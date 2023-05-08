@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] Joystick joystick;
-    [SerializeField] float runSpeed = 2f;
+    [SerializeField] float maxHorizontalSpeed = 5f;
 
     private Animator playerAnimator;
     private Rigidbody2D playerRigidbody;
@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Run();
-
+        FlipSprite();
         
 
         
@@ -30,10 +30,22 @@ public class PlayerController : MonoBehaviour
 
     private void Run()
     {
-        Vector2 playerVelocity = new Vector2(joystick.Horizontal * runSpeed, playerRigidbody.velocity.y);
+        // get player speed from joystick input
+        float horizontalSpeed = joystick.Horizontal * maxHorizontalSpeed;
+        
+        // move player according to speed
+        Vector2 playerVelocity = new Vector2(horizontalSpeed, playerRigidbody.velocity.y);
         playerRigidbody.velocity = playerVelocity;
 
-        bool playerHasHorizontalSpeed = Mathf.Abs(playerRigidbody.velocity.x) > Mathf.Epsilon;
-        playerAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
+        // adjust player animation according to absolute value of speed
+        playerAnimator.SetFloat("horizontalSpeed", Mathf.Abs(horizontalSpeed));
+    }
+
+    private void FlipSprite()
+    {
+        if (Mathf.Abs(joystick.Horizontal) > Mathf.Epsilon)
+        {
+            transform.localScale = new Vector2(Mathf.Sign(playerRigidbody.velocity.x) * 1f, 1f);
+        }
     }
 }
