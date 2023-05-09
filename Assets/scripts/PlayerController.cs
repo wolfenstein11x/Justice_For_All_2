@@ -6,21 +6,27 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] Joystick joystick;
     [SerializeField] float maxHorizontalSpeed = 5f;
+    [SerializeField] float maxJumpSpeed = 5f;
 
     private Animator playerAnimator;
     private Rigidbody2D playerRigidbody;
+    private BoxCollider2D feetCollider;
+    private LayerMask jumpableSurface;
 
     // Start is called before the first frame update
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody2D>();
+        feetCollider = GetComponent<BoxCollider2D>();
+        jumpableSurface = LayerMask.GetMask("Ground"); // | LayerMask.GetMask("Climbing") | LayerMaks.GetMask("") ...
     }
 
     // Update is called once per frame
     void Update()
     {
         Run();
+        Jump();
         FlipSprite();
         
 
@@ -47,5 +53,19 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector2(Mathf.Sign(playerRigidbody.velocity.x) * 1f, 1f);
         }
+    }
+
+    private void Jump()
+    {
+        bool onJumpableSurface = (feetCollider.IsTouchingLayers(jumpableSurface));
+
+        if (!onJumpableSurface) return;
+       
+        if (joystick.Vertical >= 0.3f)
+        {
+            Vector2 playerVelocity = new Vector2(playerRigidbody.velocity.x, maxJumpSpeed);
+            playerRigidbody.velocity = playerVelocity;
+        }
+
     }
 }
