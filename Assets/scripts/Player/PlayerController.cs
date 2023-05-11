@@ -10,12 +10,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float timeBetweenShots = 0.25f;
     [SerializeField] Bullet bullet;
     [SerializeField] Transform shootPoint;
+    [SerializeField] float meleeRange = 0.25f;
+    [SerializeField] Transform meleePos;
+    [SerializeField] float meleeDamage = 5f;
 
     private Animator playerAnimator;
     private Rigidbody2D playerRigidbody;
     private BoxCollider2D feetCollider;
     private LayerMask jumpableSurface;
     private MuzzleFlash muzzleFlash;
+    private OrientationTracker orientationTracker;
+    private LayerMask meleeRaycastLayers;
 
     private bool readyToShoot;
     private bool allowInvoke;
@@ -30,6 +35,8 @@ public class PlayerController : MonoBehaviour
         muzzleFlash = GetComponentInChildren<MuzzleFlash>();
         readyToShoot = true;
         allowInvoke = true;
+        orientationTracker = GetComponent<OrientationTracker>();
+        meleeRaycastLayers = LayerMask.GetMask("Enemy");
     }
 
     // Update is called once per frame
@@ -38,7 +45,7 @@ public class PlayerController : MonoBehaviour
         Run();
         Jump();
         FlipSprite();
-        
+        InMeleeRange();
 
         
         
@@ -94,6 +101,45 @@ public class PlayerController : MonoBehaviour
         {
             Invoke("ResetShot", timeBetweenShots);
             allowInvoke = false;
+        }
+    }
+
+    // InMeleeRange not needed for Player, other than for debugging
+    public bool InMeleeRange()
+    {
+        float orientation = orientationTracker.GetOrientation();
+
+        RaycastHit2D hitMelee = Physics2D.Raycast(meleePos.position, Vector2.right * new Vector2(orientation, 0f), meleeRange, meleeRaycastLayers);
+
+
+        if (hitMelee.collider != null)
+        {
+            Debug.DrawRay(meleePos.position, Vector2.right * hitMelee.distance * new Vector2(orientation, 0f), Color.red);
+            return true;
+        }
+        else
+        {
+            Debug.DrawRay(meleePos.position, Vector2.right * meleeRange * new Vector2(orientation, 0f), Color.blue);
+            return false;
+        }
+
+    }
+
+    public void Stab()
+    {
+        playerAnimator.SetTrigger("stab");
+    }
+
+    public void DealMeleeDamage()
+    {
+        float orientation = orientationTracker.GetOrientation();
+        RaycastHit2D hitMelee = Physics2D.Raycast(meleePos.position, Vector2.right * new Vector2(orientation, 0f), meleeRange, meleeRaycastLayers);
+
+        Health enemyHealth = hitMelee.collider.gameObject.GetComponent<Health>();
+
+        if (enemyHealth != null)
+        {
+            enemyHealth.TakeDamage(meleeDamage);
         }
     }
 

@@ -62,9 +62,17 @@ public class Enemy : MonoBehaviour
 
     }
 
+    public void InitiateMeleeAttack()
+    {
+        if (InMeleeRange())
+        {
+            DealDamage(meleeDamage);
+        }
+    }
+
     public void DealDamage(float damage)
     {
-        Debug.Log("damage: " + damage);
+        //Debug.Log("damage: " + damage);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
