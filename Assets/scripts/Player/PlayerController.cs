@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRigidbody;
     private BoxCollider2D feetCollider;
     private LayerMask jumpableSurface;
+    private MuzzleFlash muzzleFlash;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         feetCollider = GetComponent<BoxCollider2D>();
         jumpableSurface = LayerMask.GetMask("Ground"); // | LayerMask.GetMask("Climbing") | LayerMaks.GetMask("") ...
+        muzzleFlash = GetComponentInChildren<MuzzleFlash>();
     }
 
     // Update is called once per frame
@@ -72,5 +74,6 @@ public class PlayerController : MonoBehaviour
     public void Shoot()
     {
         playerAnimator.SetTrigger("shoot");
+        muzzleFlash.Fire();
     }
 }
