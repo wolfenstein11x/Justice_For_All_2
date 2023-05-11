@@ -7,12 +7,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Joystick joystick;
     [SerializeField] float maxHorizontalSpeed = 5f;
     [SerializeField] float maxJumpSpeed = 5f;
+    [SerializeField] float timeBetweenShots = 0.25f;
 
     private Animator playerAnimator;
     private Rigidbody2D playerRigidbody;
     private BoxCollider2D feetCollider;
     private LayerMask jumpableSurface;
     private MuzzleFlash muzzleFlash;
+
+    private bool readyToShoot;
+    private bool allowInvoke;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +26,8 @@ public class PlayerController : MonoBehaviour
         feetCollider = GetComponent<BoxCollider2D>();
         jumpableSurface = LayerMask.GetMask("Ground"); // | LayerMask.GetMask("Climbing") | LayerMaks.GetMask("") ...
         muzzleFlash = GetComponentInChildren<MuzzleFlash>();
+        readyToShoot = true;
+        allowInvoke = true;
     }
 
     // Update is called once per frame
@@ -73,7 +79,23 @@ public class PlayerController : MonoBehaviour
 
     public void Shoot()
     {
+        if (!readyToShoot) return;
+
+        readyToShoot = false;
+
         playerAnimator.SetTrigger("shoot");
         muzzleFlash.Fire();
+
+        if (allowInvoke)
+        {
+            Invoke("ResetShot", timeBetweenShots);
+            allowInvoke = false;
+        }
+    }
+
+    private void ResetShot()
+    {
+        readyToShoot = true;
+        allowInvoke = true;
     }
 }
