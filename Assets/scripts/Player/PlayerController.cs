@@ -135,10 +135,9 @@ public class PlayerController : MonoBehaviour
         float orientation = orientationTracker.GetOrientation();
         RaycastHit2D hitMelee = Physics2D.Raycast(meleePos.position, Vector2.right * new Vector2(orientation, 0f), meleeRange, meleeRaycastLayers);
 
-        Health enemyHealth = hitMelee.collider.gameObject.GetComponent<Health>();
-
-        if (enemyHealth != null)
+        if (hitMelee.collider.gameObject.GetComponent<Health>() != null)
         {
+            Health enemyHealth = hitMelee.collider.gameObject.GetComponent<Health>();
             enemyHealth.TakeDamage(meleeDamage);
         }
     }

@@ -6,10 +6,12 @@ public class Health : MonoBehaviour
 {
     [SerializeField] float hitPoints = 20f;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,8 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (hitPoints <= 0) return;
+
         hitPoints -= damage;
 
         if (hitPoints <= 0)
@@ -30,6 +34,6 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("I died");
+        animator.SetTrigger("die");
     }
 }

@@ -75,6 +75,11 @@ public class Enemy : MonoBehaviour
         //Debug.Log("damage: " + damage);
     }
 
+    public void RemoveFromPlay()
+    {
+        Destroy(gameObject);
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         moveSpeed = -moveSpeed;
