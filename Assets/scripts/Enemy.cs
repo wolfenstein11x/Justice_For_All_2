@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 1f;
     [SerializeField] float meleeRange = 1f;
+    [SerializeField] Transform meleePos;
+    [SerializeField] float meleeDamage;
 
     Rigidbody2D rb;
     OrientationTracker orientationTracker;
@@ -17,7 +19,7 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         orientationTracker = GetComponent<OrientationTracker>();
-        LayerMask meleeRaycastLayers = LayerMask.GetMask("Player");
+        meleeRaycastLayers = LayerMask.GetMask("Player");
     }
 
     // Update is called once per frame
@@ -35,25 +37,34 @@ public class Enemy : MonoBehaviour
         transform.localScale = new Vector2(-(Mathf.Sign(rb.velocity.x)), 1f);
     }
 
+    public void Halt()
+    {
+        rb.velocity = new Vector2(0f, 0f);
+    }
+
     public bool InMeleeRange()
     {
         float orientation = orientationTracker.GetOrientation();
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * new Vector2(orientation, 0f), meleeRange, meleeRaycastLayers);
+        RaycastHit2D hitMelee = Physics2D.Raycast(meleePos.position, Vector2.right * new Vector2(orientation, 0f), meleeRange, meleeRaycastLayers);
 
-        if (!hit) { return false; }
-
-        if (hit.collider.gameObject.tag == "Player")
+        
+        if (hitMelee.collider != null)
         {
-            Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.red);
+            Debug.DrawRay(meleePos.position, Vector2.right * hitMelee.distance * new Vector2(orientation, 0f), Color.red);
             return true;
         }
         else
         {
-            Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.green);
+            Debug.DrawRay(meleePos.position, Vector2.right * meleeRange * new Vector2(orientation, 0f), Color.blue);
             return false;
         }
 
+    }
+
+    public void DealDamage(float damage)
+    {
+        Debug.Log("damage: " + damage);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
