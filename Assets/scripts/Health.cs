@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] float hitPoints = 20f;
+    [SerializeField] protected float hitPoints = 20f;
 
-    Animator animator;
+    protected Animator animator;
+ 
 
     // Start is called before the first frame update
     void Start()
     {
+        Initialize();
+    }
+
+    protected virtual void Initialize()
+    {
         animator = GetComponent<Animator>();
     }
+
+    
 
     // Update is called once per frame
     void Update()
@@ -20,7 +28,7 @@ public class Health : MonoBehaviour
         
     }
 
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         if (hitPoints <= 0) return;
 

@@ -2,31 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeStateEnemy : StateMachineBehaviour
+public class DeathStateEnemy : StateMachineBehaviour
 {
     Enemy enemy;
-    PlayerHealth player;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         enemy = animator.GetComponent<Enemy>();
         enemy.Halt();
-        player = FindObjectOfType<PlayerHealth>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (player.IsDead())
-        {
-            animator.SetBool("attackMode", false);
-        }
-
-        if (!enemy.InMeleeRange())
-        {
-            animator.SetBool("attackMode", false);
-        }
+        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

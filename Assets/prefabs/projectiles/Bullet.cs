@@ -32,6 +32,12 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Health targetHealth = collision.gameObject.GetComponent<Health>();
+        if (targetHealth != null)
+        {
+            targetHealth.TakeDamage(damage);
+        }
+
         GameObject bulletExplosion = Instantiate(impactVFX, transform.position, transform.rotation);
         Destroy(bulletExplosion, 0.2f);
         Destroy(gameObject);
