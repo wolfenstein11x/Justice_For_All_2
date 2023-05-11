@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float maxHorizontalSpeed = 5f;
     [SerializeField] float maxJumpSpeed = 5f;
     [SerializeField] float timeBetweenShots = 0.25f;
+    [SerializeField] Bullet bullet;
+    [SerializeField] Transform shootPoint;
 
     private Animator playerAnimator;
     private Rigidbody2D playerRigidbody;
@@ -85,6 +87,8 @@ public class PlayerController : MonoBehaviour
 
         playerAnimator.SetTrigger("shoot");
         muzzleFlash.Fire();
+        Bullet firedBullet = Instantiate(bullet, shootPoint.position, bullet.transform.rotation);
+        firedBullet.transform.parent = gameObject.transform;
 
         if (allowInvoke)
         {
