@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MuzzleFlash : MonoBehaviour
 {
-    [SerializeField] AudioSource fireSound;
-
     Animator animator;
 
     // Start is called before the first frame update
@@ -22,7 +20,6 @@ public class MuzzleFlash : MonoBehaviour
 
     public void Fire()
     {
-        fireSound.Play();
         animator.SetTrigger("fire");
     }
 }

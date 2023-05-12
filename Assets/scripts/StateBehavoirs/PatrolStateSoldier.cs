@@ -6,6 +6,7 @@ public class PatrolStateSoldier : StateMachineBehaviour
 {
     Enemy enemy;
     MeleeAttacker meleeAttacker;
+    Shooter shooter;
     PlayerHealth player;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -13,6 +14,7 @@ public class PatrolStateSoldier : StateMachineBehaviour
     {
         enemy = animator.GetComponent<Enemy>();
         meleeAttacker = animator.GetComponent<MeleeAttacker>();
+        shooter = animator.GetComponent<Shooter>();
         player = FindObjectOfType<PlayerHealth>();
     }
 
@@ -26,6 +28,11 @@ public class PatrolStateSoldier : StateMachineBehaviour
         if (meleeAttacker.InMeleeRange())
         {
             animator.SetBool("meleeMode", true);
+        }
+
+        else if (shooter.InShootingRange())
+        {
+            animator.SetBool("shootMode", true);
         }
     }
 
