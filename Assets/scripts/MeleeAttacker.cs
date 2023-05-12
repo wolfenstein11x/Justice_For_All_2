@@ -46,7 +46,7 @@ public class MeleeAttacker : MonoBehaviour
         float orientation = orientationTracker.GetOrientation();
         RaycastHit2D hitMelee = Physics2D.Raycast(meleePos.position, Vector2.right * new Vector2(orientation, 0f), meleeRange, meleeRaycastLayers);
 
-        if (hitMelee.collider.gameObject.GetComponent<Health>() != null)
+        if (hitMelee.collider != null)
         {
             Health targetHealth = hitMelee.collider.gameObject.GetComponent<Health>();
             targetHealth.TakeDamage(meleeDamage);

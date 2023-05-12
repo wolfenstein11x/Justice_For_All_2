@@ -1845,7 +1845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18acfeb5e6d586b40ae48c2ed509d0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeRange: 1
+  meleeRange: 0.3
   meleePos: {fileID: 1207269632}
   meleeDamage: 5
   meleeRaycastLayers:
@@ -17283,7 +17283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2768418039557588102, guid: 183e71d90d549294b96d95a6980a8b28, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6470860431904239478, guid: 183e71d90d549294b96d95a6980a8b28, type: 3}
       propertyPath: m_RootOrder
