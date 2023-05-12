@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8593346393149003082}
   - component: {fileID: 4525910989550452881}
   - component: {fileID: 4525910989550452882}
+  - component: {fileID: 2514807610048540118}
   m_Layer: 9
   m_Name: Boar
   m_TagString: Untagged
@@ -152,9 +153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  meleeRange: 0.2
-  meleePos: {fileID: 3183201631699577934}
-  meleeDamage: 5
 --- !u!114 &6991348641686112900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +215,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 20
+--- !u!114 &2514807610048540118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768418039557588102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18acfeb5e6d586b40ae48c2ed509d0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeRange: 0.2
+  meleePos: {fileID: 3183201631699577934}
+  meleeDamage: 5
+  meleeRaycastLayers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &3861839254607788413
 GameObject:
   m_ObjectHideFlags: 0

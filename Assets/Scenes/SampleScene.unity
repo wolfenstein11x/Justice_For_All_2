@@ -951,9 +951,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2514807610048540118, guid: 183e71d90d549294b96d95a6980a8b28, type: 3}
+      propertyPath: meleeRaycastLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 2768418039557588102, guid: 183e71d90d549294b96d95a6980a8b28, type: 3}
       propertyPath: m_Name
       value: Boar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842359123665653708, guid: 183e71d90d549294b96d95a6980a8b28, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6470860431904239478, guid: 183e71d90d549294b96d95a6980a8b28, type: 3}
       propertyPath: m_RootOrder
@@ -1404,6 +1412,7 @@ GameObject:
   - component: {fileID: 1029291811}
   - component: {fileID: 1029291812}
   - component: {fileID: 1029291813}
+  - component: {fileID: 1029291814}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1611,6 +1620,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPoints: 100
   healthBar: {fileID: 1448888436}
+--- !u!114 &1029291814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029291803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18acfeb5e6d586b40ae48c2ed509d0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeRange: 1
+  meleePos: {fileID: 1207269632}
+  meleeDamage: 5
+  meleeRaycastLayers:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &1086727433
 GameObject:
   m_ObjectHideFlags: 0
@@ -17010,10 +17037,6 @@ PrefabInstance:
     - target: {fileID: 2768418039557588102, guid: 183e71d90d549294b96d95a6980a8b28, type: 3}
       propertyPath: m_Name
       value: Boar
-      objectReference: {fileID: 0}
-    - target: {fileID: 2842359123665653708, guid: 183e71d90d549294b96d95a6980a8b28, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6470860431904239478, guid: 183e71d90d549294b96d95a6980a8b28, type: 3}
       propertyPath: m_RootOrder

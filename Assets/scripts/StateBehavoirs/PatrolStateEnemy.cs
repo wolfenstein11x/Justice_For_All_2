@@ -5,12 +5,14 @@ using UnityEngine;
 public class PatrolStateEnemy : StateMachineBehaviour
 {
     Enemy enemy;
+    MeleeAttacker meleeAttacker;
     PlayerHealth player;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         enemy = animator.GetComponent<Enemy>();
+        meleeAttacker = animator.GetComponent<MeleeAttacker>();
         player = FindObjectOfType<PlayerHealth>();
     }
 
@@ -21,7 +23,7 @@ public class PatrolStateEnemy : StateMachineBehaviour
 
         if (player.IsDead()) return;
 
-        if (enemy.InMeleeRange())
+        if (meleeAttacker.InMeleeRange())
         {
             animator.SetBool("attackMode", true);
         }

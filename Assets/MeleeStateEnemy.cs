@@ -5,6 +5,7 @@ using UnityEngine;
 public class MeleeStateEnemy : StateMachineBehaviour
 {
     Enemy enemy;
+    MeleeAttacker meleeAttacker;
     PlayerHealth player;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -12,6 +13,7 @@ public class MeleeStateEnemy : StateMachineBehaviour
     {
         enemy = animator.GetComponent<Enemy>();
         enemy.Halt();
+        meleeAttacker = animator.GetComponent<MeleeAttacker>();
         player = FindObjectOfType<PlayerHealth>();
     }
 
@@ -23,7 +25,7 @@ public class MeleeStateEnemy : StateMachineBehaviour
             animator.SetBool("attackMode", false);
         }
 
-        if (!enemy.InMeleeRange())
+        if (!meleeAttacker.InMeleeRange())
         {
             animator.SetBool("attackMode", false);
         }
