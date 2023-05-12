@@ -4,22 +4,15 @@ using UnityEngine;
 
 public class MuzzleFlash : MonoBehaviour
 {
-    Animator animator;
+    [SerializeField] float lifeTime = 0.2f;
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        Destroy(gameObject, lifeTime);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 
-    public void Fire()
-    {
-        animator.SetTrigger("fire");
-    }
+  
 }

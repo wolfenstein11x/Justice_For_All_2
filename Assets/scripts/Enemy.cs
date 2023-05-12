@@ -5,12 +5,19 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 1f;
+    [SerializeField] bool hideMode = false;
     
     Rigidbody2D rb;
     OrientationTracker orientationTracker;
-    
-    
-    
+    Animator animator;
+
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        animator.SetBool("hideMode", hideMode);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private MuzzleFlash muzzleFlash;
     private OrientationTracker orientationTracker;
     private MeleeAttacker meleeAttacker;
+    private AudioSource gunSound;
 
     private bool readyToShoot;
     private bool allowInvoke;
@@ -29,11 +30,11 @@ public class PlayerController : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         feetCollider = GetComponent<BoxCollider2D>();
         jumpableSurface = LayerMask.GetMask("Ground"); // | LayerMask.GetMask("Climbing") | LayerMaks.GetMask("") ...
-        muzzleFlash = GetComponentInChildren<MuzzleFlash>();
         readyToShoot = true;
         allowInvoke = true;
         orientationTracker = GetComponent<OrientationTracker>();
         meleeAttacker = GetComponent<MeleeAttacker>();
+        gunSound = GetComponentInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour
         FlipSprite();
 
         // for debugging only
-        meleeAttacker.InMeleeRange();
+        //meleeAttacker.InMeleeRange();
 
         
         
@@ -92,7 +93,8 @@ public class PlayerController : MonoBehaviour
         readyToShoot = false;
 
         playerAnimator.SetTrigger("shoot");
-        muzzleFlash.Fire();
+        gunSound.Play();
+        //muzzleFlash.Fire();
         Bullet firedBullet = Instantiate(bullet, shootPoint.position, bullet.transform.rotation);
         firedBullet.transform.parent = gameObject.transform;
 

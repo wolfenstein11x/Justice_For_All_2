@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    [SerializeField] bool hideMode;
     [SerializeField] Bullet bullet;
+    [SerializeField] GameObject muzzleFlash;
     [SerializeField] Transform shootPoint;
+    [SerializeField] Transform muzzleFlashPoint;
+    [SerializeField] Transform shootPointCrouching;
+    [SerializeField] Transform muzzleFlashPointCrouching;
     [SerializeField] float shootRange;
     [SerializeField] LayerMask shootRaycastLayers;
 
-    private MuzzleFlash muzzleFlash;
     private AudioSource gunSound;
     private OrientationTracker orientationTracker;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        muzzleFlash = GetComponentInChildren<MuzzleFlash>();
         gunSound = GetComponentInChildren<AudioSource>();
         orientationTracker = GetComponent<OrientationTracker>();
     }
@@ -30,8 +34,17 @@ public class Shooter : MonoBehaviour
     public void Shoot()
     {
         gunSound.Play();
-        muzzleFlash.Fire();
+        GameObject gunMuzzleFlash = Instantiate(muzzleFlash, muzzleFlashPoint.position, muzzleFlash.transform.rotation);
+        gunMuzzleFlash.transform.localScale = new Vector2(1.0f * orientationTracker.GetOrientation(), 1f);
         Bullet firedBullet = Instantiate(bullet, shootPoint.position, bullet.transform.rotation);
+        firedBullet.transform.parent = gameObject.transform;
+    }
+
+    public void ShootCrouched()
+    {
+        gunSound.Play();
+        GameObject gunMuzzleFlash = Instantiate(muzzleFlash, muzzleFlashPointCrouching.position, muzzleFlash.transform.rotation);
+        Bullet firedBullet = Instantiate(bullet, shootPointCrouching.position, bullet.transform.rotation);
         firedBullet.transform.parent = gameObject.transform;
     }
 
