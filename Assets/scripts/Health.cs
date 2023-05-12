@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] protected float hitPoints = 20f;
+    [SerializeField] AudioSource takeDamageSound;
 
     protected Animator animator;
     protected SpriteRenderer renderer;
@@ -35,6 +36,7 @@ public class Health : MonoBehaviour
         if (hitPoints <= 0) return;
 
         hitPoints -= damage;
+        takeDamageSound.Play();
         PlayDamageEffect();
 
         if (hitPoints <= 0)

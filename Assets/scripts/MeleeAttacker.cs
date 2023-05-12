@@ -9,9 +9,11 @@ public class MeleeAttacker : MonoBehaviour
     [SerializeField] Transform meleePos;
     [SerializeField] float meleeDamage;
     [SerializeField] LayerMask meleeRaycastLayers;
+    [SerializeField] AudioSource meleeSwingSound;
 
     Rigidbody2D rb;
     OrientationTracker orientationTracker;
+    
 
 
     // Start is called before the first frame update
@@ -51,5 +53,13 @@ public class MeleeAttacker : MonoBehaviour
             Health targetHealth = hitMelee.collider.gameObject.GetComponent<Health>();
             targetHealth.TakeDamage(meleeDamage);
         }
+
     }
+
+    public void PlayMeleeSwingSound()
+    {
+        meleeSwingSound.Play();
+    }
+
+    
 }
