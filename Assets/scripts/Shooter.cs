@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    [SerializeField] bool hideMode;
     [SerializeField] Bullet bullet;
     [SerializeField] GameObject muzzleFlash;
     [SerializeField] Transform shootPoint;

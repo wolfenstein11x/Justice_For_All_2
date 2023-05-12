@@ -14,6 +14,6 @@ public class ControlsUI : MonoBehaviour
 
     public void ShootButton()
     {
-        playerController.Shoot();
+        playerController.ShootButton();
     }
 }

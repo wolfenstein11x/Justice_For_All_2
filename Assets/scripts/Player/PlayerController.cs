@@ -8,17 +8,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float maxHorizontalSpeed = 5f;
     [SerializeField] float maxJumpSpeed = 5f;
     [SerializeField] float timeBetweenShots = 0.25f;
-    [SerializeField] Bullet bullet;
-    [SerializeField] Transform shootPoint;
 
     private Animator playerAnimator;
     private Rigidbody2D playerRigidbody;
     private BoxCollider2D feetCollider;
     private LayerMask jumpableSurface;
-    private MuzzleFlash muzzleFlash;
     private OrientationTracker orientationTracker;
+    private Shooter shooter;
     private MeleeAttacker meleeAttacker;
-    private AudioSource gunSound;
 
     private bool readyToShoot;
     private bool allowInvoke;
@@ -33,8 +30,8 @@ public class PlayerController : MonoBehaviour
         readyToShoot = true;
         allowInvoke = true;
         orientationTracker = GetComponent<OrientationTracker>();
+        shooter = GetComponent<Shooter>();
         meleeAttacker = GetComponent<MeleeAttacker>();
-        gunSound = GetComponentInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -86,18 +83,19 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void Shoot()
+    public void ShootButton()
     {
+        // check if you are able to shoot
         if (!readyToShoot) return;
 
         readyToShoot = false;
 
+        // actual shooting happens here
         playerAnimator.SetTrigger("shoot");
-        gunSound.Play();
-        //muzzleFlash.Fire();
-        Bullet firedBullet = Instantiate(bullet, shootPoint.position, bullet.transform.rotation);
-        firedBullet.transform.parent = gameObject.transform;
+        shooter.Shoot();
 
+
+        // reset
         if (allowInvoke)
         {
             Invoke("ResetShot", timeBetweenShots);
@@ -107,7 +105,7 @@ public class PlayerController : MonoBehaviour
 
     
 
-    public void Stab()
+    public void MeleeButton()
     {
         playerAnimator.SetTrigger("stab");
     }
