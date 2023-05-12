@@ -22,12 +22,12 @@ public class MeleeStateEnemy : StateMachineBehaviour
     {
         if (player.IsDead())
         {
-            animator.SetBool("attackMode", false);
+            animator.SetBool("meleeMode", false);
         }
 
         if (!meleeAttacker.InMeleeRange())
         {
-            animator.SetBool("attackMode", false);
+            animator.SetBool("meleeMode", false);
         }
     }
 

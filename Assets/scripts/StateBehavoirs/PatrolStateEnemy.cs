@@ -25,7 +25,7 @@ public class PatrolStateEnemy : StateMachineBehaviour
 
         if (meleeAttacker.InMeleeRange())
         {
-            animator.SetBool("attackMode", true);
+            animator.SetBool("meleeMode", true);
         }
     }
 
