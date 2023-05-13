@@ -464,6 +464,7 @@ GameObject:
   - component: {fileID: 250238011}
   - component: {fileID: 250238013}
   - component: {fileID: 250238012}
+  - component: {fileID: 250238014}
   m_Layer: 5
   m_Name: grenadeCountText
   m_TagString: Untagged
@@ -588,6 +589,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250238010}
   m_CullTransparentMesh: 1
+--- !u!114 &250238014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250238010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd64fa52153746428971dd3b864854a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingAmmo: 5
 --- !u!4 &342970816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7598135996414864234, guid: 913acf592b5e1934a92077a97a9a8bc8, type: 3}
@@ -945,7 +959,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.289717, y: 0.89291, z: -10}
+  m_LocalPosition: {x: -7.238332, y: 0.89304, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1600,7 +1614,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 874461291}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1029291810}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: GrenadeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &874461291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17836,8 +17862,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 639034347}
-        m_TargetAssemblyTypeName: ControlsUI, Assembly-CSharp
+      - m_Target: {fileID: 1029291810}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: ShootButton
         m_Mode: 1
         m_Arguments:
@@ -18832,6 +18858,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 850888307244679067, guid: 1e1a235089735644b8b8bb9e468dec49, type: 3}
+      propertyPath: ammoType
+      value: 
+      objectReference: {fileID: 250238014}
+    - target: {fileID: 850888307244679067, guid: 1e1a235089735644b8b8bb9e468dec49, type: 3}
+      propertyPath: ammoAmount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 850888307244679077, guid: 1e1a235089735644b8b8bb9e468dec49, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -18886,7 +18920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 850888307244679079, guid: 1e1a235089735644b8b8bb9e468dec49, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7506619894270411316, guid: 1e1a235089735644b8b8bb9e468dec49, type: 3}
       propertyPath: m_Layer
@@ -19783,6 +19817,10 @@ PrefabInstance:
       propertyPath: ammoCountText
       value: 
       objectReference: {fileID: 2098407796}
+    - target: {fileID: 8157354322196353880, guid: 93cf2b4166fd3cb41a6268dfa1be73b8, type: 3}
+      propertyPath: grenadeCountText
+      value: 
+      objectReference: {fileID: 250238014}
     - target: {fileID: 8157354322196353887, guid: 93cf2b4166fd3cb41a6268dfa1be73b8, type: 3}
       propertyPath: healthBar
       value: 

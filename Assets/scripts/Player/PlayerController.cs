@@ -115,9 +115,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void GrenadeButton()
+    {
+        // check if you have grenades
+        if (!HasGrenades()) return;
+
+        // actual grenade throwing happens in animation event
+        playerAnimator.SetTrigger("throwGrenade");
+        grenadeCountText.DecrementAmmo();
+    }
+
     private bool HasAmmo()
     {
         return ammoCountText.GetAmmoCount() > 0;
+    }
+
+    private bool HasGrenades()
+    {
+        return grenadeCountText.GetAmmoCount() > 0;
     }
 
     
