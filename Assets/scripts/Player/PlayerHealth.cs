@@ -30,4 +30,21 @@ public class PlayerHealth : Health
     {
         return hitPoints <= 0;
     }
+
+    public void Heal(float healAmount)
+    {
+        float maxHealth = healthBar.GetMaxHealth();
+
+        if ((hitPoints + healAmount) > healthBar.GetMaxHealth())
+        {
+            hitPoints = maxHealth;
+        }
+
+        else
+        {
+            hitPoints = (hitPoints + healAmount);
+        }
+
+        healthBar.SetHealth(hitPoints);
+    }
 }

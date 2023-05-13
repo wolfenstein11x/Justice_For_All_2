@@ -29,4 +29,9 @@ public class HealthBar : MonoBehaviour
     {
         //animator.SetTrigger("heal");
     }
+
+    public float GetMaxHealth()
+    {
+        return slider.maxValue;
+    }
 }

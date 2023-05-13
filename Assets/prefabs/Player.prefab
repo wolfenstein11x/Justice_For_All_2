@@ -1,5 +1,63 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1521223814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521223815}
+  - component: {fileID: 1521223816}
+  m_Layer: 0
+  m_Name: feetCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1521223815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521223814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8157354322196353895}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1521223816
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521223814}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.008107424, y: -0.5435231}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.364038, y: 0.10660219}
+  m_EdgeRadius: 0
 --- !u!1 &8157354321284830341
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,7 +134,6 @@ GameObject:
   - component: {fileID: 8157354322196353882}
   - component: {fileID: 8157354322196353883}
   - component: {fileID: 8157354322196353880}
-  - component: {fileID: 8157354322196353881}
   - component: {fileID: 8157354322196353886}
   - component: {fileID: 8157354322196353887}
   - component: {fileID: 8157354322196353884}
@@ -106,6 +163,7 @@ Transform:
   - {fileID: 3200604385134614171}
   - {fileID: 4953388560817973917}
   - {fileID: 77595382263122194}
+  - {fileID: 1521223815}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -195,8 +253,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.031266212, y: 0.0122509}
-  m_Size: {x: 0.51824665, y: 1.2207196}
+  m_Offset: {x: -0.0059640408, y: 0.025050282}
+  m_Size: {x: 0.4676423, y: 1.1951208}
   m_Direction: 0
 --- !u!95 &8157354322196353883
 Animator:
@@ -235,32 +293,6 @@ MonoBehaviour:
   maxHorizontalSpeed: 7
   maxJumpSpeed: 15
   timeBetweenShots: 0.25
---- !u!61 &8157354322196353881
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8157354322196353889}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0052440166, y: -0.5264599}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.33, y: 0.5}
-    oldSize: {x: 1.1475, y: 1.46}
-    newSize: {x: 4.59, y: 5.84}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.33130884, y: 0.14739096}
-  m_EdgeRadius: 0
 --- !u!114 &8157354322196353886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd96ec36675c77a4aa879918c4179c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 900
+  hitPoints: 100
   meleeDamageSound: {fileID: 77595381268295448}
   healthBar: {fileID: 0}
 --- !u!114 &8157354322196353884
@@ -300,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18acfeb5e6d586b40ae48c2ed509d0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeRange: 0.33
+  meleeRange: 0.4
   meleePos: {fileID: 8157354321284830586}
   meleeDamage: 5
   meleeRaycastLayers:

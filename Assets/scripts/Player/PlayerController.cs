@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         playerAnimator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody2D>();
-        feetCollider = GetComponent<BoxCollider2D>();
+        feetCollider = GetComponentInChildren<BoxCollider2D>();
         jumpableSurface = LayerMask.GetMask("Ground"); // | LayerMask.GetMask("Climbing") | LayerMaks.GetMask("") ...
         readyToShoot = true;
         allowInvoke = true;
