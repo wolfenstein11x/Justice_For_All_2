@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         FlipSprite();
 
         // for debugging only
-        //meleeAttacker.InMeleeRange();
+        meleeAttacker.InMeleeRange();
 
         
         
