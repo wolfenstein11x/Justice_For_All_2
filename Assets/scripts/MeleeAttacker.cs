@@ -51,6 +51,7 @@ public class MeleeAttacker : MonoBehaviour
         if (hitMelee.collider != null)
         {
             Health targetHealth = hitMelee.collider.gameObject.GetComponent<Health>();
+            targetHealth.PlayMeleeDamageSound();
             targetHealth.TakeDamage(meleeDamage);
         }
 
@@ -58,7 +59,10 @@ public class MeleeAttacker : MonoBehaviour
 
     public void PlayMeleeSwingSound()
     {
-        meleeSwingSound.Play();
+        if (!InMeleeRange())
+        {
+            meleeSwingSound.Play();
+        }
     }
 
     

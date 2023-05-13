@@ -6,6 +6,7 @@ public class Shooter : MonoBehaviour
 {
     [SerializeField] Bullet bullet;
     [SerializeField] GameObject muzzleFlash;
+    [SerializeField] AudioSource gunSound;
     [SerializeField] Transform shootPoint;
     [SerializeField] Transform muzzleFlashPoint;
     [SerializeField] Transform shootPointCrouching;
@@ -13,14 +14,12 @@ public class Shooter : MonoBehaviour
     [SerializeField] float shootRange;
     [SerializeField] LayerMask shootRaycastLayers;
 
-    private AudioSource gunSound;
     private OrientationTracker orientationTracker;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        gunSound = GetComponentInChildren<AudioSource>();
         orientationTracker = GetComponent<OrientationTracker>();
     }
 

@@ -5,10 +5,11 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] protected float hitPoints = 20f;
-    [SerializeField] AudioSource takeDamageSound;
+    [SerializeField] AudioSource meleeDamageSound;
 
     protected Animator animator;
     protected SpriteRenderer renderer;
+    protected CapsuleCollider2D capsuleCollider;
  
 
     // Start is called before the first frame update
@@ -21,22 +22,16 @@ public class Health : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         renderer = GetComponent<SpriteRenderer>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 
     public virtual void TakeDamage(float damage)
     {
         if (hitPoints <= 0) return;
 
         hitPoints -= damage;
-        takeDamageSound.Play();
         PlayDamageEffect();
 
         if (hitPoints <= 0)
@@ -45,9 +40,17 @@ public class Health : MonoBehaviour
         }
     }
 
+    public void PlayMeleeDamageSound()
+    {
+        meleeDamageSound.Play();
+    }
+
     private void Die()
     {
         animator.SetTrigger("die");
+
+        // turn off collider so that dead enemy doesn't block attacks
+        capsuleCollider.enabled = false;
     }
 
     private void PlayDamageEffect()
@@ -71,4 +74,6 @@ public class Health : MonoBehaviour
         }
 
     }
+
+    
 }
