@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MuzzleFlash : MonoBehaviour
+public class VFX : MonoBehaviour
 {
     [SerializeField] float lifeTime = 0.2f;
 

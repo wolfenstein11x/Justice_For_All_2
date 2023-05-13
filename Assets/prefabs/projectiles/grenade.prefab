@@ -31,7 +31,8 @@ Transform:
   m_LocalPosition: {x: -7.4, y: 1.69, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3236118314000525499}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -102,8 +103,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_GravityScale: 3
+  m_Material: {fileID: 6200000, guid: dcbaf42bbb52a1448ba6988cb3516ea8, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -120,15 +121,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32423c0930f66f1488b0f1dfdafceb44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialVelocityX: 5
+  maxDamage: 30
+  initialVelocityX: 3
   initialVelocityY: 10
-  explosionDelayMin: 4
-  explosionDelayMax: 5
-  explosionDuration: 0.5
-  explosion: {fileID: 0}
+  explosionDelayMin: 2
+  explosionDelayMax: 3
+  explosionDuration: 1.395
+  explosion: {fileID: 3340753291188522532, guid: 2c1802918e6b4464798e0b7ea68ca060, type: 3}
+  explosionSound: {fileID: 3236118314000525498}
   explosionOffsetX: 0.42
   explosionOffsetY: 2.04
-  explosionRadius: 5
+  explosionRadius: 3
 --- !u!70 &-3257121430230140814
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -145,3 +148,70 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0063734297, y: 0.053537406}
   m_Size: {x: 0.42641294, y: 0.42641294}
   m_Direction: 1
+--- !u!1001 &3409934403727886260
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3141382873759504438}
+    m_Modifications:
+    - target: {fileID: 268955060954115853, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+      propertyPath: m_Name
+      value: explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 268955060954115855, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 268955060954115855, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 268955060954115855, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 268955060954115855, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 268955060954115855, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 268955060954115855, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 268955060954115855, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 268955060954115855, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 268955060954115855, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 268955060954115855, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 268955060954115855, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+--- !u!82 &3236118314000525498 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 268955060954115854, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+  m_PrefabInstance: {fileID: 3409934403727886260}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3236118314000525499 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 268955060954115855, guid: 7ac0c62984d560a488a4cc17001e91a1, type: 3}
+  m_PrefabInstance: {fileID: 3409934403727886260}
+  m_PrefabAsset: {fileID: 0}
