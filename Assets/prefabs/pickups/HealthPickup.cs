@@ -9,14 +9,12 @@ public class HealthPickup : MonoBehaviour
     [SerializeField] float healSoundDuration = 0.25f;
 
     SpriteRenderer spriteRenderer;
-    BoxCollider2D boxCollider;
 
     bool obtained;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        boxCollider = GetComponent<BoxCollider2D>();
         obtained = false;
     }
 
