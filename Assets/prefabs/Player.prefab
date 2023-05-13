@@ -58,6 +58,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.364038, y: 0.10660219}
   m_EdgeRadius: 0
+--- !u!1 &1808102843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1808102844}
+  m_Layer: 8
+  m_Name: throwPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1808102844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808102843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.626, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8157354322196353895}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8157354321284830341
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +169,7 @@ GameObject:
   - component: {fileID: 8157354322196353887}
   - component: {fileID: 8157354322196353884}
   - component: {fileID: 8157354322196353885}
+  - component: {fileID: 8157354322386709628}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -165,6 +197,7 @@ Transform:
   - {fileID: 77595382263122194}
   - {fileID: 1521223815}
   - {fileID: 5661273215147529835}
+  - {fileID: 1808102844}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -366,6 +399,20 @@ MonoBehaviour:
   shootRaycastLayers:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &8157354322386709628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157354322196353889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0210999332b67488b405f61ca7e874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenade: {fileID: 3141382873759504437, guid: 27294cb506a351941b3a51bee814ef94, type: 3}
+  grenadeThrowPoint: {fileID: 1808102844}
 --- !u!1 &8157354322284522172
 GameObject:
   m_ObjectHideFlags: 0
