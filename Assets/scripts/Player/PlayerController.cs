@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float maxHorizontalSpeed = 5f;
     [SerializeField] float maxJumpSpeed = 5f;
     [SerializeField] float timeBetweenShots = 0.25f;
+    [SerializeField] AmmoTracker ammoCountText;
+    [SerializeField] AmmoTracker grenadeCountText;
+    [SerializeField] AudioSource outOfAmmoSound;
 
     private Animator playerAnimator;
     private Rigidbody2D playerRigidbody;
@@ -88,11 +91,20 @@ public class PlayerController : MonoBehaviour
         // check if you are able to shoot
         if (!readyToShoot) return;
 
+        // check if you have ammo
+        if (!HasAmmo())
+        {
+            playerAnimator.SetTrigger("shoot");
+            outOfAmmoSound.Play();
+            return;
+        }
+
         readyToShoot = false;
 
         // actual shooting happens here
         playerAnimator.SetTrigger("shoot");
         shooter.Shoot();
+        ammoCountText.DecrementAmmo();
 
 
         // reset
@@ -101,6 +113,11 @@ public class PlayerController : MonoBehaviour
             Invoke("ResetShot", timeBetweenShots);
             allowInvoke = false;
         }
+    }
+
+    private bool HasAmmo()
+    {
+        return ammoCountText.GetAmmoCount() > 0;
     }
 
     

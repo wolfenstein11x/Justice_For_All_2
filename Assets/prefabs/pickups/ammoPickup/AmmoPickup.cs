@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AmmoPickup : MonoBehaviour
 {
-    [SerializeField] GameObject ammoType;
+    [SerializeField] AmmoTracker ammoType;
     [SerializeField] int ammoAmount;
     [SerializeField] AudioSource pickupSound;
     [SerializeField] float pickupSoundDuration = 0.25f;
@@ -29,7 +29,7 @@ public class AmmoPickup : MonoBehaviour
 
         pickupSound.Play();
 
-        Debug.Log("got me some ammo");
+        ammoType.CollectAmmo(ammoAmount);
 
         // after picking up item, make it disappear, but don't destroy yet until sound finished playing
         spriteRenderer.enabled = false;
