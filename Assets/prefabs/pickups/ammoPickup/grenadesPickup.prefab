@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 850888307244679076}
   - component: {fileID: 850888307244679066}
   - component: {fileID: 850888307244679067}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: grenadesPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoType: {fileID: 0}
-  ammoAmount: 0
+  ammoAmount: 80
   pickupSound: {fileID: 7506619894270411319}
   pickupSoundDuration: 0.96
 --- !u!1001 &3218009399355328973
@@ -139,6 +139,10 @@ PrefabInstance:
     - target: {fileID: 4937200258782268409, guid: d1e9401496de02f47989f49331c886f3, type: 3}
       propertyPath: m_Name
       value: ammoPickupSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937200258782268409, guid: d1e9401496de02f47989f49331c886f3, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4937200258782268411, guid: d1e9401496de02f47989f49331c886f3, type: 3}
       propertyPath: m_RootOrder
