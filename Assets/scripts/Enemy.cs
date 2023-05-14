@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 1f;
+    [SerializeField] float walkSpeed = 2f;
+    public float runSpeedMultiplier = 1.5f;
     [SerializeField] bool hideMode = false;
     
     Rigidbody2D rb;
     OrientationTracker orientationTracker;
     Animator animator;
+    float moveSpeed;
 
 
     private void Awake()
@@ -23,11 +25,12 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         orientationTracker = GetComponent<OrientationTracker>();
+        moveSpeed = walkSpeed;
     }
 
     
 
-    public void Patrol()
+    public void Move()
     {
         rb.velocity = new Vector2(moveSpeed, 0f);
     }
@@ -40,6 +43,11 @@ public class Enemy : MonoBehaviour
     public void Halt()
     {
         rb.velocity = new Vector2(0f, 0f);
+    }
+
+    public void MultiplySpeed(float speedMultiplier)
+    {
+        moveSpeed = moveSpeed * speedMultiplier;
     }
 
     public void RemoveFromPlay()
