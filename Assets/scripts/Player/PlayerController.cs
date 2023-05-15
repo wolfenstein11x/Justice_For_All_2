@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AmmoTracker ammoCountText;
     [SerializeField] AmmoTracker grenadeCountText;
     [SerializeField] AudioSource outOfAmmoSound;
+    //[SerializeField] Vector2 hazardForce;
 
     private Animator playerAnimator;
     private Rigidbody2D playerRigidbody;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private OrientationTracker orientationTracker;
     private Shooter shooter;
     private MeleeAttacker meleeAttacker;
+    private PlayerHealth playerHealth;
 
     private bool readyToShoot;
     private bool allowInvoke;
@@ -28,8 +30,9 @@ public class PlayerController : MonoBehaviour
     {
         playerAnimator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody2D>();
+        playerHealth = GetComponent<PlayerHealth>();
         feetCollider = GetComponentInChildren<BoxCollider2D>();
-        jumpableSurface = LayerMask.GetMask("Ground"); // | LayerMask.GetMask("Climbing") | LayerMaks.GetMask("") ...
+        jumpableSurface = LayerMask.GetMask("Ground") | LayerMask.GetMask("Hazards"); // | LayerMaks.GetMask("") ...
         readyToShoot = true;
         allowInvoke = true;
         orientationTracker = GetComponent<OrientationTracker>();
@@ -147,5 +150,11 @@ public class PlayerController : MonoBehaviour
     {
         readyToShoot = true;
         allowInvoke = true;
+    }
+
+    public void ReactToHazard(float hazardDamage)
+    {
+        //playerRigidbody.AddForce(hazardForce);
+        playerHealth.TakeDamage(hazardDamage);
     }
 }
