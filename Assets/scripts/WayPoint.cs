@@ -8,6 +8,7 @@ public class WayPoint : MonoBehaviour
 
     [SerializeField] Enemy patroller;
     [SerializeField] [Range(0f, 1f)] float jumpProbability, turnProbability;
+    [SerializeField] bool optional;
     [SerializeField] float proximityThreshold = 0.1f;
     [SerializeField] float resetTime = 1f;
 
@@ -38,11 +39,15 @@ public class WayPoint : MonoBehaviour
 
         if (proximityToPatroller <= proximityThreshold)
         {
+            // prevent enemy from jumping/turning away from a fight for seemingly no reason
+            if (optional && patroller.InAttackMode()) return;
+
             recentInteraction = true;
             //Debug.Log(proximityToPatroller);
             MakeDecision();
             Invoke(nameof(ClearRecentInteraction), resetTime);
         }
+
     }
 
     private void MeasureProximity()

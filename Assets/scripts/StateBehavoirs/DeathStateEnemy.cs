@@ -11,6 +11,7 @@ public class DeathStateEnemy : StateMachineBehaviour
     {
         enemy = animator.GetComponent<Enemy>();
         enemy.Halt();
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

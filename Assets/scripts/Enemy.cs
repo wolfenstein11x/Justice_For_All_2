@@ -74,4 +74,12 @@ public class Enemy : MonoBehaviour
         moveSpeed = -moveSpeed;
         FlipSprite();
     }
+
+    public bool InAttackMode()
+    {
+        bool inMeleeMode = animator.GetBool("meleeMode");
+        bool inShootMode = animator.GetBool("shootMode");
+
+        return (inMeleeMode || inShootMode);
+    }
 }
