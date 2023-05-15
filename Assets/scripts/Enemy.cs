@@ -36,12 +36,9 @@ public class Enemy : MonoBehaviour
         rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
     }
 
-    public void Jump(bool up=true)
+    public void Jump()
     {
-
-
-        //Vector2 jumpVelocity = new Vector2(rb.velocity.x, jumpSpeed);
-        //rb.velocity = jumpVelocity;
+        animator.SetTrigger("jump");
         Vector2 jumpForce = new Vector2(0f, jumpSpeed);
         rb.AddForce(jumpForce);
     }
@@ -67,6 +64,12 @@ public class Enemy : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D collision)
+    {
+        moveSpeed = -moveSpeed;
+        FlipSprite();
+    }
+
+    public void TurnAround()
     {
         moveSpeed = -moveSpeed;
         FlipSprite();
