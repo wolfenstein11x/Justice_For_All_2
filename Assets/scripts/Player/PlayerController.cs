@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Joystick joystick;
     [SerializeField] float maxHorizontalSpeed = 5f;
     [SerializeField] float maxJumpSpeed = 5f;
+    [SerializeField] float jumpThreshold = 0.3f;
+    [SerializeField] float enterExitBuildingThreshold = 0.1f;
     [SerializeField] float timeBetweenShots = 0.25f;
     [SerializeField] AmmoTracker ammoCountText;
     [SerializeField] AmmoTracker grenadeCountText;
@@ -81,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
         if (!onJumpableSurface) return;
        
-        if (joystick.Vertical >= 0.3f)
+        if (joystick.Vertical >= jumpThreshold)
         {
             Vector2 playerVelocity = new Vector2(playerRigidbody.velocity.x, maxJumpSpeed);
             playerRigidbody.velocity = playerVelocity;
@@ -156,5 +158,15 @@ public class PlayerController : MonoBehaviour
     {
         //playerRigidbody.AddForce(hazardForce);
         playerHealth.TakeDamage(hazardDamage);
+    }
+
+    public bool AttemptingToEnter()
+    {
+        return joystick.Vertical > enterExitBuildingThreshold;
+    }
+
+    public bool AttemptingToExit()
+    {
+        return joystick.Vertical < -enterExitBuildingThreshold;
     }
 }

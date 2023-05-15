@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6871329656804107173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.28, y: -1.81, z: 0}
+  m_LocalPosition: {x: 0, y: -1.81, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6906286777849944207, guid: 4218424f3b17523428e01b83bd6899b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.73
+      value: 0.734
       objectReference: {fileID: 0}
     - target: {fileID: 6906286777849944207, guid: 4218424f3b17523428e01b83bd6899b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -199,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4934853920569188621, guid: d98c1c1944205b94a9bc02e2287d3b2f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.4
+      value: -0.725
       objectReference: {fileID: 0}
     - target: {fileID: 4934853920569188621, guid: d98c1c1944205b94a9bc02e2287d3b2f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -237,6 +237,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4934853921913103177, guid: d98c1c1944205b94a9bc02e2287d3b2f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.464
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d98c1c1944205b94a9bc02e2287d3b2f, type: 3}
 --- !u!4 &6871329656891938989 stripped
@@ -257,7 +261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377743256032400458, guid: d3c428618edb3434e9d1d959e1baba85, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -12.71
       objectReference: {fileID: 0}
     - target: {fileID: 7377743256032400458, guid: d3c428618edb3434e9d1d959e1baba85, type: 3}
       propertyPath: m_LocalPosition.y
@@ -299,6 +303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass5
       objectReference: {fileID: 0}
+    - target: {fileID: 7377743257014703216, guid: d3c428618edb3434e9d1d959e1baba85, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.79
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3c428618edb3434e9d1d959e1baba85, type: 3}
 --- !u!4 &6871329655932374905 stripped
@@ -313,6 +321,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6871329656916680613}
     m_Modifications:
+    - target: {fileID: 327126124689692307, guid: f1d78081ca9da4a44a82b3f6d51fbdf3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.088
+      objectReference: {fileID: 0}
+    - target: {fileID: 327126124689692307, guid: f1d78081ca9da4a44a82b3f6d51fbdf3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.458
+      objectReference: {fileID: 0}
     - target: {fileID: 327126125321452517, guid: f1d78081ca9da4a44a82b3f6d51fbdf3, type: 3}
       propertyPath: m_Name
       value: grass7
@@ -323,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 327126125321452522, guid: f1d78081ca9da4a44a82b3f6d51fbdf3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -12.78
       objectReference: {fileID: 0}
     - target: {fileID: 327126125321452522, guid: f1d78081ca9da4a44a82b3f6d51fbdf3, type: 3}
       propertyPath: m_LocalPosition.y
