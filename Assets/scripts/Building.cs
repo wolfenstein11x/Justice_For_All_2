@@ -9,8 +9,9 @@ public class Building : MonoBehaviour
     [SerializeField] GameObject[] doors;
     [SerializeField] GameObject exterior;
     [SerializeField] GameObject interior;
-    [SerializeField] TilemapRenderer platformsTilemapRenderer;
+    [SerializeField] TilemapRenderer platformsTilemapRenderer, hazardsTilemapRenderer;
     [SerializeField] GameObject indoorBackground;
+
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +57,7 @@ public class Building : MonoBehaviour
     private void EnterBuilding()
     {
         exterior.SetActive(false);
-        platformsTilemapRenderer.enabled = false;
+        SetTilemaps(true);
 
         indoorBackground.SetActive(true);
         interior.SetActive(true);
@@ -68,6 +69,24 @@ public class Building : MonoBehaviour
         interior.SetActive(false);
 
         exterior.SetActive(true);
-        platformsTilemapRenderer.enabled = true;
+        SetTilemaps(false);
+    }
+
+    private void SetTilemaps(bool indoors)
+    {
+        TilemapRenderer[] tilemaps = FindObjectsOfType<TilemapRenderer>();
+
+        foreach (TilemapRenderer tilemap in tilemaps)
+        {
+            if (tilemap.name == "IndoorBackgroundTilemap")
+            {
+                tilemap.enabled = indoors;
+            }
+
+            else
+            {
+                tilemap.enabled = !indoors;
+            }
+        }
     }
 }
