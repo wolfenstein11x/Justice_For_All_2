@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     [SerializeField] AudioSource meleeDamageSound;
 
     protected Animator animator;
-    protected SpriteRenderer renderer;
+    protected SpriteRenderer sr;
     protected CapsuleCollider2D capsuleCollider;
  
 
@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
     protected virtual void Initialize()
     {
         animator = GetComponent<Animator>();
-        renderer = GetComponent<SpriteRenderer>();
+        sr = GetComponent<SpriteRenderer>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
@@ -45,7 +45,7 @@ public class Health : MonoBehaviour
         meleeDamageSound.Play();
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         animator.SetTrigger("die");
 
@@ -61,7 +61,7 @@ public class Health : MonoBehaviour
     // parameter flickerRate must be even number
     IEnumerator FlickerSprite(int flickerRate)
     {
-        Color c = renderer.material.color;
+        Color c = sr.material.color;
 
         float alpha = 1f;
 
@@ -69,7 +69,7 @@ public class Health : MonoBehaviour
         {
             alpha = (i % 2 == 0) ? 0.5f : 1f;
             c.a = alpha;
-            renderer.material.color = c;
+            sr.material.color = c;
             yield return new WaitForSeconds(1.0f / flickerRate);
         }
 

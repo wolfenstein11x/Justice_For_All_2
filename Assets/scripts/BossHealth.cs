@@ -10,9 +10,15 @@ public class BossHealth : PlayerHealth
         Initialize();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Initialize()
     {
-        
+        animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
+        healthBar.SetMaxHealth(hitPoints);
+    }
+
+    protected override void Die()
+    {
+        animator.SetTrigger("die");
     }
 }

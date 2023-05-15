@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : Health
 {
-    [SerializeField] HealthBar healthBar;
+    [SerializeField] protected HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()

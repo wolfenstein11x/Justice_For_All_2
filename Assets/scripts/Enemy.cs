@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float walkSpeed = 2f;
     public float runSpeedMultiplier = 1.5f;
+    [SerializeField] float jumpSpeed;
     [SerializeField] bool hideMode = false;
     
     Rigidbody2D rb;
@@ -32,7 +33,17 @@ public class Enemy : MonoBehaviour
 
     public void Move()
     {
-        rb.velocity = new Vector2(moveSpeed, 0f);
+        rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+    }
+
+    public void Jump(bool up=true)
+    {
+
+
+        //Vector2 jumpVelocity = new Vector2(rb.velocity.x, jumpSpeed);
+        //rb.velocity = jumpVelocity;
+        Vector2 jumpForce = new Vector2(0f, jumpSpeed);
+        rb.AddForce(jumpForce);
     }
 
     public void FlipSprite()
