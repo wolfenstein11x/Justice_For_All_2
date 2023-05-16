@@ -9,8 +9,6 @@ public class Building : MonoBehaviour
     [SerializeField] GameObject[] doors;
     [SerializeField] GameObject exterior;
     [SerializeField] GameObject interior;
-    [SerializeField] TilemapRenderer platformsTilemapRenderer, hazardsTilemapRenderer;
-    [SerializeField] GameObject indoorBackground;
 
 
     // Start is called before the first frame update
@@ -58,16 +56,12 @@ public class Building : MonoBehaviour
     {
         exterior.SetActive(false);
         SetTilemaps(true);
-
-        indoorBackground.SetActive(true);
         interior.SetActive(true);
     }
 
     private void ExitBuilding()
     {
-        indoorBackground.SetActive(false);
         interior.SetActive(false);
-
         exterior.SetActive(true);
         SetTilemaps(false);
     }

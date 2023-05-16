@@ -21,7 +21,15 @@ public class PlayerHealth : Health
 
     public override void TakeDamage(float damage)
     {
-        base.TakeDamage(damage);
+        if (hitPoints <= 0) return;
+
+        hitPoints -= damage;
+        PlayDamageEffect();
+
+        if (hitPoints <= 0)
+        {
+            Die();
+        }
 
         healthBar.SetHealth(hitPoints);
     }

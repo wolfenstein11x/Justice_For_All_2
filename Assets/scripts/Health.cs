@@ -31,6 +31,8 @@ public class Health : MonoBehaviour
     {
         if (hitPoints <= 0) return;
 
+        animator.SetBool("isProvoked", true);
+
         hitPoints -= damage;
         PlayDamageEffect();
 
@@ -53,7 +55,7 @@ public class Health : MonoBehaviour
         capsuleCollider.enabled = false;
     }
 
-    private void PlayDamageEffect()
+    protected void PlayDamageEffect()
     {
         StartCoroutine(FlickerSprite(10));
     }
