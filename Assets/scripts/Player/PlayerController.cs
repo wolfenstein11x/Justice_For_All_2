@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerHealth.IsDead()) return;
+
         Run();
         Jump();
         FlipSprite();

@@ -34,6 +34,12 @@ public class PlayerHealth : Health
         healthBar.SetHealth(hitPoints);
     }
 
+    protected override void Die()
+    {
+        base.Die();
+        FindObjectOfType<MenuController>().ActivateGemOverMenu();
+    }
+
     public bool IsDead()
     {
         return hitPoints <= 0;
