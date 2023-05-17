@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 5313792998650320364}
   m_Layer: 5
   m_Name: grenadeCountText
-  m_TagString: grenadeCount
+  m_TagString: grenades
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1193,7 +1193,7 @@ GameObject:
   - component: {fileID: 5313792999975282854}
   m_Layer: 5
   m_Name: ammoCountText
-  m_TagString: ammoCount
+  m_TagString: ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1327,7 +1327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd64fa52153746428971dd3b864854a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingAmmo: 5
+  startingAmmo: 30
 --- !u!1 &5313793000235158711
 GameObject:
   m_ObjectHideFlags: 0
