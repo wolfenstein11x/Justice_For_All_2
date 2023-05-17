@@ -280,6 +280,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 1
   runSpeedMultiplier: 1.5
+  sightRange: 10
+  sightRaycastLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  jumpSpeed: 0
   hideMode: 0
 --- !u!114 &4028386662228038276
 MonoBehaviour:

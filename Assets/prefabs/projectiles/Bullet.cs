@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
         // de-child bullet from shooter so it does not move with shooter
         transform.parent = null;
 
-        Destroy(gameObject, maxLifetime);
+        Invoke(nameof(BlowUp), maxLifetime);
     }
 
     // Update is called once per frame
@@ -36,11 +36,17 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Health targetHealth = collision.gameObject.GetComponent<Health>();
+        
         if (targetHealth != null)
         {
             targetHealth.TakeDamage(damage);
         }
 
+        BlowUp();
+    }
+
+    public void BlowUp()
+    {
         // show bullet explosion where bullet hits
         GameObject bulletExplosion = Instantiate(impactVFX, transform.position, transform.rotation);
 
