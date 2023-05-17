@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 5313792998650320364}
   m_Layer: 5
   m_Name: grenadeCountText
-  m_TagString: Untagged
+  m_TagString: grenadeCount
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1193,7 +1193,7 @@ GameObject:
   - component: {fileID: 5313792999975282854}
   m_Layer: 5
   m_Name: ammoCountText
-  m_TagString: Untagged
+  m_TagString: ammoCount
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1442,7 +1442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1849781207869760417, guid: e584b5b0495b01a4a9ae716723e4b426, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1849781207869760430, guid: e584b5b0495b01a4a9ae716723e4b426, type: 3}
       propertyPath: m_Pivot.x
@@ -1681,7 +1681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788800437807483992, guid: 5d43469f15a58de439133ca72365d19a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1788800437893226564, guid: 5d43469f15a58de439133ca72365d19a, type: 3}
       propertyPath: m_fontColor32.rgba

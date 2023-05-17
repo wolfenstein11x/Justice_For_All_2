@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class AmmoPickup : MonoBehaviour
 {
-    [SerializeField] AmmoTracker ammoType;
+    [SerializeField] string ammoOrGrenades;
     [SerializeField] int ammoAmount;
     [SerializeField] AudioSource pickupSound;
     [SerializeField] float pickupSoundDuration = 0.25f;
 
     SpriteRenderer spriteRenderer;
+    GameObject ammoType;
 
     bool obtained;
 
@@ -17,6 +18,8 @@ public class AmmoPickup : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         obtained = false;
+
+        ammoType = GameObject.FindWithTag(ammoOrGrenades);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,7 +32,7 @@ public class AmmoPickup : MonoBehaviour
 
         pickupSound.Play();
 
-        ammoType.CollectAmmo(ammoAmount);
+        ammoType.GetComponent<AmmoTracker>().CollectAmmo(ammoAmount);
 
         // after picking up item, make it disappear, but don't destroy yet until sound finished playing
         spriteRenderer.enabled = false;

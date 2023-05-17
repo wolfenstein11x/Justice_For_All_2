@@ -11,13 +11,19 @@ public class Bullet : MonoBehaviour
 
     private Rigidbody2D rb;
     private float orientation;
+    SpriteRenderer sr, srParent, srImpact;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+        srParent = GetComponentInParent<SpriteRenderer>();
         orientation = GetComponentInParent<OrientationTracker>().GetOrientation();
-        
+
+        // set sorting layer to same as the person shooting, so that bullet is visible indoors
+        sr.sortingLayerName = srParent.sortingLayerName;
+
         // de-child bullet from shooter so it does not move with shooter
         transform.parent = null;
 
@@ -38,7 +44,13 @@ public class Bullet : MonoBehaviour
             targetHealth.TakeDamage(damage);
         }
 
+        // show bullet explosion where bullet his
         GameObject bulletExplosion = Instantiate(impactVFX, transform.position, transform.rotation);
+
+        // make bullet explosion sorting layer same as that of the bullet so we can see it indoors
+        srImpact = bulletExplosion.GetComponent<SpriteRenderer>();
+        srImpact.sortingLayerName = sr.sortingLayerName;
+
         Destroy(bulletExplosion, 0.2f);
         Destroy(gameObject);
     }

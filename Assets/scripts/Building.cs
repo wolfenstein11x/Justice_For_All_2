@@ -9,7 +9,10 @@ public class Building : MonoBehaviour
     [SerializeField] GameObject[] doors;
     [SerializeField] GameObject exterior;
     [SerializeField] GameObject interior;
+    [SerializeField] SpriteRenderer[] nearbySprites;
+    [SerializeField] GameObject[] nearbySpriteParents;
 
+    PlayerController pc;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +28,7 @@ public class Building : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        PlayerController pc = collision.gameObject.GetComponent<PlayerController>();
+        pc = collision.gameObject.GetComponent<PlayerController>();
 
         if (pc != null)
         {
@@ -51,9 +54,28 @@ public class Building : MonoBehaviour
         }
     }
 
+    private void SetNearbySprites(bool visible)
+    {
+        foreach (SpriteRenderer sr in nearbySprites)
+        {
+            sr.enabled = visible;
+        }
+
+        foreach (GameObject spriteParent in nearbySpriteParents)
+        {
+            SpriteRenderer[] spriteChildren = spriteParent.GetComponentsInChildren<SpriteRenderer>();
+            foreach(SpriteRenderer sprite in spriteChildren)
+            {
+                sprite.enabled = visible;
+            }
+        }
+    }
+
 
     private void EnterBuilding()
     {
+        SetNearbySprites(false);
+
         exterior.SetActive(false);
         SetTilemaps(true);
         interior.SetActive(true);
@@ -61,6 +83,8 @@ public class Building : MonoBehaviour
 
     private void ExitBuilding()
     {
+        SetNearbySprites(true);
+
         interior.SetActive(false);
         exterior.SetActive(true);
         SetTilemaps(false);
