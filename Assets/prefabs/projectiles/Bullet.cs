@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] float speed = 10f;
     [SerializeField] float damage = 10f;
     [SerializeField] float maxLifetime = 1f;
+    [SerializeField] float explosionLifetime = 0.2f;
     [SerializeField] GameObject impactVFX;
 
     private Rigidbody2D rb;
@@ -18,11 +19,7 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        srParent = GetComponentInParent<SpriteRenderer>();
         orientation = GetComponentInParent<OrientationTracker>().GetOrientation();
-
-        // set sorting layer to same as the person shooting, so that bullet is visible indoors
-        sr.sortingLayerName = srParent.sortingLayerName;
 
         // de-child bullet from shooter so it does not move with shooter
         transform.parent = null;
@@ -44,14 +41,10 @@ public class Bullet : MonoBehaviour
             targetHealth.TakeDamage(damage);
         }
 
-        // show bullet explosion where bullet his
+        // show bullet explosion where bullet hits
         GameObject bulletExplosion = Instantiate(impactVFX, transform.position, transform.rotation);
 
-        // make bullet explosion sorting layer same as that of the bullet so we can see it indoors
-        srImpact = bulletExplosion.GetComponent<SpriteRenderer>();
-        srImpact.sortingLayerName = sr.sortingLayerName;
-
-        Destroy(bulletExplosion, 0.2f);
+        Destroy(bulletExplosion, explosionLifetime);
         Destroy(gameObject);
     }
 

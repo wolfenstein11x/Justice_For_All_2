@@ -9,10 +9,9 @@ public class Building : MonoBehaviour
     [SerializeField] GameObject[] doors;
     [SerializeField] GameObject exterior;
     [SerializeField] GameObject interior;
-    [SerializeField] SpriteRenderer[] nearbySprites;
-    [SerializeField] GameObject[] nearbySpriteParents;
 
     PlayerController pc;
+    SpriteRenderer playerSR;
 
     // Start is called before the first frame update
     void Start()
@@ -29,17 +28,18 @@ public class Building : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         pc = collision.gameObject.GetComponent<PlayerController>();
+        playerSR = collision.gameObject.GetComponent<SpriteRenderer>();
 
         if (pc != null)
         {
             if (pc.AttemptingToEnter() && !locked)
             {
-                EnterBuilding();
+                EnterBuilding(playerSR);
             }
 
             else if (pc.AttemptingToExit())
             {
-                ExitBuilding();
+                ExitBuilding(playerSR);
             }
         }
     }
@@ -54,36 +54,21 @@ public class Building : MonoBehaviour
         }
     }
 
-    private void SetNearbySprites(bool visible)
+   
+    private void EnterBuilding(SpriteRenderer sr)
     {
-        foreach (SpriteRenderer sr in nearbySprites)
-        {
-            sr.enabled = visible;
-        }
+        // change player sorting layer so that we can see him indoors
+        sr.sortingLayerName = "indoorPlayer";
 
-        foreach (GameObject spriteParent in nearbySpriteParents)
-        {
-            SpriteRenderer[] spriteChildren = spriteParent.GetComponentsInChildren<SpriteRenderer>();
-            foreach(SpriteRenderer sprite in spriteChildren)
-            {
-                sprite.enabled = visible;
-            }
-        }
-    }
-
-
-    private void EnterBuilding()
-    {
-        SetNearbySprites(false);
-
+        interior.SetActive(true);
         exterior.SetActive(false);
         SetTilemaps(true);
-        interior.SetActive(true);
     }
 
-    private void ExitBuilding()
+    private void ExitBuilding(SpriteRenderer sr)
     {
-        SetNearbySprites(true);
+        // set player sorting layer back to normal
+        playerSR.sortingLayerName = "player";
 
         interior.SetActive(false);
         exterior.SetActive(true);

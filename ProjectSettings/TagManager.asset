@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ammo
   - grenades
+  - grenadeCount
+  - ammoCount
   layers:
   - Default
   - TransparentFX
@@ -46,9 +48,6 @@ TagManager:
   - name: background
     uniqueID: 1135784815
     locked: 0
-  - name: indoorBackground
-    uniqueID: 655702939
-    locked: 0
   - name: objects
     uniqueID: 987877901
     locked: 0
@@ -63,4 +62,19 @@ TagManager:
     locked: 0
   - name: platforms
     uniqueID: 1834968621
+    locked: 0
+  - name: indoorBackground
+    uniqueID: 655702939
+    locked: 0
+  - name: indoorObjects
+    uniqueID: 802488065
+    locked: 0
+  - name: indoorEnemy
+    uniqueID: 3560126383
+    locked: 0
+  - name: indoorPlayer
+    uniqueID: 3572046611
+    locked: 0
+  - name: VFX
+    uniqueID: 1256307477
     locked: 0
