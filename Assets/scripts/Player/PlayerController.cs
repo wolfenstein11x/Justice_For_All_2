@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
     private bool readyToShoot;
     private bool allowInvoke;
+    private bool dialogueMode = false;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +61,13 @@ public class PlayerController : MonoBehaviour
 
     private void Run()
     {
+        if (dialogueMode)
+        {
+            playerRigidbody.velocity = new Vector2(0f, playerRigidbody.velocity.y);
+            playerAnimator.SetFloat("horizontalSpeed", 0f);
+            return;
+        }
+
         // get player speed from joystick input
         float horizontalSpeed = joystick.Horizontal * maxHorizontalSpeed;
         
@@ -69,6 +77,11 @@ public class PlayerController : MonoBehaviour
 
         // adjust player animation according to absolute value of speed
         playerAnimator.SetFloat("horizontalSpeed", Mathf.Abs(horizontalSpeed));
+    }
+
+    public void SetDialogueMode(bool status)
+    {
+        dialogueMode = status;
     }
 
     private void FlipSprite()

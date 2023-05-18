@@ -85,10 +85,10 @@ public class Enemy : MonoBehaviour
 
     public void TurnAround()
     {
-        Debug.Log(moveSpeed);
+        //Debug.Log(moveSpeed);
         moveSpeed = -moveSpeed;
         FlipSprite();
-        Debug.Log(moveSpeed);
+        //Debug.Log(moveSpeed);
     }
 
     public bool InAttackMode()
