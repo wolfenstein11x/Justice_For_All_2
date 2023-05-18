@@ -29,7 +29,7 @@ public class MenuController : MonoBehaviour
 
     public void HomeButton()
     {
-
+        sceneLoader.LoadMainMenu();
     }
 
     public void PlayAgainButton()
