@@ -4,34 +4,45 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float walkSpeed = 2f;
+    [SerializeField] protected float walkSpeed = 2f;
     public float runSpeedMultiplier = 1.5f;
-    [SerializeField] float sightRange = 10f;
-    [SerializeField] LayerMask sightRaycastLayers;
-    [SerializeField] float jumpSpeed;
-    [SerializeField] bool hideMode = false;
+    [SerializeField] protected float sightRange = 10f;
+    [SerializeField] protected LayerMask sightRaycastLayers;
+    [SerializeField] protected float jumpSpeed;
+    [SerializeField] protected bool hideMode = false;
+    [SerializeField] protected bool facingLeft = false;
     
-    Rigidbody2D rb;
-    OrientationTracker orientationTracker;
-    Animator animator;
-    float moveSpeed;
+    protected Rigidbody2D rb;
+    protected OrientationTracker orientationTracker;
+    protected Animator animator;
+    protected float moveSpeed;
 
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
-        animator.SetBool("hideMode", hideMode);
+        PreInitialize();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        Initialize();
+    }
+
+    protected virtual void PreInitialize()
+    {
+        animator = GetComponent<Animator>();
+        animator.SetBool("hideMode", hideMode);
+    }
+
+    protected virtual void Initialize()
+    {
         rb = GetComponent<Rigidbody2D>();
         orientationTracker = GetComponent<OrientationTracker>();
         moveSpeed = walkSpeed;
+        
+        if (facingLeft) TurnAround();
     }
-
-    
 
     public void Move()
     {
@@ -67,14 +78,17 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        moveSpeed = -moveSpeed;
-        FlipSprite();
+        TurnAround();
+        //moveSpeed = -moveSpeed;
+        //FlipSprite();
     }
 
     public void TurnAround()
     {
+        Debug.Log(moveSpeed);
         moveSpeed = -moveSpeed;
         FlipSprite();
+        Debug.Log(moveSpeed);
     }
 
     public bool InAttackMode()

@@ -42,6 +42,7 @@ public class Shooter : MonoBehaviour
     {
         gunSound.Play();
         GameObject gunMuzzleFlash = Instantiate(muzzleFlash, muzzleFlashPointCrouching.position, muzzleFlash.transform.rotation);
+        gunMuzzleFlash.transform.localScale = new Vector2(1.0f * orientationTracker.GetOrientation(), 1f);
         Bullet firedBullet = Instantiate(bullet, shootPointCrouching.position, bullet.transform.rotation);
         firedBullet.transform.parent = gameObject.transform;
     }

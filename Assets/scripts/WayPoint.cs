@@ -53,6 +53,7 @@ public class WayPoint : MonoBehaviour
     private void MeasureProximity()
     {
         proximityToPatroller = Vector2.Distance(transform.position, patroller.transform.position);
+        //Debug.Log(gameObject.name + ": " + proximityToPatroller);
     }
 
     private void MakeDecision()
