@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Boss : Enemy
 {
-    //[SerializeField] bool faceLeft;
-
+    [SerializeField] DialogueController dialogueController;
     public bool dialogueMode;
 
     private void Awake()
@@ -30,5 +29,10 @@ public class Boss : Enemy
     {
         dialogueMode = status;
         animator.SetBool("dialogueMode", status);
+    }
+
+    public void StartPostBattleDialogue()
+    {
+        dialogueController.StartDialogue();
     }
 }

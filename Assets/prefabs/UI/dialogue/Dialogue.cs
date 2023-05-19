@@ -7,20 +7,18 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {
     [SerializeField] DialogueController dialogueController;
-    [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] List<string> lines;
     [SerializeField] int lettersPerSecond = 10;
     //[SerializeField] TextMeshProUGUI loadingText;
     [SerializeField] GameObject arrow;
 
+    TextMeshProUGUI dialogueText;
     int currentLine = 0;
 
     void Start()
     {
-        //Debug.Log("dialog triggered");
-        //ShowArrow(true);
-        //loadingText.enabled = false;
-        //TypeNextLine();
+        dialogueText = GetComponent<TextMeshProUGUI>();
+        
     }
 
     public void TypeNextLine()

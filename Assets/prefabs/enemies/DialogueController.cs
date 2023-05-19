@@ -51,6 +51,17 @@ public class DialogueController : MonoBehaviour
             dialogueTemplate.SetActive(false);
             joystick.SetActive(true);
             weaponButtons.SetActive(true);
+
+        }
+
+        else if (postBossBattle)
+        {
+            pc.SetDialogueMode(false);
+
+            bossHealthBar.gameObject.SetActive(false);
+            dialogueTemplate.SetActive(false);
+            joystick.SetActive(true);
+            weaponButtons.SetActive(true);
         }
 
         dialogueTrigger.gameObject.SetActive(false);
