@@ -19,11 +19,6 @@ public class Boss : Enemy
         Initialize();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     protected override void PreInitialize()
     {
@@ -31,8 +26,9 @@ public class Boss : Enemy
         animator.SetBool("dialogueMode", dialogueMode);
     }
 
-    private void FaceLeft()
+    public void SetDialogueMode(bool status)
     {
-
+        dialogueMode = status;
+        animator.SetBool("dialogueMode", status);
     }
 }
