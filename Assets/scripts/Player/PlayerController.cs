@@ -94,6 +94,8 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
+        if (dialogueMode) return;
+
         bool onJumpableSurface = (feetCollider.IsTouchingLayers(jumpableSurface));
 
         if (!onJumpableSurface) return;

@@ -2453,6 +2453,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1489781001}
     m_Modifications:
+    - target: {fileID: 3510565762572705670, guid: 2f1733089637fc74a8e8d38d4c9339e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510565762572705670, guid: 2f1733089637fc74a8e8d38d4c9339e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510565762572705670, guid: 2f1733089637fc74a8e8d38d4c9339e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1254218969}
+    - target: {fileID: 3510565762572705670, guid: 2f1733089637fc74a8e8d38d4c9339e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510565762572705670, guid: 2f1733089637fc74a8e8d38d4c9339e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevelButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510565762572705670, guid: 2f1733089637fc74a8e8d38d4c9339e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510565762572705670, guid: 2f1733089637fc74a8e8d38d4c9339e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510565762572705670, guid: 2f1733089637fc74a8e8d38d4c9339e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3875186145601778877, guid: 2f1733089637fc74a8e8d38d4c9339e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2780,7 +2812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5639169510398785340, guid: 76ca6b1a43cf65044b8504ec6d79b6b6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5639169510398785341, guid: 76ca6b1a43cf65044b8504ec6d79b6b6, type: 3}
       propertyPath: m_Pivot.x
