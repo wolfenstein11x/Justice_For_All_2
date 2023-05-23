@@ -5,11 +5,13 @@ using UnityEngine;
 public class Boss : Enemy
 {
     [SerializeField] DialogueController dialogueController;
+    [SerializeField] Key key;
     public bool dialogueMode;
 
     private void Awake()
     {
         PreInitialize();
+        key.gameObject.SetActive(false);
     }
 
     // Start is called before the first frame update
@@ -34,5 +36,10 @@ public class Boss : Enemy
     public void StartPostBattleDialogue()
     {
         dialogueController.StartDialogue();
+    }
+
+    public void RevealKey()
+    {
+        key.gameObject.SetActive(true);
     }
 }

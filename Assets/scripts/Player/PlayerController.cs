@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private bool readyToShoot;
     private bool allowInvoke;
     private bool dialogueMode = false;
+    public bool hasKey = false;
 
     // Start is called before the first frame update
     void Start()
@@ -185,5 +186,15 @@ public class PlayerController : MonoBehaviour
     public bool AttemptingToExit()
     {
         return joystick.Vertical < -enterExitBuildingThreshold;
+    }
+
+    public void UseKey()
+    {
+        hasKey = false;
+    }
+
+    public void PickupKey()
+    {
+        hasKey = true;
     }
 }

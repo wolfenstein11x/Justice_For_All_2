@@ -18,6 +18,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] float startDialogueDelay = 0.25f;
 
     MusicController musicController;
+    SceneLoader sceneLoader;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class DialogueController : MonoBehaviour
         dialogueTemplate.SetActive(false);
         pc = FindObjectOfType<PlayerController>();
         musicController = FindObjectOfType<MusicController>();
+        sceneLoader = FindObjectOfType<SceneLoader>();
     }
 
     public void StartDialogue()
@@ -87,11 +89,13 @@ public class DialogueController : MonoBehaviour
             dialogueTemplate.SetActive(false);
             joystick.SetActive(true);
             weaponButtons.SetActive(true);
+            FindObjectOfType<Boss>().RevealKey();
         }
 
         else if (preArrest)
         {
             dialogueTemplate.SetActive(false);
+            sceneLoader.LoadNextLevel();
         }
 
         dialogueTrigger.gameObject.SetActive(false);

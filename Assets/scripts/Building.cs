@@ -32,7 +32,13 @@ public class Building : MonoBehaviour
 
         if (pc != null)
         {
-            if (pc.AttemptingToEnter() && !locked)
+            if (pc.AttemptingToEnter() && locked && pc.hasKey)
+            {
+                LockUnlockBuilding(false);
+                return;
+            }
+
+            else if (pc.AttemptingToEnter() && !locked)
             {
                 EnterBuilding(playerSR);
             }
