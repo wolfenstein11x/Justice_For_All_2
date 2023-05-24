@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    [SerializeField] Bullet bullet;
+    [SerializeField] protected Bullet bullet;
     [SerializeField] GameObject muzzleFlash;
-    [SerializeField] AudioSource gunSound;
-    [SerializeField] Transform shootPoint;
+    [SerializeField] protected AudioSource gunSound;
+    [SerializeField] protected Transform shootPoint;
     [SerializeField] Transform muzzleFlashPoint;
     [SerializeField] Transform shootPointCrouching;
     [SerializeField] Transform muzzleFlashPointCrouching;
-    [SerializeField] float shootRange;
-    [SerializeField] LayerMask shootRaycastLayers;
+    [SerializeField] protected float shootRange;
+    [SerializeField] protected LayerMask shootRaycastLayers;
 
-    private OrientationTracker orientationTracker;
+    protected OrientationTracker orientationTracker;
 
 
     // Start is called before the first frame update
@@ -29,7 +29,7 @@ public class Shooter : MonoBehaviour
         
     }
 
-    public void Shoot()
+    public virtual void Shoot()
     {
         gunSound.Play();
         GameObject gunMuzzleFlash = Instantiate(muzzleFlash, muzzleFlashPoint.position, muzzleFlash.transform.rotation);
@@ -47,7 +47,7 @@ public class Shooter : MonoBehaviour
         firedBullet.transform.parent = gameObject.transform;
     }
 
-    public bool InShootingRange()
+    public virtual bool InShootingRange()
     {
         float orientation = orientationTracker.GetOrientation();
         RaycastHit2D hit = Physics2D.Raycast(shootPoint.position, Vector2.right * new Vector2(orientation, 0f), shootRange, shootRaycastLayers);
