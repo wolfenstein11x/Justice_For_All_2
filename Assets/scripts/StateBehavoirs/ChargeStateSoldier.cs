@@ -27,11 +27,12 @@ public class ChargeStateSoldier : StateMachineBehaviour
         if (player.IsDead())
         {
             animator.SetBool("shootMode", false);
+            return;
         }
 
         if (meleeAttacker.InMeleeRange())
         {
-            animator.SetBool("shootMode", false);
+            animator.SetBool("meleeMode", true);
         }
 
         if (!shooter.InShootingRange())
