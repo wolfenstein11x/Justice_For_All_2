@@ -870,9 +870,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8779508498765260807}
     m_Modifications:
+    - target: {fileID: 369306030018030319, guid: 96c8f197208d9ee4491649fe87a4fc33, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308192764058562821, guid: 96c8f197208d9ee4491649fe87a4fc33, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4646008965095676460, guid: 96c8f197208d9ee4491649fe87a4fc33, type: 3}
       propertyPath: m_Name
       value: bush1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4788488080123589626, guid: 96c8f197208d9ee4491649fe87a4fc33, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8050056674367807914, guid: 96c8f197208d9ee4491649fe87a4fc33, type: 3}
       propertyPath: m_RootOrder
