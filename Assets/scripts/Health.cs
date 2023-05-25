@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] protected float hitPoints = 20f;
+    public float hitPoints = 20f;
     [SerializeField] protected AudioSource meleeDamageSound;
 
     protected Animator animator;
