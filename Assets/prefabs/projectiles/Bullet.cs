@@ -8,7 +8,9 @@ public class Bullet : MonoBehaviour
     [SerializeField] float damage = 10f;
     [SerializeField] float maxLifetime = 1f;
     [SerializeField] float explosionLifetime = 0.2f;
+    [SerializeField] float explosionSoundLifetime = 1.2f;
     [SerializeField] GameObject impactVFX;
+    [SerializeField] GameObject impactSound;
 
     private Rigidbody2D rb;
     private float orientation;
@@ -50,7 +52,14 @@ public class Bullet : MonoBehaviour
         // show bullet explosion where bullet hits
         GameObject bulletExplosion = Instantiate(impactVFX, transform.position, transform.rotation);
 
+        if (impactSound != null)
+        {
+            GameObject explosionSound = Instantiate(impactSound, transform.position, transform.rotation);
+            Destroy(explosionSound, explosionSoundLifetime);
+        }
+
         Destroy(bulletExplosion, explosionLifetime);
+        
         Destroy(gameObject);
     }
 
