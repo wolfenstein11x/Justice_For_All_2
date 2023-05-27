@@ -202,12 +202,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: ShootButton
-        m_Mode: 1
+        m_MethodName: PowerupShootButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -335,8 +335,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: ShootButton
-        m_Mode: 1
+        m_MethodName: PowerupShootButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -589,12 +589,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: ShootButton
-        m_Mode: 1
+        m_MethodName: PowerupShootButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -746,6 +746,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerupDuration: 10
+  powerupIndex: 1
+  powerupSound: {fileID: 2164896143331134124, guid: 578fca3ac0ea6c64290ed0815caee72a, type: 3}
+  soundDuration: 0.755
 --- !u!1 &2739090875529484236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,10 +1266,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a14699468d7984eb20cd974c997019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunButton: {fileID: 5313792999725662013}
-  greenBlastButton: {fileID: 1055699020}
-  blueBlastButton: {fileID: 736676839}
-  purpleBlastButton: {fileID: 1942181093}
+  shootButtons:
+  - {fileID: 5313792999725662013}
+  - {fileID: 1055699020}
+  - {fileID: 736676839}
+  - {fileID: 1942181093}
 --- !u!1 &5313792998750288314
 GameObject:
   m_ObjectHideFlags: 0

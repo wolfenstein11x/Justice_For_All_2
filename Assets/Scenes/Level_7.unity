@@ -159,11 +159,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4462797087115430836, guid: 037e0e83fda40524089fe07fc61e51e0, type: 3}
   m_PrefabInstance: {fileID: 1300162840}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &236967216 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5313792999725662013, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
-  m_PrefabInstance: {fileID: 5313792998413746642}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &250238014 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5313792998650320364, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
@@ -583,11 +578,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4765061867154780133, guid: 6c650ed79fa954f4bb6860c7e9b02210, type: 3}
   m_PrefabInstance: {fileID: 562001796}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &736676839 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 736676839, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
-  m_PrefabInstance: {fileID: 5313792998413746642}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &784097157
 GameObject:
@@ -69086,11 +69076,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fce79fcb13a990449f6bcd1c89758e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1055699020 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1055699020, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
-  m_PrefabInstance: {fileID: 5313792998413746642}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1086727433
 GameObject:
   m_ObjectHideFlags: 0
@@ -92699,11 +92684,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1942181093 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1942181093, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
-  m_PrefabInstance: {fileID: 5313792998413746642}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1992908534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93100,26 +93080,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 534938848, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
-      propertyPath: shootButtons.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 534938848, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
-      propertyPath: shootButtons.Array.data[0]
-      value: 
-      objectReference: {fileID: 236967216}
-    - target: {fileID: 534938848, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
-      propertyPath: shootButtons.Array.data[1]
-      value: 
-      objectReference: {fileID: 1055699020}
-    - target: {fileID: 534938848, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
-      propertyPath: shootButtons.Array.data[2]
-      value: 
-      objectReference: {fileID: 736676839}
-    - target: {fileID: 534938848, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
-      propertyPath: shootButtons.Array.data[3]
-      value: 
-      objectReference: {fileID: 1942181093}
     - target: {fileID: 736676841, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -93249,10 +93209,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1521223814, guid: 93cf2b4166fd3cb41a6268dfa1be73b8, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 8157354322196353880, guid: 93cf2b4166fd3cb41a6268dfa1be73b8, type: 3}
       propertyPath: joystick
       value: 
@@ -93272,14 +93228,6 @@ PrefabInstance:
     - target: {fileID: 8157354322196353889, guid: 93cf2b4166fd3cb41a6268dfa1be73b8, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8157354322196353894, guid: 93cf2b4166fd3cb41a6268dfa1be73b8, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8157354322196353894, guid: 93cf2b4166fd3cb41a6268dfa1be73b8, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1421440475
       objectReference: {fileID: 0}
     - target: {fileID: 8157354322196353895, guid: 93cf2b4166fd3cb41a6268dfa1be73b8, type: 3}
       propertyPath: m_RootOrder

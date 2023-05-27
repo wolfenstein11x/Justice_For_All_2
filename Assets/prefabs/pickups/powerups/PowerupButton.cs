@@ -7,6 +7,8 @@ public class PowerupButton : MonoBehaviour
 {
     [SerializeField] float powerupDuration = 10f;
     [SerializeField] int powerupIndex = 1;
+    [SerializeField] AudioSource powerupSound;
+    [SerializeField] float soundDuration;
 
     Image buttonImage;
     Button button;
@@ -39,6 +41,8 @@ public class PowerupButton : MonoBehaviour
     IEnumerator PowerupButtonCoroutine()
     {
         attackButtons.ActivateShootButton(powerupIndex);
+        AudioSource powerupSoundInstance = Instantiate(powerupSound, transform.position, transform.rotation);
+        Destroy(powerupSoundInstance, soundDuration);
 
         Color c = buttonImage.color;
         for (float alpha = 1f; alpha >= 0; alpha -= 0.01f)

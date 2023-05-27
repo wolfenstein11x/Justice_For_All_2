@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private LayerMask jumpableSurface;
     private OrientationTracker orientationTracker;
     private Shooter shooter;
+    private PowerupShooter powerupShooter;
     private MeleeAttacker meleeAttacker;
     private PlayerHealth playerHealth;
 
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
         allowInvoke = true;
         orientationTracker = GetComponent<OrientationTracker>();
         shooter = GetComponent<Shooter>();
+        powerupShooter = GetComponent<PowerupShooter>();
         meleeAttacker = GetComponent<MeleeAttacker>();
     }
 
@@ -136,6 +138,12 @@ public class PlayerController : MonoBehaviour
             Invoke("ResetShot", timeBetweenShots);
             allowInvoke = false;
         }
+    }
+
+    public void PowerupShootButton(int powerupIdx)
+    {
+        playerAnimator.SetTrigger("shoot");
+        powerupShooter.ShootPowerupBlast(powerupIdx);
     }
 
     public void GrenadeButton()
