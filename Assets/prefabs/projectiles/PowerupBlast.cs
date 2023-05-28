@@ -20,7 +20,7 @@ public class PowerupBlast : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponentInChildren<SpriteRenderer>();
         orientation = GetComponentInParent<OrientationTracker>().GetOrientation();
 
         // de-child bullet from shooter so it does not move with shooter
@@ -33,6 +33,51 @@ public class PowerupBlast : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(speed * orientation, 0f);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Health targetHealth = collision.gameObject.GetComponent<Health>();
+        Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+
+        // hit enemy bullet, destroy bullet and keep going
+        if (bullet != null)
+        {
+            bullet.BlowUp();
+        }
+
+        // hit something with health, deal damage and blow up
+        else if (targetHealth != null)
+        {
+            targetHealth.TakeDamage(damage);
+            FadeAway();
+        }
+
+        // hit wall, blow up
+        else
+        {
+            FadeAway();
+        }
+
+    
+    }
+
+    private void FadeAway()
+    {
+        StartCoroutine(FadeAwayCoroutine());
+    }
+
+    IEnumerator FadeAwayCoroutine()
+    {
+        Color c = sr.color;
+        for (float alpha = 1f; alpha >= 0; alpha -= 0.1f)
+        {
+            c.a = alpha;
+            sr.color = c;
+            yield return new WaitForSeconds(0.025f);
+        }
+
+        Destroy(gameObject);
     }
 
     public void BlowUp()

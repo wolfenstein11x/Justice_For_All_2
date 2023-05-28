@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5149601599699135698}
   - component: {fileID: -6077364743831621394}
   - component: {fileID: 3830366711103417731}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: purpleBlast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,6 +101,10 @@ PrefabInstance:
     - target: {fileID: 1316742630879122, guid: 44791a28f6c4fd748912e794b84fc94b, type: 3}
       propertyPath: m_Name
       value: Explosion9_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316742630879122, guid: 44791a28f6c4fd748912e794b84fc94b, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4629710722495892, guid: 44791a28f6c4fd748912e794b84fc94b, type: 3}
       propertyPath: m_RootOrder

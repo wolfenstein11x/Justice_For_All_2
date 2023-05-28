@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3789324687012119693}
   - component: {fileID: -8560280748785775264}
   - component: {fileID: 4366817021386011924}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: greenBlast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,6 +101,10 @@ PrefabInstance:
     - target: {fileID: 1102844367628936, guid: 6aff1730488694d499f43306133c14bb, type: 3}
       propertyPath: m_Name
       value: Explosion10_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102844367628936, guid: 6aff1730488694d499f43306133c14bb, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4988093512764254, guid: 6aff1730488694d499f43306133c14bb, type: 3}
       propertyPath: m_RootOrder

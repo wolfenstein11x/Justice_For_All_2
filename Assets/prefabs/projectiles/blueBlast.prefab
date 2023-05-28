@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 10089586357894031}
   - component: {fileID: -4402677023232044023}
   - component: {fileID: -2025056526159037550}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: blueBlast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,6 +101,10 @@ PrefabInstance:
     - target: {fileID: 1960920750753380, guid: 80eb4c555122c27429e13fb4ac1ae82f, type: 3}
       propertyPath: m_Name
       value: projectile23_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960920750753380, guid: 80eb4c555122c27429e13fb4ac1ae82f, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4786504276738104, guid: 80eb4c555122c27429e13fb4ac1ae82f, type: 3}
       propertyPath: m_RootOrder
