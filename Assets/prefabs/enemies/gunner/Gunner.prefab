@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3052647911363985694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0.05, z: 0}
+  m_LocalPosition: {x: 0.979, y: 0.014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -179,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -313090797
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: ede26f658b5e2c543b55b9d94dd76010, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -353,9 +353,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a757ac729901d428e9b5374576fbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 8954896665401754021, guid: 1f20c09334c11734780150d4e3e5d993, type: 3}
-  muzzleFlash: {fileID: 4813364705584113650, guid: 7e6a0172119d5d14fa2f1c337abf5dd8, type: 3}
-  gunSound: {fileID: 0}
+  bullet: {fileID: 9203581087165867108, guid: 8ee30508c6230024cb81c5c606f3a2cc, type: 3}
+  muzzleFlash: {fileID: 8118733940610384156, guid: f848be0d8be780046b03940875e07cc5, type: 3}
+  gunSound: {fileID: 541081747354038722}
   shootPoint: {fileID: 1098814433889123285}
   muzzleFlashPoint: {fileID: 367220487709785218}
   shootPointCrouching: {fileID: 0}
@@ -421,6 +421,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 063e8985d08aebe448bb7de9e38f3579, type: 3}
+--- !u!82 &541081747354038722 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1227596150940335072, guid: 063e8985d08aebe448bb7de9e38f3579, type: 3}
+  m_PrefabInstance: {fileID: 1624395159235152418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5467047885733566664 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6725521159177130730, guid: 063e8985d08aebe448bb7de9e38f3579, type: 3}
