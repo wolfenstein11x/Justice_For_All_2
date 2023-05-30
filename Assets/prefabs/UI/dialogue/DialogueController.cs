@@ -91,6 +91,7 @@ public class DialogueController : MonoBehaviour
             dialogueTemplate.SetActive(false);
             joystick.SetActive(true);
             weaponButtons.SetActive(true);
+            powerups.SetActive(true);
             FindObjectOfType<Boss>().RevealKey();
         }
 
