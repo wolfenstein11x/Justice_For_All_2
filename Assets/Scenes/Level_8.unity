@@ -286,6 +286,7 @@ MonoBehaviour:
   dialogueTrigger: {fileID: 1503989456}
   joystick: {fileID: 784939355}
   weaponButtons: {fileID: 938739669}
+  powerups: {fileID: 447112557}
   startDialogueDelay: 0.25
 --- !u!224 &176353756 stripped
 RectTransform:
@@ -696,6 +697,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &447112557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 668000230, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+  m_PrefabInstance: {fileID: 5313792998413746642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &466849214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,8 +716,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueController: {fileID: 4938849328921108641}
   lines:
-  - Oof! You've knocked me down, but not out!
-  - You won this time, but you ain't seen the last of me!
+  - Arrg! I guess I underestimated you...
+  - I won't make that mistake again!
   lettersPerSecond: 50
   arrow: {fileID: 1101033991}
 --- !u!1 &481307670
@@ -1740,7 +1746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8144467965372535028, guid: 6207b833b16628b4e94b1b1e19dccfa4, type: 3}
       propertyPath: jumpProbability
-      value: 0.6
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 8144467965372535028, guid: 6207b833b16628b4e94b1b1e19dccfa4, type: 3}
       propertyPath: turnProbability
@@ -87815,6 +87821,7 @@ MonoBehaviour:
   dialogueTrigger: {fileID: 4938849330237561640}
   joystick: {fileID: 784939355}
   weaponButtons: {fileID: 938739669}
+  powerups: {fileID: 447112557}
   startDialogueDelay: 0.25
 --- !u!1 &4938849328921108654
 GameObject:
