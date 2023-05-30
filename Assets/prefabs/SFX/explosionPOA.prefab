@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 268955060954115855}
   - component: {fileID: 268955060954115854}
+  - component: {fileID: -2582018511053618639}
   m_Layer: 0
   m_Name: explosionPOA
   m_TagString: Untagged
@@ -128,3 +129,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-2582018511053618639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268955060954115853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f1236e987a0044ea5e33f05d604403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

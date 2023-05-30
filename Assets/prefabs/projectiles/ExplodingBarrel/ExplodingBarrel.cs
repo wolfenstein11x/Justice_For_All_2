@@ -13,6 +13,7 @@ public class ExplodingBarrel : MonoBehaviour
     [SerializeField] float explosionSoundDuration;
 
     Animator animator;
+    bool exploded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,15 +29,20 @@ public class ExplodingBarrel : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (exploded) return;
+        exploded = true;
+
         animator.SetBool("exploded", true);
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
         //Debug.Log("explosion position: (" + transform.position.x + "," + transform.position.y + ")");
         foreach (Collider2D collider in colliders)
         {
-            PlayerHealth playerHealth = collider.GetComponent<PlayerHealth>();
+            if (collider.gameObject.tag == "boss") continue;
 
-            if (playerHealth != null)
+            Health targetHealth = collider.GetComponent<Health>();
+
+            if (targetHealth != null)
             {
                 float distanceToExplosion = Vector2.Distance(transform.position, collider.transform.position);
 
@@ -48,11 +54,10 @@ public class ExplodingBarrel : MonoBehaviour
 
                 //Debug.Log(explosionDamage + " damage at distance of " + distanceToExplosion);
 
-                playerHealth.TakeDamage(explosionDamage);
+                targetHealth.TakeDamage(explosionDamage);
             }
-
-
         }
+
     }
 
     public void Explode()
@@ -62,5 +67,6 @@ public class ExplodingBarrel : MonoBehaviour
 
         Destroy(explosionSoundInstance, explosionSoundDuration);
         Destroy(explosionInstance, explosionDuration);
+        Destroy(gameObject, explosionDuration);
     }
 }
