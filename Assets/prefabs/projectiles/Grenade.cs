@@ -55,7 +55,7 @@ public class Grenade : MonoBehaviour
 
     }
 
-    private void DealExplosionDamage()
+    protected void DealExplosionDamage()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
         //Debug.Log("explosion position: (" + transform.position.x + "," + transform.position.y + ")");
