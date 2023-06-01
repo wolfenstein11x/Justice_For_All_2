@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Lever : ObjectHealth
 {
+    [SerializeField] MovingDoor movingDoor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +18,6 @@ public class Lever : ObjectHealth
 
         //breakSound.Play();
         animator.SetBool("switchedOn", true);
+        movingDoor.Open();
     }
 }

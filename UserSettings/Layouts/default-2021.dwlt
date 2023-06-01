@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Simulator
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 29
+  controlID: 143
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,9 +120,9 @@ MonoBehaviour:
     y: 561
     width: 1466
     height: 386
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 17}
   - {fileID: 22}
@@ -130,8 +130,8 @@ MonoBehaviour:
   - {fileID: 15}
   - {fileID: 13}
   - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 30
+  controlID: 73
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 31
+  controlID: 74
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -352,7 +352,7 @@ MonoBehaviour:
     m_CachedPref: 50
     m_ControlHash: 1964396721
     m_PrefName: Preview_TilemapBrushInspector
-  m_Palette: {fileID: 5757465980018219595, guid: a16b10f537f668f4d82c96a0ddffaf39, type: 3}
+  m_Palette: {fileID: 7425513580850206763, guid: 89e057bc8d58c2c4cb80c410ce11c0af, type: 3}
   m_DrawGridGizmo: 1
   m_DrawGizmos: 0
 --- !u!114 &14
@@ -386,7 +386,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -112986
+  m_LastSelectedObjectID: -17784
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -440,6 +440,7 @@ MonoBehaviour:
     - {fileID: 5751478871217616546, guid: c4e765eac5c626e459f0a23f9d8de3ab, type: 2}
     - {fileID: 2451401465394407725, guid: 85c603c0e04aa734f90dcc7481ca45c7, type: 2}
     - {fileID: -2816916752579868846, guid: 4079046720bb11f46874a3b6f5b8dc9f, type: 2}
+    - {fileID: -7768895390227545893, guid: 5882958c636297542913a98d78804ae9, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.925
       e01: 0
@@ -793,10 +794,26 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 0.6302872
+      e01: 0
+      e02: 0
+      e03: 25.759583
+      e10: 0
+      e11: 0.6302872
+      e12: 0
+      e13: -14.958054
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 4079046720bb11f46874a3b6f5b8dc9f, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 5882958c636297542913a98d78804ae9, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -2816916752579868846, guid: 4079046720bb11f46874a3b6f5b8dc9f, type: 2}
+  - m_Target: {fileID: -7768895390227545893, guid: 5882958c636297542913a98d78804ae9, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -911,22 +928,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/prefabs/SFX
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/prefabs/SFX
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\repos\J4A_mobile
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1543}
-    m_SelectedIDs: 88720000
-    m_LastClickedID: 29320
-    m_ExpandedIDs: 000000002472000026720000287200002a7200002c7200002e72000030720000327200003472000036720000387200003a7200003c7200005a72000068720000707200007272000074720000aa7200002e18020000ca9a3b
+    scrollPos: {x: 0, y: 1047}
+    m_SelectedIDs: 6c760000
+    m_LastClickedID: 30316
+    m_ExpandedIDs: 000000001476000016760000187600001a7600001c7600001e76000020760000227600002476000026760000287600002a7600002c760000507600006a760000547f0000aab7000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -954,7 +971,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002472000026720000287200002a7200002c7200002e72000030720000327200003472000036720000387200003a7200003c720000
+    m_ExpandedIDs: 000000001476000016760000187600001a7600001c7600001e76000020760000227600002476000026760000287600002a7600002c760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -979,10 +996,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 88baffff
+    m_LastClickedInstanceID: -17784
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000a6cd0000ba690000ca7600008a750000e4670000de6700007ca60000b0ca0000
+    m_ExpandedInstanceIDs: c6230000a6cd0000ba690000ca7600008a750000e4670000de6700007ca60000b0ca0000786c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1084,20 +1101,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5a100200
-      m_LastClickedID: 0
-      m_ExpandedIDs: 562dfeff7e33feffe67bfeffc882feff8cecfeff36a5ffff9aabffffd2cfffff06fbffffa0620000d80a0100ac10020000110200341102004e110200
+      m_SelectedIDs: 88baffff
+      m_LastClickedID: -17784
+      m_ExpandedIDs: 287fffff88bafffffaf7ffff06fbffffd0630000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: CastleSong
-        m_OriginalName: CastleSong
+        m_Name: wayPoint (2)
+        m_OriginalName: wayPoint (2)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -116270
+        m_UserData: -1400
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -1391,9 +1408,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -9.554375, y: 0.11102257, z: 0.0194593}
+    m_Target: {x: -7.0672913, y: 3.2265315, z: -0.044228967}
     speed: 2
-    m_Value: {x: -9.465487, y: 0.22722784, z: 0.01723056}
+    m_Value: {x: -6.568025, y: 3.3007717, z: -0.047408897}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1444,9 +1461,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.7298255
+    m_Target: 6.748587
     speed: 2
-    m_Value: 4.952697
+    m_Value: 7.066583
   m_Ortho:
     m_Target: 1
     speed: 2
