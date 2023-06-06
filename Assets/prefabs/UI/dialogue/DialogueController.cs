@@ -31,7 +31,6 @@ public class DialogueController : MonoBehaviour
         dialogueTemplate.SetActive(false);
         pc = FindObjectOfType<PlayerController>();
         musicController = FindObjectOfType<MusicController>();
-        sceneLoader = FindObjectOfType<SceneLoader>();
     }
 
     public void StartDialogue()
@@ -98,6 +97,7 @@ public class DialogueController : MonoBehaviour
         else if (preArrest)
         {
             dialogueTemplate.SetActive(false);
+            sceneLoader = FindObjectOfType<SceneLoader>();
             sceneLoader.LoadNextLevel();
         }
 
