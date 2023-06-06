@@ -70,7 +70,6 @@ GameObject:
   - component: {fileID: 1431930725082484687}
   - component: {fileID: 1992908537}
   - component: {fileID: 1992908538}
-  - component: {fileID: 2990783546106001673}
   m_Layer: 0
   m_Name: levelEndSign
   m_TagString: Untagged
@@ -173,18 +172,6 @@ BoxCollider2D:
   m_Size: {x: 1.0962167, y: 11.828762}
   m_EdgeRadius: 0
 --- !u!114 &1992908538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2974609677595526417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76a79bfaf19f22e42952654e9f6b84fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2990783546106001673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
