@@ -113,7 +113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8157354321284830341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.172, y: -0.08, z: 0}
+  m_LocalPosition: {x: 0.172, y: 0.067, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meleeRange: 0.4
   meleePos: {fileID: 8157354321284830586}
-  meleeDamage: 5
+  meleeDamage: 20
   meleeRaycastLayers:
     serializedVersion: 2
     m_Bits: 16896

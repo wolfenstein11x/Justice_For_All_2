@@ -161,6 +161,7 @@ MonoBehaviour:
     m_Bits: 0
   jumpSpeed: 0
   hideMode: 0
+  facingLeft: 0
 --- !u!114 &6362568430826059319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4185f9b989653478ed7f48da943aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 20
+  hitPoints: 30
   meleeDamageSound: {fileID: 2726054771159812711}
 --- !u!114 &6362568430826059307
 MonoBehaviour:
@@ -267,7 +268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6362568431381716881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19, y: -0.35, z: 0}
+  m_LocalPosition: {x: 0.567, y: -0.175, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
