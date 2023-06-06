@@ -26,7 +26,7 @@ public class PowerupBlast : MonoBehaviour
         // de-child bullet from shooter so it does not move with shooter
         transform.parent = null;
 
-        Destroy(gameObject, maxLifetime);
+        Invoke(nameof(FadeAway), maxLifetime);
     }
 
     // Update is called once per frame
