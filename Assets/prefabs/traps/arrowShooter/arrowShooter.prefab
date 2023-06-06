@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1290736804}
   - component: {fileID: 1290736808}
   - component: {fileID: 1290736809}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: arrowShooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e55364a210f847a16b150c0f60872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
+  hitPoints: 30
   meleeDamageSound: {fileID: 1299613535042695865}
   breakSound: {fileID: 6312545299057443295}
 --- !u!114 &1290736804
