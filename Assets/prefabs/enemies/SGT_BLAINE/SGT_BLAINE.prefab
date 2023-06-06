@@ -284,7 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meleeRange: 0.5
   meleePos: {fileID: 6808122370744905683}
-  meleeDamage: 15
+  meleeDamage: 40
   meleeRaycastLayers:
     serializedVersion: 2
     m_Bits: 256
@@ -301,9 +301,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e74e953be02974a9a04f091324240b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 200
+  hitPoints: 300
   meleeDamageSound: {fileID: 7418844072430544425}
   healthBar: {fileID: 0}
+  healthThreshold1: 0
+  healthThreshold2: 0
 --- !u!95 &1573779083204177136
 Animator:
   serializedVersion: 5

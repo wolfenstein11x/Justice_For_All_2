@@ -23,14 +23,14 @@ public class BossHealth : PlayerHealth
         {
             if (reachedThreshold2) return;
             reachedThreshold2 = true;
-            bossTrapActivator.ActivateBossTrap(1);
+            if (bossTrapActivator != null) bossTrapActivator.ActivateBossTrap(1);
         }
 
         else if (hitPoints <= healthThreshold1)
         {
             if (reachedThreshold1) return;
             reachedThreshold1 = true;
-            bossTrapActivator.ActivateBossTrap(0);
+            if (bossTrapActivator != null) bossTrapActivator.ActivateBossTrap(0);
         }
     }
 
@@ -46,7 +46,7 @@ public class BossHealth : PlayerHealth
     protected override void Die()
     {
         animator.SetTrigger("die");
-        bossTrapActivator.DisableAllBossTraps();
+        if (bossTrapActivator != null) bossTrapActivator.DisableAllBossTraps();
         boss.StartPostBattleDialogue();
         
     }
