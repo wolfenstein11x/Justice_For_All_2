@@ -9,6 +9,7 @@ public class Building : MonoBehaviour
     [SerializeField] GameObject[] doors;
     [SerializeField] GameObject exterior;
     [SerializeField] GameObject interior;
+    [SerializeField] Enemy[] outsideEnemies;
 
     PlayerController pc;
     SpriteRenderer playerSR;
@@ -69,6 +70,9 @@ public class Building : MonoBehaviour
         interior.SetActive(true);
         exterior.SetActive(false);
         SetTilemaps(true);
+
+        // prevent any enemies outside the house from attacking player through the walls
+        SetOutsideEnemies(false);
     }
 
     private void ExitBuilding(SpriteRenderer sr)
@@ -79,6 +83,8 @@ public class Building : MonoBehaviour
         interior.SetActive(false);
         exterior.SetActive(true);
         SetTilemaps(false);
+
+        SetOutsideEnemies(true);
     }
 
     private void SetTilemaps(bool indoors)
@@ -95,6 +101,17 @@ public class Building : MonoBehaviour
             else
             {
                 tilemap.enabled = !indoors;
+            }
+        }
+    }
+
+    private void SetOutsideEnemies(bool status)
+    {
+        foreach(Enemy enemy in outsideEnemies)
+        {
+            if (enemy.gameObject != null)
+            {
+                enemy.gameObject.SetActive(status);
             }
         }
     }
