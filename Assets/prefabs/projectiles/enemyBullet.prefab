@@ -48,10 +48,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  damage: 5
+  damage: 10
   maxLifetime: 0.3
   explosionLifetime: 0.2
+  explosionSoundLifetime: 1.2
   impactVFX: {fileID: 3523049988676160250, guid: de6d0a30b2bf13e4389bc9f2a15b5780, type: 3}
+  impactSound: {fileID: 0}
 --- !u!50 &4957401057800887382
 Rigidbody2D:
   serializedVersion: 4
