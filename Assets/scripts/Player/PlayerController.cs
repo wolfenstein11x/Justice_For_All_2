@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private bool readyToShoot;
     private bool allowInvoke;
     private bool dialogueMode = false;
+    private bool jumpReset = true;
     public bool hasKey = false;
 
     // Start is called before the first frame update
@@ -97,19 +98,28 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
+        if (joystick.Vertical < jumpThreshold)
+        {
+            jumpReset = true;
+        }
+
         if (dialogueMode) return;
 
         bool onJumpableSurface = (feetCollider.IsTouchingLayers(jumpableSurface));
 
         if (!onJumpableSurface) return;
+
+        if (!jumpReset) return;
        
         if (joystick.Vertical >= jumpThreshold)
         {
             Vector2 playerVelocity = new Vector2(playerRigidbody.velocity.x, maxJumpSpeed);
             playerRigidbody.velocity = playerVelocity;
+            jumpReset = false;
         }
-
     }
+
+    
 
     public void ShootButton()
     {
