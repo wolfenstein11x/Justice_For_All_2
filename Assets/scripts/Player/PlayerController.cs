@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerHealth = GetComponent<PlayerHealth>();
         feetCollider = GetComponentInChildren<BoxCollider2D>();
-        jumpableSurface = LayerMask.GetMask("Ground") | LayerMask.GetMask("Hazards"); // | LayerMaks.GetMask("") ...
+        jumpableSurface = LayerMask.GetMask("Ground") | LayerMask.GetMask("Hazards") | LayerMask.GetMask("Breakables"); // ...
         readyToShoot = true;
         allowInvoke = true;
         orientationTracker = GetComponent<OrientationTracker>();
