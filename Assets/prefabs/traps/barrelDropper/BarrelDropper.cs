@@ -9,11 +9,19 @@ public class BarrelDropper : MonoBehaviour
     [SerializeField] float delayMax = 6f;
 
     private bool allowInvoke;
+    private BossHealth bossHealth;
 
     // Start is called before the first frame update
     void Start()
     {
         allowInvoke = true;
+        bossHealth = FindObjectOfType<BossHealth>();
+    }
+
+    private void OnDisable()
+    {
+        CancelInvoke(nameof(DropBarrel));
+        //Debug.Log("cancelled invoke");
     }
 
     // Update is called once per frame

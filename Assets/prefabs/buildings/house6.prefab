@@ -361,6 +361,7 @@ MonoBehaviour:
   - {fileID: 4527799816832688216}
   exterior: {fileID: 4527799817327779394}
   interior: {fileID: 4527799816165421100}
+  outsideEnemies: []
 --- !u!61 &4527799816872176052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -535,7 +536,7 @@ GameObject:
   - component: {fileID: 4527799817327779404}
   - component: {fileID: 8806906938397256366}
   - component: {fileID: 8922479743645762160}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: houseExterior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
