@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498bdf969245e4049969132c74190f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 1
+  walkSpeed: 2
   runSpeedMultiplier: 3
   sightRange: 8
   sightRaycastLayers:
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4185f9b989653478ed7f48da943aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 40
+  hitPoints: 50
   meleeDamageSound: {fileID: 8707965324598370578}
 --- !u!114 &1831080936416057534
 MonoBehaviour:
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meleeRange: 0.2
   meleePos: {fileID: 1702971297338775846}
-  meleeDamage: 10
+  meleeDamage: 20
   meleeRaycastLayers:
     serializedVersion: 2
     m_Bits: 256
