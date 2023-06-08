@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2903725725369707824}
   - component: {fileID: 1665618306}
   - component: {fileID: 1665618307}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.020320415, y: -0.013063014}
+  m_Offset: {x: -0.020320415, y: -0.014743984}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -133,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5142298, y: 0.48436844}
+  m_Size: {x: 0.5142298, y: 0.4810065}
   m_EdgeRadius: 0
 --- !u!114 &1665618307
 MonoBehaviour:
@@ -150,6 +150,7 @@ MonoBehaviour:
   hitPoints: 1
   meleeDamageSound: {fileID: 1636320858122414293}
   breakSound: {fileID: 1636320858122414293}
+  movingDoor: {fileID: 0}
 --- !u!1001 &805876723037210097
 PrefabInstance:
   m_ObjectHideFlags: 0
