@@ -143,6 +143,7 @@ MonoBehaviour:
   - {fileID: 1286612203095929132}
   exterior: {fileID: 1286612201625232792}
   interior: {fileID: 1286612202566406416}
+  outsideEnemies: []
 --- !u!61 &1286612201851809946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -156,7 +157,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.9790764, y: -4.061163}
+  m_Offset: {x: -3.9790764, y: -3.8153234}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -167,7 +168,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6406021, y: 1.3351231}
+  m_Size: {x: 0.6406021, y: 0.8434439}
   m_EdgeRadius: 0
 --- !u!1 &1286612202566406416
 GameObject:
