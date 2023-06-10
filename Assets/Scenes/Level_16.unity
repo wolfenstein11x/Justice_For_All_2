@@ -292,6 +292,7 @@ MonoBehaviour:
   joystick: {fileID: 784939355}
   weaponButtons: {fileID: 938739669}
   powerups: {fileID: 447112557}
+  entryButtons: {fileID: 5313792998413746643}
   startDialogueDelay: 0.25
 --- !u!1001 &138793414
 PrefabInstance:
@@ -84486,6 +84487,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 447112557}
     - target: {fileID: 4477554920265750944, guid: ff3575762aad33741a024bcec5623816, type: 3}
+      propertyPath: entryButtons
+      value: 
+      objectReference: {fileID: 5313792998413746643}
+    - target: {fileID: 4477554920265750944, guid: ff3575762aad33741a024bcec5623816, type: 3}
       propertyPath: weaponButtons
       value: 
       objectReference: {fileID: 938739669}
@@ -85094,6 +85099,7 @@ MonoBehaviour:
   joystick: {fileID: 784939355}
   weaponButtons: {fileID: 938739669}
   powerups: {fileID: 447112557}
+  entryButtons: {fileID: 5313792998413746643}
   startDialogueDelay: 0.25
 --- !u!1 &4938849328921108654
 GameObject:
@@ -85461,6 +85467,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+--- !u!1 &5313792998413746643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5682355935401811172, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+  m_PrefabInstance: {fileID: 5313792998413746642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5662795599260998181 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5977168466515300433, guid: 79711eacdf816b643a6cfaa6772a8e8a, type: 3}
