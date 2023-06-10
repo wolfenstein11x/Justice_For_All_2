@@ -13,17 +13,18 @@ public class Building : MonoBehaviour
 
     PlayerController pc;
     SpriteRenderer playerSR;
+    EntryControls entryControls;
 
     // Start is called before the first frame update
     void Start()
     {
         LockUnlockBuilding(locked);
+        entryControls = FindObjectOfType<EntryControls>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private bool PlayerOutside()
     {
-        
+        return exterior.activeSelf;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -33,6 +34,24 @@ public class Building : MonoBehaviour
 
         if (pc != null)
         {
+            entryControls.LinkToBuilding(this);
+
+            if (PlayerOutside() && locked && pc.hasKey)
+            {
+                entryControls.RevealButton(2);
+            }
+
+            else if (PlayerOutside() && !locked)
+            {
+                entryControls.RevealButton(0);
+            }
+
+            else if (!PlayerOutside())
+            {
+                entryControls.RevealButton(1);
+            }
+
+            /*
             if (pc.AttemptingToEnter() && locked && pc.hasKey)
             {
                 LockUnlockBuilding(false);
@@ -48,6 +67,17 @@ public class Building : MonoBehaviour
             {
                 ExitBuilding(playerSR);
             }
+            */
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        pc = collision.gameObject.GetComponent<PlayerController>();
+
+        if (pc != null)
+        {
+            entryControls.HideAllButtons();
         }
     }
 
@@ -62,10 +92,10 @@ public class Building : MonoBehaviour
     }
 
    
-    private void EnterBuilding(SpriteRenderer sr)
+    public void EnterBuilding()
     {
         // change player sorting layer so that we can see him indoors
-        sr.sortingLayerName = "indoorPlayer";
+        playerSR.sortingLayerName = "indoorPlayer";
 
         interior.SetActive(true);
         exterior.SetActive(false);
@@ -75,7 +105,7 @@ public class Building : MonoBehaviour
         SetOutsideEnemies(false);
     }
 
-    private void ExitBuilding(SpriteRenderer sr)
+    public void ExitBuilding()
     {
         // set player sorting layer back to normal
         playerSR.sortingLayerName = "player";
@@ -87,6 +117,7 @@ public class Building : MonoBehaviour
         SetOutsideEnemies(true);
     }
 
+    
     private void SetTilemaps(bool indoors)
     {
         TilemapRenderer[] tilemaps = FindObjectsOfType<TilemapRenderer>();
