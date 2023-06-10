@@ -8,12 +8,14 @@ public class EntryControls : MonoBehaviour
     [SerializeField] GameObject[] entryButtons;
 
     Building linkedBuilding;
+    PlayerController pc;
     
 
     // Start is called before the first frame update
     void Start()
     {
         HideAllButtons();
+        pc = FindObjectOfType<PlayerController>();
     }
 
     public void HideAllButtons()
@@ -38,15 +40,20 @@ public class EntryControls : MonoBehaviour
     public void EnterButton()
     {
         linkedBuilding.EnterBuilding();
+        HideAllButtons();
     }
 
     public void ExitButton()
     {
         linkedBuilding.ExitBuilding();
+        HideAllButtons();
     }
 
     public void UnlockButton()
     {
+        //Debug.Log("unlock!");
+        pc.UseKey();
         linkedBuilding.LockUnlockBuilding(false);
+        HideAllButtons();
     }
 }

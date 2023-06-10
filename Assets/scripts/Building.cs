@@ -50,24 +50,6 @@ public class Building : MonoBehaviour
             {
                 entryControls.RevealButton(1);
             }
-
-            /*
-            if (pc.AttemptingToEnter() && locked && pc.hasKey)
-            {
-                LockUnlockBuilding(false);
-                return;
-            }
-
-            else if (pc.AttemptingToEnter() && !locked)
-            {
-                EnterBuilding(playerSR);
-            }
-
-            else if (pc.AttemptingToExit())
-            {
-                ExitBuilding(playerSR);
-            }
-            */
         }
     }
 
