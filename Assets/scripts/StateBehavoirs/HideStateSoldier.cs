@@ -32,6 +32,11 @@ public class HideStateSoldier : StateMachineBehaviour
         {
             animator.SetBool("shootMode", true);
         }
+
+        if (enemy.PlayerInSight())
+        {
+            animator.SetBool("isProvoked", true);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

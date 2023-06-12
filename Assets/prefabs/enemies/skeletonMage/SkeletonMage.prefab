@@ -222,7 +222,7 @@ MonoBehaviour:
   sightRange: 10
   sightRaycastLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 264
   jumpSpeed: 0
   hideMode: 0
   facingLeft: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18acfeb5e6d586b40ae48c2ed509d0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeRange: 0.3
+  meleeRange: 0.9
   meleePos: {fileID: 1064792538656609393}
   meleeDamage: 10
   meleeRaycastLayers:
@@ -299,7 +299,7 @@ MonoBehaviour:
   muzzleFlashPoint: {fileID: 3676687230043725520}
   shootPointCrouching: {fileID: 0}
   muzzleFlashPointCrouching: {fileID: 0}
-  shootRange: 5
+  shootRange: 7
   shootRaycastLayers:
     serializedVersion: 2
     m_Bits: 264
