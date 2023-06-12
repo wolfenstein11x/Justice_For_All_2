@@ -50,16 +50,24 @@ public class PowerupBlast : MonoBehaviour
         else if (targetHealth != null)
         {
             targetHealth.TakeDamage(damage);
+
+            DisableColliders();
+
             FadeAway();
         }
 
-        // hit wall, blow up
+        // hit wall or another powerup blast, blow up
         else
         {
             FadeAway();
+            //DisableColliders();
         }
+    }
 
-    
+    private void DisableColliders()
+    {
+        CapsuleCollider2D collider = GetComponent<CapsuleCollider2D>();
+        collider.enabled = false;
     }
 
     private void FadeAway()
