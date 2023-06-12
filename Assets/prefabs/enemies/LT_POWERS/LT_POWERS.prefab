@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332820686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0.13, z: 0}
+  m_LocalPosition: {x: 0.75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,7 +86,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371534885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4, y: 0.1, z: 0}
+  m_LocalPosition: {x: 1.6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 2030124508}
   m_Layer: 9
   m_Name: LT_POWERS
-  m_TagString: Untagged
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
   hitPoints: 400
   meleeDamageSound: {fileID: 6458986125166781337}
   healthBar: {fileID: 0}
-  healthThreshold1: 200
+  healthThreshold1: 150
   healthThreshold2: 0
 --- !u!95 &2030124506
 Animator:
@@ -349,10 +349,10 @@ MonoBehaviour:
     m_Bits: 0
   jumpSpeed: 800
   hideMode: 0
-  facingLeft: 0
+  facingLeft: 1
   dialogueController: {fileID: 0}
   key: {fileID: 0}
-  dialogueMode: 0
+  dialogueMode: 1
 --- !u!1001 &1188620103
 PrefabInstance:
   m_ObjectHideFlags: 0
