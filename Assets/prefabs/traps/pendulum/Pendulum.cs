@@ -7,6 +7,7 @@ public class Pendulum : MonoBehaviour
     [SerializeField] float maxAngle = 30.0f;
     [SerializeField] float speed = 1.0f;
     [SerializeField] float damage = 10f;
+    [SerializeField] AudioSource hitSound;
 
     
 
@@ -23,12 +24,14 @@ public class Pendulum : MonoBehaviour
         gameObject.transform.localRotation = Quaternion.Euler(0, 0, angle);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
 
         if (playerHealth != null)
         {
+            hitSound.Play();
             playerHealth.TakeDamage(damage);
         }
     }
