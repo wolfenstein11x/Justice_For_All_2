@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325173655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.754, y: 0.202, z: 0}
+  m_LocalPosition: {x: 1.1, y: 0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456201081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.815, y: 0.307, z: 0}
+  m_LocalPosition: {x: 1.73, y: 0.307, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e74e953be02974a9a04f091324240b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 500
+  hitPoints: 450
   meleeDamageSound: {fileID: 6458986125398128833}
   healthBar: {fileID: 0}
   healthThreshold1: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   facingLeft: 1
   dialogueController: {fileID: 0}
   key: {fileID: 0}
-  dialogueMode: 0
+  dialogueMode: 1
 --- !u!1001 &1083348202
 PrefabInstance:
   m_ObjectHideFlags: 0
