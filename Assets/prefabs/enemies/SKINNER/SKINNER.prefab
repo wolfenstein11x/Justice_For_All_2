@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 584811604}
   m_Layer: 9
   m_Name: SKINNER
-  m_TagString: Untagged
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
   hitPoints: 450
   meleeDamageSound: {fileID: 6458986125398128833}
   healthBar: {fileID: 0}
-  healthThreshold1: 0
+  healthThreshold1: 225
   healthThreshold2: 0
 --- !u!95 &584811602
 Animator:
