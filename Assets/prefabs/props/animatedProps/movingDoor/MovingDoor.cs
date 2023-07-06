@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovingDoor : MonoBehaviour
 {
     [SerializeField] bool startOpen;
+    [SerializeField] AudioSource openSound;
 
     Animator animator;
 
@@ -16,13 +17,18 @@ public class MovingDoor : MonoBehaviour
 
     public void Open()
     {
+        if (animator.GetBool("open") == true) return;
+
         animator.SetBool("open", true);
+        openSound.Play();
     }
 
     public void Close()
     {
         animator.SetBool("open", false);
     }
+
+    
 
    
 }
