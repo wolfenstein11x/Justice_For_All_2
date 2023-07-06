@@ -313,8 +313,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 1
   runSpeedMultiplier: 1.5
+  sightRange: 10
+  sightRaycastLayers:
+    serializedVersion: 2
+    m_Bits: 264
   jumpSpeed: 0
   hideMode: 0
+  facingLeft: 0
 --- !u!114 &8451573883355419231
 MonoBehaviour:
   m_ObjectHideFlags: 0
