@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Simulator
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 60
+  controlID: 114
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,9 +120,9 @@ MonoBehaviour:
     y: 553
     width: 1466
     height: 394
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 17}
   - {fileID: 22}
@@ -130,8 +130,8 @@ MonoBehaviour:
   - {fileID: 15}
   - {fileID: 14}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 5
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 108
+  controlID: 115
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 109
+  controlID: 116
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -352,7 +352,7 @@ MonoBehaviour:
     m_CachedPref: 50
     m_ControlHash: 1964396721
     m_PrefName: Preview_TilemapBrushInspector
-  m_Palette: {fileID: 3000751974337661171, guid: 8d314b8e4c9e4e54782cba2c6a938fed, type: 3}
+  m_Palette: {fileID: 5757465980018219595, guid: a16b10f537f668f4d82c96a0ddffaf39, type: 3}
   m_DrawGridGizmo: 1
   m_DrawGizmos: 0
 --- !u!114 &14
@@ -579,7 +579,7 @@ MonoBehaviour:
       e10: 0
       e11: 0.7515625
       e12: 0
-      e13: 61.539062
+      e13: 84.328125
       e20: 0
       e21: 0
       e22: 1
@@ -691,7 +691,7 @@ MonoBehaviour:
       e10: 0
       e11: 0.7515625
       e12: 0
-      e13: 54.023438
+      e13: 58.023438
       e20: 0
       e21: 0
       e22: 1
@@ -876,14 +876,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.5409449
+    - e00: 0.7574803
       e01: 0
       e02: 0
-      e03: -12.047241
+      e03: -22.874023
       e10: 0
-      e11: 0.5409449
+      e11: 0.7574803
       e12: 0
-      e13: 177.47244
+      e13: 64.74016
       e20: 0
       e21: 0
       e22: 1
@@ -1117,9 +1117,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 19a6ab35d8736ea46bebf52e724bc969, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 06639f96975c27846b6f64010971985f, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -1903493127762829065, guid: 19a6ab35d8736ea46bebf52e724bc969, type: 2}
+  - m_Target: {fileID: -336122503105476321, guid: 06639f96975c27846b6f64010971985f, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1234,22 +1234,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/prefabs/pickups/powerups
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/prefabs/pickups/powerups
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\repos\J4A_mobile
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1167}
-    m_SelectedIDs: a0bb0000
-    m_LastClickedID: 48032
-    m_ExpandedIDs: 00000000fc820000fe82000000830000028300000483000006830000088300000a8300000c8300000e830000108300001283000014830000b2860000c2860000ca860000d0860000f486000000ca9a3b
+    scrollPos: {x: 0, y: 751}
+    m_SelectedIDs: 568e0000
+    m_LastClickedID: 36438
+    m_ExpandedIDs: 00000000288100002a8100002c8100002e81000030810000328100003481000036810000388100003a8100003c8100003e810000408100002e8e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1277,7 +1277,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc820000fe82000000830000028300000483000006830000088300000a8300000c8300000e830000108300001283000014830000
+    m_ExpandedIDs: 00000000288100002a8100002c8100002e81000030810000328100003481000036810000388100003a8100003c8100003e81000040810000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1302,8 +1302,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 3eef0000
+    m_LastClickedInstanceID: 61246
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000a6cd0000ca7600008a750000e4670000de6700007ca60000b0ca0000786c0000206d0000f6800000
     m_RenameOverlay:
@@ -1407,25 +1407,25 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9c9bfbff
-      m_LastClickedID: -287844
-      m_ExpandedIDs: cce5fbff5c08fcff360bfcff481afcff4a29fcff5237fcff8ef8ffff06fbffffa462000050630000be630000786400000a650200c065020010670200d26e0200106f02001c6f0200346f0200746f0200786f02007c6f02008a6f0200946f020010700200
+      m_SelectedIDs: 3eef0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 7ccfffffb8e9ffff06fbffffe462000026640000226500000e660000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: milestoneDoor  (1)
+        m_OriginalName: milestoneDoor  (1)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -2138
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1714,9 +1714,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.3910666, y: 4.147345, z: -0.061838057}
+    m_Target: {x: 18.572266, y: 2.68841, z: -0.10589804}
     speed: 2
-    m_Value: {x: 6.977216, y: 4.034933, z: -0.05603394}
+    m_Value: {x: 18.572266, y: 2.68841, z: -0.10589804}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1767,9 +1767,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 13.478506
+    m_Target: 11.395453
     speed: 2
-    m_Value: 12.898092
+    m_Value: 11.395453
   m_Ortho:
     m_Target: 1
     speed: 2
