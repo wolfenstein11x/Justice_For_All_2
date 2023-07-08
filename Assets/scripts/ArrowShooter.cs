@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ArrowShooter : Shooter
 {
+    [SerializeField] AudioSource boltSound;
+    [SerializeField] AudioSource shootSound;
 
     Animator animator;
 
@@ -29,9 +31,18 @@ public class ArrowShooter : Shooter
 
     public override void Shoot()
     {
-        gunSound.Play();
         Bullet firedBullet = Instantiate(bullet, shootPoint.position, bullet.transform.rotation);
         firedBullet.transform.parent = gameObject.transform;
+    }
+
+    public void PlayBoltSound()
+    {
+        boltSound.Play();
+    }
+
+    public void PlayShootSound()
+    {
+        shootSound.Play();
     }
 
     
