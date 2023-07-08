@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     protected Animator animator;
     protected SpriteRenderer sr;
     protected CapsuleCollider2D capsuleCollider;
+    protected float startingHitPoints;
  
 
     // Start is called before the first frame update
@@ -23,6 +24,13 @@ public class Health : MonoBehaviour
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        startingHitPoints = hitPoints;
+    }
+
+    public void Revive()
+    {
+        hitPoints = startingHitPoints;
+        capsuleCollider.enabled = true;
     }
 
   
@@ -53,6 +61,16 @@ public class Health : MonoBehaviour
 
         // turn off collider so that dead enemy doesn't block attacks
         capsuleCollider.enabled = false;
+    }
+
+    public void ForceDie()
+    {
+        if (hitPoints > 0)
+        {
+            hitPoints = 0f;
+            Die();
+        }
+        
     }
 
     protected void PlayDamageEffect()
