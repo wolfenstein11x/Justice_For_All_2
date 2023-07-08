@@ -24,7 +24,15 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(activeSceneIdx + 1);
+        if (activeSceneIdx >= 47)
+        {
+            LoadMainMenu();
+        }
+
+        else
+        {
+            SceneManager.LoadScene(activeSceneIdx + 1);
+        }
     }
 
     public void LoadMainMenu()
