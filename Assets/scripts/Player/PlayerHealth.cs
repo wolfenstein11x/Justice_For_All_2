@@ -61,4 +61,9 @@ public class PlayerHealth : Health
 
         healthBar.SetHealth(hitPoints);
     }
+
+    public float GetMaxHealth()
+    {
+        return healthBar.GetMaxHealth();
+    }
 }

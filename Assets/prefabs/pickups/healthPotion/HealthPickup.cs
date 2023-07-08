@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
-    [SerializeField] int healAmount = 50;
+    [SerializeField] [Range(0f, 1f)] float healPercentage = 0;
     [SerializeField] AudioSource healSound;
     [SerializeField] float healSoundDuration = 0.25f;
 
@@ -24,6 +24,8 @@ public class HealthPickup : MonoBehaviour
         if (obtained) return;
 
         PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+        float maxHealth = playerHealth.GetMaxHealth();
+        float healAmount = maxHealth * healPercentage;
 
         if (playerHealth != null)
         {
