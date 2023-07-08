@@ -6,6 +6,8 @@ public class EntryControls : MonoBehaviour
 {
     // 0 is enter, 1 is exit, 2 is unlock
     [SerializeField] GameObject[] entryButtons;
+    [SerializeField] AudioSource unlockSound;
+    [SerializeField] AudioSource enterExitSound;
 
     Building linkedBuilding;
     PlayerController pc;
@@ -40,12 +42,14 @@ public class EntryControls : MonoBehaviour
     public void EnterButton()
     {
         linkedBuilding.EnterBuilding();
+        enterExitSound.Play();
         HideAllButtons();
     }
 
     public void ExitButton()
     {
         linkedBuilding.ExitBuilding();
+        enterExitSound.Play();
         HideAllButtons();
     }
 
@@ -53,6 +57,7 @@ public class EntryControls : MonoBehaviour
     {
         //Debug.Log("unlock!");
         pc.UseKey();
+        unlockSound.Play();
         linkedBuilding.LockUnlockBuilding(false);
         HideAllButtons();
     }

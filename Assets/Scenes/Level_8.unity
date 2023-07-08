@@ -87014,6 +87014,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1888398719 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8657698308607883280, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+  m_PrefabInstance: {fileID: 5313792998413746642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1952632147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87159,6 +87164,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.727733, y: 0.42795724}
   m_EdgeRadius: 0
+--- !u!82 &1996923446 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1050638262379726256, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+  m_PrefabInstance: {fileID: 5313792998413746642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2048308139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89381,6 +89391,14 @@ PrefabInstance:
       propertyPath: dialogueController
       value: 
       objectReference: {fileID: 4197876976290253155}
+    - target: {fileID: 8938919313132058143, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+      propertyPath: unlockSound
+      value: 
+      objectReference: {fileID: 1996923446}
+    - target: {fileID: 8938919313132058143, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+      propertyPath: enterExitSound
+      value: 
+      objectReference: {fileID: 1888398719}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
 --- !u!4 &5568222411672112021

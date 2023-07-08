@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
+    [SerializeField] AudioSource pickupSound;
+
     Animator animator;
 
     // Start is called before the first frame update
@@ -26,8 +28,9 @@ public class Key : MonoBehaviour
 
             PlayerController pc = collision.gameObject.GetComponent<PlayerController>();
             pc.PickupKey();
+            pickupSound.Play();
 
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 3f);
 
         }
     }
