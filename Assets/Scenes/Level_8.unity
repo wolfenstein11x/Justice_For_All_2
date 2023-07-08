@@ -288,6 +288,7 @@ MonoBehaviour:
   weaponButtons: {fileID: 938739669}
   powerups: {fileID: 447112557}
   entryButtons: {fileID: 1954003929}
+  pauseButton: {fileID: 5313792998413746643}
   startDialogueDelay: 0.25
 --- !u!4 &207258025 stripped
 Transform:
@@ -87497,6 +87498,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 447112557}
     - target: {fileID: 4477554920265750944, guid: ff3575762aad33741a024bcec5623816, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 5313792998413746643}
+    - target: {fileID: 4477554920265750944, guid: ff3575762aad33741a024bcec5623816, type: 3}
       propertyPath: entryButtons
       value: 
       objectReference: {fileID: 1954003929}
@@ -87558,11 +87563,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4477554921172279862, guid: ff3575762aad33741a024bcec5623816, type: 3}
       propertyPath: m_Size.y
-      value: 2.6476846
+      value: 1.5757557
       objectReference: {fileID: 0}
     - target: {fileID: 4477554921172279862, guid: ff3575762aad33741a024bcec5623816, type: 3}
       propertyPath: m_Offset.y
-      value: 1.4613564
+      value: 1.9973209
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff3575762aad33741a024bcec5623816, type: 3}
@@ -88994,6 +88999,7 @@ MonoBehaviour:
   weaponButtons: {fileID: 938739669}
   powerups: {fileID: 447112557}
   entryButtons: {fileID: 1954003929}
+  pauseButton: {fileID: 5313792998413746643}
   startDialogueDelay: 0.25
 --- !u!1 &4938849328921108654
 GameObject:
@@ -89271,6 +89277,10 @@ PrefabInstance:
       propertyPath: dialogueController
       value: 
       objectReference: {fileID: 131970393}
+    - target: {fileID: 1632043353, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2826722244627084337, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -89401,6 +89411,11 @@ PrefabInstance:
       objectReference: {fileID: 1888398719}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+--- !u!1 &5313792998413746643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5313792999706422397, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+  m_PrefabInstance: {fileID: 5313792998413746642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5568222411672112021
 Transform:
   m_ObjectHideFlags: 0

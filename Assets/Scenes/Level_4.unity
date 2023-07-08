@@ -361,6 +361,7 @@ MonoBehaviour:
   weaponButtons: {fileID: 938739669}
   powerups: {fileID: 572090805}
   entryButtons: {fileID: 5313792998413746643}
+  pauseButton: {fileID: 5313792998413746644}
   startDialogueDelay: 0.25
 --- !u!1001 &205065213
 PrefabInstance:
@@ -87137,6 +87138,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 572090805}
     - target: {fileID: 4477554920265750944, guid: ff3575762aad33741a024bcec5623816, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 5313792998413746644}
+    - target: {fileID: 4477554920265750944, guid: ff3575762aad33741a024bcec5623816, type: 3}
       propertyPath: entryButtons
       value: 
       objectReference: {fileID: 5313792998413746643}
@@ -87198,11 +87203,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4477554921172279862, guid: ff3575762aad33741a024bcec5623816, type: 3}
       propertyPath: m_Size.y
-      value: 2.6476846
+      value: 1.7041978
       objectReference: {fileID: 0}
     - target: {fileID: 4477554921172279862, guid: ff3575762aad33741a024bcec5623816, type: 3}
       propertyPath: m_Offset.y
-      value: 1.4613564
+      value: 1.9330997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff3575762aad33741a024bcec5623816, type: 3}
@@ -87474,6 +87479,7 @@ MonoBehaviour:
   weaponButtons: {fileID: 938739669}
   powerups: {fileID: 572090805}
   entryButtons: {fileID: 5313792998413746643}
+  pauseButton: {fileID: 5313792998413746644}
   startDialogueDelay: 0.25
 --- !u!1 &4938849328921108654
 GameObject:
@@ -87675,6 +87681,10 @@ PrefabInstance:
       value: You made a big mistake coming here, pal! I'm gonna make sure you don't
         make it out of here alive!
       objectReference: {fileID: 0}
+    - target: {fileID: 1632043353, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1632043354, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -87824,6 +87834,11 @@ PrefabInstance:
 --- !u!1 &5313792998413746643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5682355935401811172, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+  m_PrefabInstance: {fileID: 5313792998413746642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5313792998413746644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5313792999706422397, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
   m_PrefabInstance: {fileID: 5313792998413746642}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5729192952818108239

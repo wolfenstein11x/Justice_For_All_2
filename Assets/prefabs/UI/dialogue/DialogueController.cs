@@ -14,7 +14,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] GameObject dialogueTemplate;
     [SerializeField] Dialogue dialogue;
     [SerializeField] DialogueTrigger dialogueTrigger;
-    [SerializeField] GameObject joystick, weaponButtons, powerups, entryButtons;
+    [SerializeField] GameObject joystick, weaponButtons, powerups, entryButtons, pauseButton;
     [SerializeField] float startDialogueDelay = 0.25f;
 
     MusicController musicController;
@@ -57,6 +57,7 @@ public class DialogueController : MonoBehaviour
         weaponButtons.SetActive(false);
         powerups.SetActive(false);
         entryButtons.SetActive(false);
+        pauseButton.SetActive(false);
 
         // give short delay before typing line to give Dialogue game object enough time to initialize, preventing null reference error
         Invoke(nameof(TypeLine), startDialogueDelay);
@@ -81,6 +82,7 @@ public class DialogueController : MonoBehaviour
             weaponButtons.SetActive(true);
             powerups.SetActive(true);
             entryButtons.SetActive(true);
+            pauseButton.SetActive(true);
 
         }
 
