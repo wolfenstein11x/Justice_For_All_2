@@ -485,6 +485,7 @@ MonoBehaviour:
   weaponButtons: {fileID: 938739669}
   powerups: {fileID: 572090805}
   entryButtons: {fileID: 5313792998413746643}
+  pauseButton: {fileID: 5313792998413746646}
   startDialogueDelay: 0.25
 --- !u!1001 &207323896
 PrefabInstance:
@@ -88143,6 +88144,7 @@ MonoBehaviour:
   weaponButtons: {fileID: 938739669}
   powerups: {fileID: 572090805}
   entryButtons: {fileID: 5313792998413746643}
+  pauseButton: {fileID: 5313792998413746646}
   startDialogueDelay: 0.25
 --- !u!1 &4938849328921108654
 GameObject:
@@ -88348,6 +88350,10 @@ PrefabInstance:
       propertyPath: lines.Array.data[1]
       value: I'm not like those other chums you've been beating up on... I'm special
         forces! I'm tough!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632043353, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1632043354, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
       propertyPath: m_RootOrder
@@ -88555,6 +88561,11 @@ RectTransform:
 --- !u!224 &5313792998413746645 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8068878308368083622, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+  m_PrefabInstance: {fileID: 5313792998413746642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5313792998413746646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5313792999706422397, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
   m_PrefabInstance: {fileID: 5313792998413746642}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5729192952818108239
@@ -88770,6 +88781,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 800139203}
     m_Modifications:
+    - target: {fileID: 4779606146598497435, guid: 2dfa9704a51f81249b14a95b54f0c7d6, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6805588
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779606146598497435, guid: 2dfa9704a51f81249b14a95b54f0c7d6, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.9449193
+      objectReference: {fileID: 0}
     - target: {fileID: 4779606147973666573, guid: 2dfa9704a51f81249b14a95b54f0c7d6, type: 3}
       propertyPath: dialogue
       value: 
@@ -88782,6 +88801,10 @@ PrefabInstance:
       propertyPath: powerups
       value: 
       objectReference: {fileID: 572090805}
+    - target: {fileID: 4779606147973666573, guid: 2dfa9704a51f81249b14a95b54f0c7d6, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 5313792998413746646}
     - target: {fileID: 4779606147973666573, guid: 2dfa9704a51f81249b14a95b54f0c7d6, type: 3}
       propertyPath: entryButtons
       value: 

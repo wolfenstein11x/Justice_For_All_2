@@ -7,6 +7,11 @@ public class SceneLoader : MonoBehaviour
 {
     int activeSceneIdx;
 
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
+
     void Start()
     {
         activeSceneIdx = SceneManager.GetActiveScene().buildIndex;

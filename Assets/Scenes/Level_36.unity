@@ -482,6 +482,7 @@ MonoBehaviour:
   weaponButtons: {fileID: 938739669}
   powerups: {fileID: 447112557}
   entryButtons: {fileID: 270274066}
+  pauseButton: {fileID: 5313792998413746647}
   startDialogueDelay: 0.25
 --- !u!1001 &145244819
 PrefabInstance:
@@ -65052,6 +65053,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 447112557}
     - target: {fileID: 4477554920265750944, guid: ff3575762aad33741a024bcec5623816, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 5313792998413746647}
+    - target: {fileID: 4477554920265750944, guid: ff3575762aad33741a024bcec5623816, type: 3}
       propertyPath: entryButtons
       value: 
       objectReference: {fileID: 270274066}
@@ -65376,6 +65381,7 @@ MonoBehaviour:
   weaponButtons: {fileID: 938739669}
   powerups: {fileID: 447112557}
   entryButtons: {fileID: 270274066}
+  pauseButton: {fileID: 5313792998413746647}
   startDialogueDelay: 0.25
 --- !u!1 &4938849328921108654
 GameObject:
@@ -65858,6 +65864,11 @@ RectTransform:
 --- !u!224 &5313792998413746646 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8068878308368083622, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
+  m_PrefabInstance: {fileID: 5313792998413746642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5313792998413746647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5313792999706422397, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
   m_PrefabInstance: {fileID: 5313792998413746642}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5729192952818108239

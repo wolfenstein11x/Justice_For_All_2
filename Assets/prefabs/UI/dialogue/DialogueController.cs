@@ -96,6 +96,7 @@ public class DialogueController : MonoBehaviour
             weaponButtons.SetActive(true);
             powerups.SetActive(true);
             entryButtons.SetActive(true);
+            pauseButton.SetActive(true);
             FindObjectOfType<Boss>().RevealKey();
         }
 
