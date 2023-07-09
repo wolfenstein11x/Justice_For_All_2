@@ -275,11 +275,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 821493311}
   - {fileID: 1998427556}
+  - {fileID: 821493311}
   - {fileID: 1663751932}
   - {fileID: 1634042259}
   - {fileID: 1270997031}
+  - {fileID: 1608764462}
   - {fileID: 150504116}
   - {fileID: 1062776587}
   - {fileID: 1559657695}
@@ -289,7 +290,6 @@ Transform:
   - {fileID: 1341796938}
   - {fileID: 929886952}
   - {fileID: 631482483}
-  - {fileID: 1608764462}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -113129,7 +113129,7 @@ Transform:
   - {fileID: 1402726861}
   - {fileID: 1490334421}
   m_Father: {fileID: 129109504}
-  m_RootOrder: 14
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1611636463
 PrefabInstance:
@@ -113593,6 +113593,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7012355178765349316, guid: 80811709e86b7ff4eaaaa571a878cf12, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7012355178765349318, guid: 80811709e86b7ff4eaaaa571a878cf12, type: 3}
       propertyPath: m_Name
       value: healthPotion
@@ -113611,6 +113615,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 800139203}
     m_Modifications:
+    - target: {fileID: 5977168466387282152, guid: 79711eacdf816b643a6cfaa6772a8e8a, type: 3}
+      propertyPath: locked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5977168466387282153, guid: 79711eacdf816b643a6cfaa6772a8e8a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -113990,6 +113998,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1431930725082484687, guid: 92b8fcd5de7127e4abe9c883be7a811a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2974609677595526417, guid: 92b8fcd5de7127e4abe9c883be7a811a, type: 3}
       propertyPath: m_Name
       value: levelEndSign
@@ -114033,7 +114045,7 @@ Transform:
   - {fileID: 1184682262}
   - {fileID: 677105564}
   m_Father: {fileID: 129109504}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2013691215
 PrefabInstance:
