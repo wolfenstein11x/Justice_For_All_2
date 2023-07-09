@@ -51,6 +51,10 @@ public class MeleeAttacker : MonoBehaviour
         if (hitMelee.collider != null)
         {
             Health targetHealth = hitMelee.collider.gameObject.GetComponent<Health>();
+
+            // added this to eliminate occasional null reference error
+            if (targetHealth == null) return;
+
             targetHealth.PlayMeleeDamageSound();
             targetHealth.TakeDamage(meleeDamage);
         }
