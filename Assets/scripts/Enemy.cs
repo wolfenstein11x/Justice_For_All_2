@@ -110,14 +110,14 @@ public class Enemy : MonoBehaviour
             // ray hit a target, because only a target would have Health
             if (hit.collider.gameObject.GetComponent<Health>() != null)
             {
-                Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.red);
+                //Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.red);
                 return true;
             }
 
             // ray hit a wall
             else
             {
-                Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.yellow);
+                //Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.yellow);
                 return false;
             }
 
@@ -126,7 +126,7 @@ public class Enemy : MonoBehaviour
         // ray hit nothing
         else
         {
-            Debug.DrawRay(transform.position, Vector2.right * sightRange * new Vector2(orientation, 0f), Color.blue);
+            //Debug.DrawRay(transform.position, Vector2.right * sightRange * new Vector2(orientation, 0f), Color.blue);
             return false;
         }
     }

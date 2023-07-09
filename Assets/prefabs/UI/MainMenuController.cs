@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] GameObject LevelsMenu1, LevelsMenu2, LevelsMenu3, PlayMenu, SettingsMenu;
+    [SerializeField] GameObject loadingText;
 
     // Start is called before the first frame update
     void Start()
@@ -14,10 +15,12 @@ public class MainMenuController : MonoBehaviour
         LevelsMenu1.SetActive(false);
         LevelsMenu2.SetActive(false);
         LevelsMenu3.SetActive(false);
+        loadingText.SetActive(false);
     }
 
     public void LoadLevelButton(int level)
     {
+        loadingText.SetActive(true);
         SceneManager.LoadScene(level);
     }
 

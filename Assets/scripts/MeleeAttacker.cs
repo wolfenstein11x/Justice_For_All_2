@@ -32,12 +32,12 @@ public class MeleeAttacker : MonoBehaviour
 
         if (hitMelee.collider != null)
         {
-            Debug.DrawRay(meleePos.position, Vector2.right * hitMelee.distance * new Vector2(orientation, 0f), Color.red);
+            //Debug.DrawRay(meleePos.position, Vector2.right * hitMelee.distance * new Vector2(orientation, 0f), Color.red);
             return true;
         }
         else
         {
-            Debug.DrawRay(meleePos.position, Vector2.right * meleeRange * new Vector2(orientation, 0f), Color.blue);
+            //Debug.DrawRay(meleePos.position, Vector2.right * meleeRange * new Vector2(orientation, 0f), Color.blue);
             return false;
         }
 
