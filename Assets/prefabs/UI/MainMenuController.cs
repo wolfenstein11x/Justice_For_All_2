@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    [SerializeField] GameObject LevelsMenu1, LevelsMenu2, LevelsMenu3, PlayMenu;
+    [SerializeField] GameObject LevelsMenu1, LevelsMenu2, LevelsMenu3, PlayMenu, SettingsMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,12 @@ public class MainMenuController : MonoBehaviour
     {
         PlayMenu.SetActive(false);
         LevelsMenu1.SetActive(true);
+    }
+
+    public void SettingsButton()
+    {
+        PlayMenu.SetActive(false);
+        SettingsMenu.SetActive(true);
     }
 
     public void NextPageButton1()
@@ -66,6 +72,12 @@ public class MainMenuController : MonoBehaviour
     public void LevelsMenu3CloseButton()
     {
         LevelsMenu3.SetActive(false);
+        PlayMenu.SetActive(true);
+    }
+
+    public void SettingsMenuCloseButton()
+    {
+        SettingsMenu.SetActive(false);
         PlayMenu.SetActive(true);
     }
 
