@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5755421324573734997}
   - component: {fileID: 2701527294481828116}
+  - component: {fileID: 1400330267117220915}
   m_Layer: 0
   m_Name: BossBattle1
   m_TagString: Untagged
@@ -128,3 +129,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1400330267117220915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9133874079040839749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116dfd2a18736454abc42a089c993c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxVolume: 0.4
