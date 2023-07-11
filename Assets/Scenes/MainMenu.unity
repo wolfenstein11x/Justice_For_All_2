@@ -1021,6 +1021,7 @@ GameObject:
   - component: {fileID: 417018665}
   - component: {fileID: 417018667}
   - component: {fileID: 417018666}
+  - component: {fileID: 417018668}
   m_Layer: 5
   m_Name: SettingsMenu
   m_TagString: Untagged
@@ -1090,6 +1091,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417018664}
   m_CullTransparentMesh: 1
+--- !u!114 &417018668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417018664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e46e39787ff47549a1e4392ff157e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  easyBox: {fileID: 1184900009}
+  mediumBox: {fileID: 1635162527}
+  hardBox: {fileID: 1661495668}
+  onBox: {fileID: 609437500}
+  offBox: {fileID: 646988838}
 --- !u!1 &440618494 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6637299419566982700, guid: 76ca6b1a43cf65044b8504ec6d79b6b6, type: 3}
@@ -1360,6 +1378,7 @@ GameObject:
   - component: {fileID: 609437498}
   - component: {fileID: 609437500}
   - component: {fileID: 609437501}
+  - component: {fileID: 609437502}
   m_Layer: 5
   m_Name: checkboxMusicOn
   m_TagString: Untagged
@@ -1497,6 +1516,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 609437502}
+        m_TargetAssemblyTypeName: MusicSetting, Assembly-CSharp
+        m_MethodName: TurnMusicOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &609437502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609437496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cf9c44e132802458f24915e16344d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &612440746 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7263711206919327359, guid: 76ca6b1a43cf65044b8504ec6d79b6b6, type: 3}
@@ -1520,6 +1563,7 @@ GameObject:
   - component: {fileID: 646988836}
   - component: {fileID: 646988838}
   - component: {fileID: 646988839}
+  - component: {fileID: 646988840}
   m_Layer: 5
   m_Name: checkboxMusicOff
   m_TagString: Untagged
@@ -1657,6 +1701,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 646988840}
+        m_TargetAssemblyTypeName: MusicSetting, Assembly-CSharp
+        m_MethodName: TurnMusicOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &646988840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646988834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cf9c44e132802458f24915e16344d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &707502480 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3070219527949068476, guid: 76ca6b1a43cf65044b8504ec6d79b6b6, type: 3}
@@ -2291,7 +2359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07fcd59a638c7e41a7ffbdc727e7b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highestUnlockedLevel: 25
   levelButtons:
   - {fileID: 1784156214}
   - {fileID: 5095267601770684530}
@@ -2645,6 +2712,7 @@ GameObject:
   - component: {fileID: 1184900007}
   - component: {fileID: 1184900009}
   - component: {fileID: 1184900010}
+  - component: {fileID: 1184900011}
   m_Layer: 5
   m_Name: checkbox_easy
   m_TagString: Untagged
@@ -2783,6 +2851,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1184900011}
+        m_TargetAssemblyTypeName: DifficultySetting, Assembly-CSharp
+        m_MethodName: SetDifficulty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1184900011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184900005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65b574191d95414582a371f09d6bee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficulty: 0
 --- !u!1 &1185638329 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5853025417627041889, guid: 76ca6b1a43cf65044b8504ec6d79b6b6, type: 3}
@@ -4460,6 +4553,7 @@ GameObject:
   - component: {fileID: 1635162525}
   - component: {fileID: 1635162527}
   - component: {fileID: 1635162528}
+  - component: {fileID: 1635162529}
   m_Layer: 5
   m_Name: checkbox_medium
   m_TagString: Untagged
@@ -4598,6 +4692,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1635162529}
+        m_TargetAssemblyTypeName: DifficultySetting, Assembly-CSharp
+        m_MethodName: SetDifficulty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1635162529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635162523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65b574191d95414582a371f09d6bee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficulty: 1
 --- !u!1 &1635265909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4952817521129320114, guid: 76ca6b1a43cf65044b8504ec6d79b6b6, type: 3}
@@ -4776,6 +4895,7 @@ GameObject:
   - component: {fileID: 1661495666}
   - component: {fileID: 1661495668}
   - component: {fileID: 1661495669}
+  - component: {fileID: 1661495670}
   m_Layer: 5
   m_Name: checkbox_hard
   m_TagString: Untagged
@@ -4914,6 +5034,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1661495670}
+        m_TargetAssemblyTypeName: DifficultySetting, Assembly-CSharp
+        m_MethodName: SetDifficulty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1661495670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661495664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65b574191d95414582a371f09d6bee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficulty: 2
 --- !u!1 &1669314189 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3653119367207714177, guid: c8a3db825fedec4489d38aaf20ba2d94, type: 3}
