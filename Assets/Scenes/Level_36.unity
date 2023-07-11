@@ -63090,7 +63090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe95baa45b498d439684169a2d6bec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 30
 --- !u!114 &1448888436 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5313792999316294054, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
@@ -65968,6 +65968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkeletonSpear_respawner
       objectReference: {fileID: 0}
+    - target: {fileID: 3037286316728468866, guid: 66d90ccead401b2448cbb4e60136fbee, type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 6161174005053402738, guid: 66d90ccead401b2448cbb4e60136fbee, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -66072,6 +66076,10 @@ PrefabInstance:
     - target: {fileID: 7202273395647306929, guid: 5fe4aa51c486725468e7a34ee07fd909, type: 3}
       propertyPath: m_Name
       value: Skeleton_respawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202273395647306929, guid: 5fe4aa51c486725468e7a34ee07fd909, type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe4aa51c486725468e7a34ee07fd909, type: 3}

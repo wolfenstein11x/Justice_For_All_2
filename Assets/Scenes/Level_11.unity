@@ -115604,7 +115604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe95baa45b498d439684169a2d6bec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 30
 --- !u!114 &1448888436 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5313792999316294054, guid: 180b648fae05db7419cb6463db4e2df7, type: 3}
@@ -117502,6 +117502,10 @@ PrefabInstance:
     - target: {fileID: 1313975464323057131, guid: 0ac41be389b8ea44798bbff8412e6904, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313975464349437554, guid: 0ac41be389b8ea44798bbff8412e6904, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ac41be389b8ea44798bbff8412e6904, type: 3}

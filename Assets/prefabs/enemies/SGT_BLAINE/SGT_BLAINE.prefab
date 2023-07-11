@@ -304,6 +304,9 @@ MonoBehaviour:
   hitPoints: 300
   meleeDamageSound: {fileID: 7418844072430544425}
   healthBar: {fileID: 0}
+  startingHitpointsEasy: 0
+  startingHitpointsMedium: 0
+  startingHitpointsHard: 0
   healthThreshold1: 0
   healthThreshold2: 0
 --- !u!95 &1573779083204177136
@@ -371,7 +374,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6808122371738150218}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 847e7f388268ad44fa356b37c7793ef2, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

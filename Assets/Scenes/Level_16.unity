@@ -748,7 +748,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 21.036358, y: 5.966999}
+    - - {x: 25.164352, y: 5.8243113}
+      - {x: 21.023739, y: 5.84081}
+      - {x: 8.73825, y: 5.8714805}
       - {x: -17.83695, y: 5.865425}
       - {x: -17.856617, y: -5.8752823}
       - {x: 89.27342, y: -5.769755}
@@ -83226,7 +83228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe95baa45b498d439684169a2d6bec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 30
 --- !u!1001 &1439753921
 PrefabInstance:
   m_ObjectHideFlags: 0
