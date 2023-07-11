@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHealth : Health
 {
     [SerializeField] protected HealthBar healthBar;
+    [SerializeField] float startingHitpointsEasy, startingHitpointsMedium, startingHitpointsHard;
 
     // Start is called before the first frame update
     void Start()
@@ -14,9 +15,35 @@ public class PlayerHealth : Health
 
     protected override void Initialize()
     {
-        base.Initialize();
+        animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
 
+        InitHitPoints();
+
+        hitPoints = startingHitPoints;
         healthBar.SetMaxHealth(hitPoints);
+    }
+
+    private void InitHitPoints()
+    {
+        int difficulty = PlayerPrefs.GetInt("difficulty", 1);
+        
+        switch (difficulty)
+        {
+            case 0:
+                startingHitPoints = startingHitpointsEasy;
+                break;
+            case 1:
+                startingHitPoints = startingHitpointsMedium;
+                break;
+            case 2:
+                startingHitPoints = startingHitpointsHard;
+                break;
+            default:
+                startingHitPoints = startingHitpointsMedium;
+                break;
+        }
     }
 
     public override void TakeDamage(float damage)
