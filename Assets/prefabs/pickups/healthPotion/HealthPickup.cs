@@ -24,11 +24,12 @@ public class HealthPickup : MonoBehaviour
         if (obtained) return;
 
         PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-        float maxHealth = playerHealth.GetMaxHealth();
-        float healAmount = maxHealth * healPercentage;
+        
 
         if (playerHealth != null)
         {
+            float maxHealth = playerHealth.GetMaxHealth();
+            float healAmount = maxHealth * healPercentage;
             obtained = true;
 
             playerHealth.Heal(healAmount);
