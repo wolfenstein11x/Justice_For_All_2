@@ -149,11 +149,24 @@ public class PlayerController : MonoBehaviour
             allowInvoke = false;
         }
     }
-
+    
     public void PowerupShootButton(int powerupIdx)
     {
+        // check if you are able to shoot
+        if (!readyToShoot) return;
+
+        readyToShoot = false;
+        
+        // actual shooting happens here
         playerAnimator.SetTrigger("shoot");
         powerupShooter.ShootPowerupBlast(powerupIdx);
+
+        //reset
+        if (allowInvoke)
+        {
+            Invoke("ResetShot", timeBetweenShots);
+            allowInvoke = false;
+        }
     }
 
     public void GrenadeButton()
