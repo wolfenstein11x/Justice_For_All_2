@@ -15,6 +15,7 @@ public class MainMenuController : MonoBehaviour
         LevelsMenu1.SetActive(false);
         LevelsMenu2.SetActive(false);
         LevelsMenu3.SetActive(false);
+        SettingsMenu.SetActive(false);
         loadingText.SetActive(false);
     }
 
