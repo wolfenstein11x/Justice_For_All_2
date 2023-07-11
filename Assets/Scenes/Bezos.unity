@@ -1543,6 +1543,7 @@ GameObject:
   - component: {fileID: 1444696597}
   - component: {fileID: 1444696596}
   - component: {fileID: 1444696598}
+  - component: {fileID: 1444696599}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -1664,6 +1665,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1444696599}
+        m_TargetAssemblyTypeName: Checkpoint, Assembly-CSharp
+        m_MethodName: UnlockLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1444696599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444696594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3e78dedf7d1c644afd436b39ef59bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToUnlock: 25
 --- !u!1 &1467406909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8779596475122713785, guid: b7683519cf4237b4e9cf5e480b77b1e2, type: 3}

@@ -23,6 +23,7 @@ public class LevelEndSign : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
             menuController.ActivateLevelCompleteMenu();
+            GetComponent<Checkpoint>().UnlockLevel();
         }
     }
 }

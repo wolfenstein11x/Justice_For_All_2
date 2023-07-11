@@ -1236,6 +1236,7 @@ MonoBehaviour:
   weaponButtons: {fileID: 938739669}
   powerups: {fileID: 447112557}
   entryButtons: {fileID: 270274066}
+  pauseButton: {fileID: 0}
   startDialogueDelay: 0.25
 --- !u!1001 &137656982
 PrefabInstance:
@@ -101778,6 +101779,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 947543029871893406, guid: 92b8fcd5de7127e4abe9c883be7a811a, type: 3}
+      propertyPath: levelToUnlock
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 1394826846787539052, guid: 92b8fcd5de7127e4abe9c883be7a811a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -103828,6 +103833,7 @@ MonoBehaviour:
   weaponButtons: {fileID: 938739669}
   powerups: {fileID: 447112557}
   entryButtons: {fileID: 270274066}
+  pauseButton: {fileID: 0}
   startDialogueDelay: 0.25
 --- !u!1 &4938849328921108654
 GameObject:

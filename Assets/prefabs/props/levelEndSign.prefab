@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 1431930725082484687}
   - component: {fileID: 1992908537}
   - component: {fileID: 1992908538}
+  - component: {fileID: 947543029871893406}
   m_Layer: 0
   m_Name: levelEndSign
   m_TagString: Untagged
@@ -183,3 +184,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a79bfaf19f22e42952654e9f6b84fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &947543029871893406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2974609677595526417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3e78dedf7d1c644afd436b39ef59bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToUnlock: 2

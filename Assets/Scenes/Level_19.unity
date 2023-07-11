@@ -277,10 +277,10 @@ Transform:
   m_Children:
   - {fileID: 1998427556}
   - {fileID: 821493311}
+  - {fileID: 1608764462}
   - {fileID: 1663751932}
   - {fileID: 1634042259}
   - {fileID: 1270997031}
-  - {fileID: 1608764462}
   - {fileID: 150504116}
   - {fileID: 1062776587}
   - {fileID: 1559657695}
@@ -113129,7 +113129,7 @@ Transform:
   - {fileID: 1402726861}
   - {fileID: 1490334421}
   m_Father: {fileID: 129109504}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1611636463
 PrefabInstance:
@@ -113954,6 +113954,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 947543029871893406, guid: 92b8fcd5de7127e4abe9c883be7a811a, type: 3}
+      propertyPath: levelToUnlock
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1394826846787539052, guid: 92b8fcd5de7127e4abe9c883be7a811a, type: 3}
       propertyPath: m_RootOrder
       value: 2

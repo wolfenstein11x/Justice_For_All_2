@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class LevelUnlocker : MonoBehaviour
 {
-    public int highestUnlockedLevel = 1;
     [SerializeField] LevelButton[] levelButtons;
+
+    private int highestUnlockedLevel;
 
     // Start is called before the first frame update
     void Start()
     {
+        highestUnlockedLevel = PlayerPrefs.GetInt("highestUnlockedLevel", 1);
+
         UnlockLevels(highestUnlockedLevel);
     }
 
