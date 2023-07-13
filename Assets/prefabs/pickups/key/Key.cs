@@ -8,10 +8,13 @@ public class Key : MonoBehaviour
 
     Animator animator;
 
+    bool obtained;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        obtained = false;
     }
 
     // Update is called once per frame
@@ -22,6 +25,8 @@ public class Key : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (obtained) return;
+
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
             animator.SetTrigger("pickup");
