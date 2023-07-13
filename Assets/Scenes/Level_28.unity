@@ -209,11 +209,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4134283976550626039, guid: 7019a30ebb74af34f81bc57fb872a2ee, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4134283976550626039, guid: 7019a30ebb74af34f81bc57fb872a2ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.43
+      value: 32.42
       objectReference: {fileID: 0}
     - target: {fileID: 4134283976550626039, guid: 7019a30ebb74af34f81bc57fb872a2ee, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1179,6 +1179,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5729192952818108240}
     - target: {fileID: 584811604, guid: cf81d5c591cc7bc44a151f67499b6aa8, type: 3}
+      propertyPath: deadCollider
+      value: 
+      objectReference: {fileID: 584811597}
+    - target: {fileID: 584811604, guid: cf81d5c591cc7bc44a151f67499b6aa8, type: 3}
       propertyPath: dialogueController
       value: 
       objectReference: {fileID: 4938849328921108641}
@@ -1232,6 +1236,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf81d5c591cc7bc44a151f67499b6aa8, type: 3}
+--- !u!61 &584811597 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 447489570268167664, guid: cf81d5c591cc7bc44a151f67499b6aa8, type: 3}
+  m_PrefabInstance: {fileID: 584811596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &584811604 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 584811604, guid: cf81d5c591cc7bc44a151f67499b6aa8, type: 3}

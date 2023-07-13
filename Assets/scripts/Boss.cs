@@ -6,6 +6,7 @@ public class Boss : Enemy
 {
     [SerializeField] DialogueController dialogueController;
     [SerializeField] Key key;
+    [SerializeField] BoxCollider2D deadCollider;
     public bool dialogueMode;
 
     private void Awake()
@@ -24,6 +25,7 @@ public class Boss : Enemy
     protected override void PreInitialize()
     {
         base.PreInitialize();
+        deadCollider.enabled = false;
         animator.SetBool("dialogueMode", dialogueMode);
     }
 
@@ -41,5 +43,12 @@ public class Boss : Enemy
     public void RevealKey()
     {
         key.gameObject.SetActive(true);
+    }
+
+    public void AdjustColliders()
+    {
+        BoxCollider2D regularCollider = GetComponent<BoxCollider2D>();
+        deadCollider.enabled = true;
+        regularCollider.enabled = false;
     }
 }
