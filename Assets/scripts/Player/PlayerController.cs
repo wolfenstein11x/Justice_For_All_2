@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetFloat("horizontalSpeed", Mathf.Abs(horizontalSpeed));
     }
 
+    
     public void SetDialogueMode(bool status)
     {
         dialogueMode = status;
