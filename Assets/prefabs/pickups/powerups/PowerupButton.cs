@@ -10,6 +10,7 @@ public class PowerupButton : MonoBehaviour
     [SerializeField] AudioSource powerupSound;
     [SerializeField] float soundDuration;
 
+    PowerupsController powerupsController;
     Image buttonImage;
     Button button;
     bool powerupActive = false;
@@ -22,6 +23,7 @@ public class PowerupButton : MonoBehaviour
         button = GetComponent<Button>();
         SetButtonActive(false);
         attackButtons = FindObjectOfType<AttackButtons>();
+        powerupsController = GetComponentInParent<PowerupsController>();
     }
 
     public void SetButtonActive(bool status)
@@ -32,9 +34,9 @@ public class PowerupButton : MonoBehaviour
 
     public void PushPowerupButton()
     {
-        if (powerupActive) return;
+        if (powerupsController.PowerupActive()) return;
 
-        powerupActive = true;
+        powerupsController.SetPowerupActive(true);
         StartCoroutine(PowerupButtonCoroutine());
     }
 
@@ -54,6 +56,6 @@ public class PowerupButton : MonoBehaviour
 
         attackButtons.ActivateShootButton(0);
         SetButtonActive(false);
-        powerupActive = false;
+        powerupsController.SetPowerupActive(false);
     }
 }
