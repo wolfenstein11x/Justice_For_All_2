@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1035831373928218580}
   - component: {fileID: 2515585007777178449}
   - component: {fileID: 7709756408050975069}
+  - component: {fileID: 398014517743250859}
+  - component: {fileID: 4571715581790128265}
+  - component: {fileID: 3984302547571593465}
   m_Layer: 0
   m_Name: birdy
   m_TagString: Untagged
@@ -71,12 +74,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 987877901
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: -1421440475
+  m_SortingLayer: 4
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 56f2929892a02bf4f8cbda9457fb1409, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.98, y: 0.63}
@@ -106,3 +109,60 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &398014517743250859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911305875981985510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0679554aa9a19124b90351b0ab3ccdfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfAnmations: 2
+  idleTimeMin: 3
+  idleTimeMax: 7
+  moveTimeMin: 1.5
+  moveTimeMax: 2.5
+  moveSpeed: 0.9
+--- !u!114 &4571715581790128265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911305875981985510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98742967772028944836d79275dcee3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &3984302547571593465
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911305875981985510}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
