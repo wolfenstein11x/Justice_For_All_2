@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 459
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: AnimatorControllerTool
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,9 +120,9 @@ MonoBehaviour:
     y: 614
     width: 1461
     height: 333
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 23}
@@ -131,8 +131,8 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 16}
   - {fileID: 15}
-  m_Selected: 5
-  m_LastSelected: 6
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1185,9 +1185,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 579
+    y: 687
     width: 1460
-    height: 420
+    height: 312
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2266,7 +2266,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/asset_packs/2D Platformer Tileset/Sprites/Animations/Bird/walk
+    - Assets/prefabs/props/animatedProps/torch
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -2274,16 +2274,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/asset_packs/2D Platformer Tileset/Sprites/Animations/Bird/walk
+  - Assets/prefabs/props/animatedProps/torch
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\repos\J4A_2\J4A_mobile
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 188b0000
-    m_LastClickedID: 35608
-    m_ExpandedIDs: 00000000728a0000748a0000768a0000788a00007a8a00007c8a00007e8a0000808a0000828a0000848a0000868a0000888a00008a8a00008c8a00008e8a0000908a0000c88a0000088b00000a8b000000ca9a3b
+    scrollPos: {x: 0, y: 2044}
+    m_SelectedIDs: a4990000
+    m_LastClickedID: 39332
+    m_ExpandedIDs: 00000000c08a0000c28a0000c48a0000c68a0000c88a0000ca8a0000cc8a0000ce8a0000d08a0000d28a0000d48a0000d68a0000d88a0000da8a0000dc8a0000de8a0000fe8a0000228b0000288b0000b28b0000b48b0000788d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2311,7 +2311,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000728a0000748a0000768a0000788a00007a8a00007c8a00007e8a0000808a0000828a0000848a0000868a0000888a00008a8a00008c8a00008e8a0000908a0000
+    m_ExpandedIDs: 00000000c08a0000c28a0000c48a0000c68a0000c88a0000ca8a0000cc8a0000ce8a0000d08a0000d28a0000d48a0000d68a0000d88a0000da8a0000dc8a0000de8a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2336,8 +2336,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: fc8e0000008f0000048f0000088f00000c8f0000108f0000148f0000188f0000
-    m_LastClickedInstanceID: 36604
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000a6cd0000ca7600008a750000e4670000de6700007ca60000b0ca0000206d0000f68000008e880000
     m_RenameOverlay:
@@ -2453,7 +2453,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f6faffff8a6d0000
+      m_ExpandedIDs: 42e0feffc262ffffb8d8ffffbeeafffffaeaffff54f3fffff6faffffae8c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2859,9 +2859,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -10.693084, y: 21.740236, z: -0.0077896994}
+    m_Target: {x: 10.1232815, y: 6.7485714, z: -0.1584446}
     speed: 2
-    m_Value: {x: -10.693084, y: 21.740236, z: -0.0077896994}
+    m_Value: {x: 10.308344, y: 6.592663, z: -0.15125751}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2911,9 +2911,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.2298623
+    m_Target: 16.6898
     speed: 2
-    m_Value: 1.2298623
+    m_Value: 15.9711
   m_Ortho:
     m_Target: 1
     speed: 2
