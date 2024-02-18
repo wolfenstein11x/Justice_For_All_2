@@ -22,8 +22,11 @@ public class PowerupShooter : MonoBehaviour
     {
         AudioSource blastSoundInstance = Instantiate(blastSound, transform.position, transform.rotation);
         Destroy(blastSoundInstance, blastSoundDuration);
-        
+
         PowerupBlast powerupBlast = Instantiate(powerupBlasts[powerupIdx], shootPoint.position, powerupBlasts[powerupIdx].transform.rotation);
         powerupBlast.transform.parent = gameObject.transform;
+
+        // make blast sound a child of powerupblast, in case powerup blast is destroyed before the sound instance is, and the sound instance lingers
+        blastSoundInstance.transform.parent = powerupBlast.gameObject.transform;
     }
 }

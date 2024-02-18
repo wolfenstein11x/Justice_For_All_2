@@ -26,6 +26,9 @@ public class PowerupBlast : MonoBehaviour
         // de-child bullet from shooter so it does not move with shooter
         transform.parent = null;
 
+        // powerup blasts may not be symmetric, so make it face direction it's going
+        transform.localScale = new Vector2(orientation * transform.localScale.x, transform.localScale.y);
+
         Invoke(nameof(FadeAway), maxLifetime);
     }
 

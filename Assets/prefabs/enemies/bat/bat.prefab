@@ -329,9 +329,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerupBlasts:
-  - {fileID: 4020917364536411775, guid: 636a89de113c50344ad78631433629f2, type: 3}
-  blastSound: {fileID: 6097711307674818944, guid: a1abd98cb2e0d1d41afb0aeb0246db6f, type: 3}
-  blastSoundDuration: 1.5
+  - {fileID: 6478133492982983501, guid: d3c3341f9719dfe459fa925aca748639, type: 3}
+  blastSound: {fileID: 3261175941999291686, guid: 7af905c3b1587dd4395183ebc215d6fa, type: 3}
+  blastSoundDuration: 0.3
   shootPoint: {fileID: 1765086745774231463}
 --- !u!1 &5187347883035616860
 GameObject:
@@ -389,7 +389,7 @@ Transform:
   m_GameObject: {fileID: 6406056886279863050}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
