@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meleeRange: 1
   meleePos: {fileID: 9055641419778464299}
-  meleeDamage: 0
+  meleeDamage: 20
   meleeRaycastLayers:
     serializedVersion: 2
     m_Bits: 256
@@ -485,15 +485,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 622539328298209363, guid: 38e60d6459d6f8142b6d46b7b6ddf2cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.772518
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 622539328298209363, guid: 38e60d6459d6f8142b6d46b7b6ddf2cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.68820786
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 622539328298209363, guid: 38e60d6459d6f8142b6d46b7b6ddf2cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.044725128
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 622539328298209363, guid: 38e60d6459d6f8142b6d46b7b6ddf2cd, type: 3}
       propertyPath: m_LocalRotation.w
