@@ -180,7 +180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -313090797
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3fc6eea910e74fd498165beddae97a9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498bdf969245e4049969132c74190f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 1
+  walkSpeed: 1.6
   runSpeedMultiplier: 1.5
   sightRange: 10
   sightRaycastLayers:
@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4185f9b989653478ed7f48da943aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 20
+  hitPoints: 60
   meleeDamageSound: {fileID: 418512700978739644}
 --- !u!95 &8492864902729610708
 Animator:

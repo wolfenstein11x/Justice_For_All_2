@@ -148,7 +148,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -313090797
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: f8377f427dfb90a40af0804368c76771, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4185f9b989653478ed7f48da943aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 20
+  hitPoints: 60
   meleeDamageSound: {fileID: 1776175260999762847}
 --- !u!95 &2060083018389898123
 Animator:
@@ -373,7 +373,7 @@ MonoBehaviour:
   muzzleFlashPoint: {fileID: 7644415127811397247}
   shootPointCrouching: {fileID: 0}
   muzzleFlashPointCrouching: {fileID: 0}
-  shootRange: 5
+  shootRange: 4
   shootRaycastLayers:
     serializedVersion: 2
     m_Bits: 264

@@ -1688,14 +1688,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: yellowHair
       objectReference: {fileID: 0}
-    - target: {fileID: 963728564239233949, guid: af2a71d6a42a13d4ea956d19fed56a88, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2913658114781419157, guid: af2a71d6a42a13d4ea956d19fed56a88, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6370036598621540875, guid: af2a71d6a42a13d4ea956d19fed56a88, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.88218
@@ -119331,17 +119323,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5383618079914131323, guid: 5089adbfbbca1d8408a149257909d116, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7705085937272480592, guid: 5089adbfbbca1d8408a149257909d116, type: 3}
       propertyPath: m_Name
       value: airBorne
       objectReference: {fileID: 0}
     - target: {fileID: 7705085937272480592, guid: 5089adbfbbca1d8408a149257909d116, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
