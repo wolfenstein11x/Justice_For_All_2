@@ -15,6 +15,7 @@ public class WayPoint : MonoBehaviour
     float[] probabilities;
     float proximityToPatroller;
     bool recentInteraction;
+    bool activated;
 
     private void OnDrawGizmos()
     {
@@ -27,12 +28,21 @@ public class WayPoint : MonoBehaviour
     void Start()
     {
         recentInteraction = false;
+        Activate(true);
         probabilities = new float[] { turnProbability, jumpProbability };
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!activated) return;
+
+        if (patroller.GetComponent<Health>().hitPoints <= 0f)
+        {
+            Activate(false);
+            return;
+        }
+
         if (recentInteraction) return;
 
         MeasureProximity();
@@ -98,5 +108,10 @@ public class WayPoint : MonoBehaviour
     private void ClearRecentInteraction()
     {
         recentInteraction = false;
+    }
+
+    private void Activate(bool status)
+    {
+        activated = status;
     }
 }
