@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
         startingHitPoints = hitPoints;
     }
 
+    
     public void Revive()
     {
         hitPoints = startingHitPoints;
