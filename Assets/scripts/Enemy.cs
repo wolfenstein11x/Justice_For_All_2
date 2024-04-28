@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float jumpSpeed;
     [SerializeField] protected bool hideMode = false;
     [SerializeField] protected bool facingLeft = false;
+    [SerializeField] AudioSource footstepSound;
     
     protected Rigidbody2D rb;
     protected OrientationTracker orientationTracker;
@@ -129,5 +130,10 @@ public class Enemy : MonoBehaviour
             //Debug.DrawRay(transform.position, Vector2.right * sightRange * new Vector2(orientation, 0f), Color.blue);
             return false;
         }
+    }
+
+    public void PlayFootsteps()
+    {
+        footstepSound.Play();
     }
 }
