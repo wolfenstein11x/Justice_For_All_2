@@ -65,6 +65,7 @@ public class Enemy : MonoBehaviour
     public void Halt()
     {
         rb.velocity = new Vector2(0f, 0f);
+        //Debug.Log("halting");
     }
 
     public void MultiplySpeed(float speedMultiplier)
