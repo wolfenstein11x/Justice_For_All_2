@@ -63,4 +63,6 @@ public class NPC : MonoBehaviour
         
         animator.SetTrigger(animationTrigger);
     }
+
+    
 }

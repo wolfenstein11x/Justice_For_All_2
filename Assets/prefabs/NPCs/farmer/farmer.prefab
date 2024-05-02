@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5448449042513349719}
   - component: {fileID: 9219977832515274908}
   - component: {fileID: 1513667539305101208}
+  - component: {fileID: 7968998500957587216}
   m_Layer: 0
   m_Name: farmer
   m_TagString: Untagged
@@ -166,3 +167,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7968998500957587216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2215975424290138241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43097315186a3c46b0f7465e62f2eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sightRange: 2
+  sightRaycastLayers:
+    serializedVersion: 2
+    m_Bits: 264
