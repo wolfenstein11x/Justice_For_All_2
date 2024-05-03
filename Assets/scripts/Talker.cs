@@ -8,6 +8,7 @@ public class Talker : MonoBehaviour
     [SerializeField] LayerMask sightRaycastLayers;
     [SerializeField] GameObject dialogueCanvas;
     [SerializeField] GameObject UImain;
+    [SerializeField] float talkBuffer = 2f;
 
     OrientationTracker orientationTracker;
     Animator animator;
@@ -26,7 +27,10 @@ public class Talker : MonoBehaviour
     {
         if (PlayerInSight())
         {
-            animator.SetTrigger("talk");
+            if (pc.TalkerInSight(sightRange) && !PlayerTooClose())
+            {
+                animator.SetTrigger("talk");
+            }
         }
     }
 
@@ -39,17 +43,17 @@ public class Talker : MonoBehaviour
         // ray hit something, could be a wall or a target
         if (hit.collider != null)
         {
-            // ray hit a target, because only a target would have Health
+            // ray hit Player, because only a Player would have PlayerController
             if (hit.collider.gameObject.GetComponent<PlayerController>() != null)
             {
-                Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.red);
+                //Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.red);
                 return true;
             }
 
             // ray hit a wall
             else
             {
-                Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.yellow);
+                //Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.yellow);
                 return false;
             }
 
@@ -58,7 +62,7 @@ public class Talker : MonoBehaviour
         // ray hit nothing
         else
         {
-            Debug.DrawRay(transform.position, Vector2.right * sightRange * new Vector2(orientation, 0f), Color.blue);
+            //Debug.DrawRay(transform.position, Vector2.right * sightRange * new Vector2(orientation, 0f), Color.blue);
             return false;
         }
     }
@@ -72,8 +76,12 @@ public class Talker : MonoBehaviour
 
         UImain.SetActive(!status);
         dialogueCanvas.SetActive(status);
+    }
 
-        
-        
+    private bool PlayerTooClose()
+    {
+        Vector3 playerPos = pc.transform.position;
+        float distance = Vector3.Distance(transform.position, playerPos);
+        return distance <= talkBuffer;
     }
 }

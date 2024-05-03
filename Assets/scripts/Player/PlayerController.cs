@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AmmoTracker ammoCountText;
     [SerializeField] AmmoTracker grenadeCountText;
     [SerializeField] AudioSource outOfAmmoSound;
+    [SerializeField] LayerMask dialogueRaycastLayers;
     //[SerializeField] Vector2 hazardForce;
 
     private Animator playerAnimator;
@@ -228,5 +229,37 @@ public class PlayerController : MonoBehaviour
     public void PickupKey()
     {
         hasKey = true;
+    }
+
+    public bool TalkerInSight(float sightRange)
+    {
+        float orientation = orientationTracker.GetOrientation();
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * new Vector2(orientation, 0f), sightRange, dialogueRaycastLayers);
+
+        // ray hit something, could be a wall or a target
+        if (hit.collider != null)
+        {
+            // ray hit Talker, because only a Talker would have Talker
+            if (hit.collider.gameObject.GetComponent<Talker>() != null)
+            {
+                //Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.cyan);
+                return true;
+            }
+
+            // ray hit something else
+            else
+            {
+                //Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.yellow);
+                return false;
+            }
+
+        }
+
+        // ray hit nothing
+        else
+        {
+            //Debug.DrawRay(transform.position, Vector2.right * sightRange * new Vector2(orientation, 0f), Color.black);
+            return false;
+        }
     }
 }
