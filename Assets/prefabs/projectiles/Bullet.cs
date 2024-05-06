@@ -26,6 +26,9 @@ public class Bullet : MonoBehaviour
         // de-child bullet from shooter so it does not move with shooter
         transform.parent = null;
 
+        // projectile may not be symmetric, so make it face direction it's going
+        transform.localScale = new Vector2(orientation * transform.localScale.x, transform.localScale.y);
+
         Invoke(nameof(BlowUp), maxLifetime);
     }
 
