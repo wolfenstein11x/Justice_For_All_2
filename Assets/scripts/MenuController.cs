@@ -8,6 +8,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] GameObject levelCompleteMenu;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject[] controlPanels;
+    [SerializeField] GameObject dialogueButtonBackground;
 
     SceneLoader sceneLoader;
 
@@ -18,6 +19,7 @@ public class MenuController : MonoBehaviour
         gameOverMenu.SetActive(false);
         levelCompleteMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        dialogueButtonBackground.SetActive(false);
 
         ShowControlsPanels(true);
     }
@@ -57,6 +59,11 @@ public class MenuController : MonoBehaviour
     public void ActivateLevelCompleteMenu()
     {
         levelCompleteMenu.SetActive(true);
+    }
+
+    public void ActivateDialogueButton(bool status)
+    {
+        dialogueButtonBackground.SetActive(status);
     }
 
     public void PauseButton()

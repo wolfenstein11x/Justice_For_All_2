@@ -10,6 +10,7 @@ public class Talker : MonoBehaviour
     [SerializeField] GameObject UImain;
     [SerializeField] float talkBuffer = 2f;
 
+    MenuController menuController;
     OrientationTracker orientationTracker;
     Animator animator;
     PlayerController pc;
@@ -18,6 +19,7 @@ public class Talker : MonoBehaviour
     void Start()
     {
         StartDialogue(false);
+        menuController = FindObjectOfType<MenuController>();
         orientationTracker = GetComponent<OrientationTracker>();
         animator = GetComponent<Animator>();
         pc = FindObjectOfType<PlayerController>();
@@ -29,9 +31,13 @@ public class Talker : MonoBehaviour
         {
             if (pc.TalkerInSight(sightRange) && !PlayerTooClose())
             {
-                animator.SetTrigger("talk");
+                menuController.ActivateDialogueButton(true);
             }
+
+            else menuController.ActivateDialogueButton(false);
         }
+
+        else menuController.ActivateDialogueButton(false);
     }
 
 
