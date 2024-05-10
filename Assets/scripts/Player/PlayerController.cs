@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private bool dialogueMode = false;
     private bool jumpReset = true;
     public bool hasKey = false;
+    public float sightRange = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -231,7 +232,7 @@ public class PlayerController : MonoBehaviour
         hasKey = true;
     }
 
-    public bool TalkerInSight(float sightRange)
+    public bool TalkerInSight()
     {
         float orientation = orientationTracker.GetOrientation();
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * new Vector2(orientation, 0f), sightRange, dialogueRaycastLayers);
@@ -262,4 +263,6 @@ public class PlayerController : MonoBehaviour
             return false;
         }
     }
+
+    
 }

@@ -8,9 +8,9 @@ public class MenuController : MonoBehaviour
     [SerializeField] GameObject levelCompleteMenu;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject[] controlPanels;
-    [SerializeField] GameObject dialogueButtonBackground;
 
     SceneLoader sceneLoader;
+    PlayerController pc;
 
     private void Awake()
     {
@@ -19,7 +19,6 @@ public class MenuController : MonoBehaviour
         gameOverMenu.SetActive(false);
         levelCompleteMenu.SetActive(false);
         pauseMenu.SetActive(false);
-        dialogueButtonBackground.SetActive(false);
 
         ShowControlsPanels(true);
     }
@@ -28,6 +27,7 @@ public class MenuController : MonoBehaviour
     void Start()
     {
         sceneLoader = FindObjectOfType<SceneLoader>();
+        pc = FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame
@@ -61,10 +61,7 @@ public class MenuController : MonoBehaviour
         levelCompleteMenu.SetActive(true);
     }
 
-    public void ActivateDialogueButton(bool status)
-    {
-        dialogueButtonBackground.SetActive(status);
-    }
+    
 
     public void PauseButton()
     {
@@ -87,4 +84,6 @@ public class MenuController : MonoBehaviour
             controlPanel.SetActive(status);
         }
     }
+
+  
 }

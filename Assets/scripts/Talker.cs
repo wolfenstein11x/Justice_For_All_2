@@ -6,11 +6,9 @@ public class Talker : MonoBehaviour
 {
     [SerializeField] float sightRange = 2f;
     [SerializeField] LayerMask sightRaycastLayers;
-    [SerializeField] GameObject dialogueCanvas;
-    [SerializeField] GameObject UImain;
     [SerializeField] float talkBuffer = 2f;
 
-    MenuController menuController;
+    NPCDialogueController npcDialogueController;
     OrientationTracker orientationTracker;
     Animator animator;
     PlayerController pc;
@@ -18,8 +16,7 @@ public class Talker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartDialogue(false);
-        menuController = FindObjectOfType<MenuController>();
+        npcDialogueController = FindObjectOfType<NPCDialogueController>();
         orientationTracker = GetComponent<OrientationTracker>();
         animator = GetComponent<Animator>();
         pc = FindObjectOfType<PlayerController>();
@@ -29,15 +26,13 @@ public class Talker : MonoBehaviour
     {
         if (PlayerInSight())
         {
-            if (pc.TalkerInSight(sightRange) && !PlayerTooClose())
+            if (pc.TalkerInSight() && !PlayerTooClose())
             {
-                menuController.ActivateDialogueButton(true);
+                npcDialogueController.SetCurrentTalker(this);
             }
 
-            else menuController.ActivateDialogueButton(false);
         }
 
-        else menuController.ActivateDialogueButton(false);
     }
 
 
@@ -73,16 +68,6 @@ public class Talker : MonoBehaviour
         }
     }
 
-    public void StartDialogue(bool status)
-    {
-        if (status == true)
-        {
-            pc.SetDialogueMode(true);
-        }
-
-        UImain.SetActive(!status);
-        dialogueCanvas.SetActive(status);
-    }
 
     private bool PlayerTooClose()
     {

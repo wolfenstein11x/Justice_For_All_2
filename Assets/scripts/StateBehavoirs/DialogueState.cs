@@ -10,7 +10,6 @@ public class DialogueState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         talker = animator.GetComponent<Talker>();
-        talker.StartDialogue(true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
