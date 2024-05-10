@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class NPCDialogueController : MonoBehaviour
 {
     [SerializeField] GameObject dialogueButtonBackground;
     [SerializeField] DialogueBackground dialogueBackground;
+    [SerializeField] TextMeshProUGUI dialogueText;
+    [SerializeField] int lettersPerSecond = 10;
+    [SerializeField] float startDialogueDelay = 0.25f;
 
 
+    List<string> currentTalkerLines;
     PlayerController pc;
     Talker currentTalker;
+    int currentLine = 0;
 
     private void Awake()
     {
@@ -42,10 +48,19 @@ public class NPCDialogueController : MonoBehaviour
     {
         if (TalkersInPosition())
         {
-            dialogueBackground.SetNameText(currentTalker.name);
-            dialogueBackground.SetHeadShot(currentTalker.headShot);
+            SetCurrentTalkerUI();
             ShowDialogueBackground(true);
+
+            // give short delay before typing line to give Dialogue game object enough time to initialize, preventing null reference error
+            Invoke(nameof(TypeNextLine), startDialogueDelay);
         }
+    }
+
+    private void SetCurrentTalkerUI()
+    {
+        dialogueBackground.SetNameText(currentTalker.name);
+        dialogueBackground.SetHeadShot(currentTalker.headShot);
+        currentTalkerLines = currentTalker.lines;
     }
 
     public void ShowDialogueButton(bool status)
@@ -67,5 +82,41 @@ public class NPCDialogueController : MonoBehaviour
     public bool IsCurrentTalker(Talker talker)
     {
         return currentTalker == talker;
+    }
+
+    public void TypeNextLine()
+    {
+        dialogueBackground.ShowDialogueArrow(false);
+        //Debug.Log(currentTalkerLines[0]);
+        if (currentLine >= currentTalkerLines.Count)
+        {
+            ConcludeDialogue();
+            return;
+        }
+
+        StartCoroutine(TypeLine());
+
+    }
+
+    IEnumerator TypeLine()
+    {
+        //Debug.Log("entered coroutine");
+
+        dialogueText.text = "";
+        foreach (var letter in currentTalkerLines[currentLine].ToCharArray())
+        {
+            dialogueText.text += letter;
+            //Debug.Log("made it here");
+
+            yield return new WaitForSeconds(1f / lettersPerSecond);
+        }
+
+        currentLine++;
+        dialogueBackground.ShowDialogueArrow(true);
+    }
+
+    private void ConcludeDialogue()
+    {
+
     }
 }
