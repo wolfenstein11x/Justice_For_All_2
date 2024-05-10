@@ -9,6 +9,8 @@ public class DialogueBackground : MonoBehaviour
     [SerializeField] TMP_Text nameText;
     [SerializeField] Transform headShotPosition;
     [SerializeField] GameObject dialogueArrow;
+
+    GameObject headShot;
     
     // Start is called before the first frame update
     void Start()
@@ -31,12 +33,12 @@ public class DialogueBackground : MonoBehaviour
     public void SetHeadShot(GameObject currentTalkerHeadShot)
     {
         //headShot = currentTalkerHeadShot;
-        Instantiate(currentTalkerHeadShot, headShotPosition);
+        headShot = Instantiate(currentTalkerHeadShot, headShotPosition);
     }
 
     public void ClearHeadShot()
     {
-
+        Destroy(headShot);
     }
  
 
