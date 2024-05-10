@@ -24,14 +24,14 @@ public class Talker : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerInSight())
-        {
-            if (pc.TalkerInSight() && !PlayerTooClose())
+        if (npcDialogueController.IsCurrentTalker(this)) return;
+
+        if (PlayerInSight() && pc.TalkerInSight())
             {
                 npcDialogueController.SetCurrentTalker(this);
             }
 
-        }
+        
 
     }
 
@@ -47,8 +47,9 @@ public class Talker : MonoBehaviour
             // ray hit Player, because only a Player would have PlayerController
             if (hit.collider.gameObject.GetComponent<PlayerController>() != null)
             {
+                if (PlayerTooClose()) return false;
+                else return true;
                 //Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.red);
-                return true;
             }
 
             // ray hit a wall

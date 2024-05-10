@@ -40,4 +40,9 @@ public class NPCDialogueController : MonoBehaviour
         currentTalker = talker;
         Debug.Log(currentTalker.name);
     }
+
+    public bool IsCurrentTalker(Talker talker)
+    {
+        return currentTalker == talker;
+    }
 }
