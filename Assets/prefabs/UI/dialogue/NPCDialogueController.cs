@@ -5,6 +5,7 @@ using UnityEngine;
 public class NPCDialogueController : MonoBehaviour
 {
     [SerializeField] GameObject dialogueButtonBackground;
+    [SerializeField] DialogueBackground dialogueBackground;
 
 
     PlayerController pc;
@@ -12,7 +13,8 @@ public class NPCDialogueController : MonoBehaviour
 
     private void Awake()
     {
-        dialogueButtonBackground.SetActive(false);
+        ShowDialogueButton(false);
+        ShowDialogueBackground(false);
     }
 
     // Start is called before the first frame update
@@ -24,21 +26,42 @@ public class NPCDialogueController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (pc.InDialogueMode()) return;
+
+        ShowDialogueButton(TalkersInPosition());
+    }
+
+    private bool TalkersInPosition()
+    {
+        if (currentTalker == null) return false;
+
+        else return (pc.TalkerInSight() && currentTalker.PlayerInSight());
     }
 
     public void AttemptInitiateDialogue()
     {
-        if (pc.TalkerInSight() && currentTalker.PlayerInSight())
+        if (TalkersInPosition())
         {
-            Debug.Log(currentTalker.name);
+            dialogueBackground.SetNameText(currentTalker.name);
+            dialogueBackground.SetHeadShot(currentTalker.headShot);
+            ShowDialogueBackground(true);
         }
+    }
+
+    public void ShowDialogueButton(bool status)
+    {
+        dialogueButtonBackground.SetActive(status);
+    }
+
+    private void ShowDialogueBackground(bool status)
+    {
+        dialogueBackground.gameObject.SetActive(status);
     }
 
     public void SetCurrentTalker(Talker talker)
     {
         currentTalker = talker;
-        Debug.Log(currentTalker.name);
+        //Debug.Log(currentTalker.name);
     }
 
     public bool IsCurrentTalker(Talker talker)

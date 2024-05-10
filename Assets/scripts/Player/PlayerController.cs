@@ -91,6 +91,11 @@ public class PlayerController : MonoBehaviour
         dialogueMode = status;
     }
 
+    public bool InDialogueMode()
+    {
+        return dialogueMode;
+    }
+
     private void FlipSprite()
     {
         if (Mathf.Abs(joystick.Horizontal) > Mathf.Epsilon)

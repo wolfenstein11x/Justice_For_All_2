@@ -7,6 +7,7 @@ public class Talker : MonoBehaviour
     [SerializeField] float sightRange = 2f;
     [SerializeField] LayerMask sightRaycastLayers;
     [SerializeField] float talkBuffer = 2f;
+    public GameObject headShot;
 
     NPCDialogueController npcDialogueController;
     OrientationTracker orientationTracker;
