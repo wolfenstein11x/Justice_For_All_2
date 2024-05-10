@@ -48,6 +48,7 @@ public class NPCDialogueController : MonoBehaviour
     {
         if (TalkersInPosition())
         {
+            currentTalker.SetTalkMode(true);
             SetCurrentTalkerUI();
             ShowDialogueBackground(true);
 
@@ -115,8 +116,12 @@ public class NPCDialogueController : MonoBehaviour
         dialogueBackground.ShowDialogueArrow(true);
     }
 
-    private void ConcludeDialogue()
+    public void ConcludeDialogue()
     {
-
+        dialogueText.text = "";
+        currentLine = 0;
+        dialogueBackground.ClearHeadShot();
+        ShowDialogueBackground(false);
+        currentTalker.SetTalkMode(false);
     }
 }

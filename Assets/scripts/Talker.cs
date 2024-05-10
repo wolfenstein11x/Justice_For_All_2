@@ -78,4 +78,9 @@ public class Talker : MonoBehaviour
         float distance = Vector3.Distance(transform.position, playerPos);
         return distance <= talkBuffer;
     }
+
+    public void SetTalkMode(bool status)
+    {
+        animator.SetBool("talkMode", status);
+    }
 }
