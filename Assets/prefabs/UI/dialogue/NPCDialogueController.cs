@@ -15,6 +15,7 @@ public class NPCDialogueController : MonoBehaviour
     List<string> currentTalkerLines;
     PlayerController pc;
     Talker currentTalker;
+    MenuController menuController;
     int currentLine = 0;
 
     private void Awake()
@@ -27,6 +28,7 @@ public class NPCDialogueController : MonoBehaviour
     void Start()
     {
         pc = FindObjectOfType<PlayerController>();
+        menuController = FindObjectOfType<MenuController>();
     }
 
     // Update is called once per frame
@@ -50,6 +52,7 @@ public class NPCDialogueController : MonoBehaviour
         {
             currentTalker.SetTalkMode(true);
             SetCurrentTalkerUI();
+            menuController.ShowControlsPanels(false);
             ShowDialogueBackground(true);
 
             // give short delay before typing line to give Dialogue game object enough time to initialize, preventing null reference error
@@ -122,6 +125,7 @@ public class NPCDialogueController : MonoBehaviour
         currentLine = 0;
         dialogueBackground.ClearHeadShot();
         ShowDialogueBackground(false);
+        menuController.ShowControlsPanels(true);
         currentTalker.SetTalkMode(false);
     }
 }

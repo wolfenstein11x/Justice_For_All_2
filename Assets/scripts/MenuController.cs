@@ -77,7 +77,7 @@ public class MenuController : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    void ShowControlsPanels(bool status)
+    public void ShowControlsPanels(bool status)
     {
         foreach (GameObject controlPanel in controlPanels)
         {
