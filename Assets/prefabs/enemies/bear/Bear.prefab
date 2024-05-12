@@ -184,10 +184,11 @@ MonoBehaviour:
   sightRange: 12
   sightRaycastLayers:
     serializedVersion: 2
-    m_Bits: 264
+    m_Bits: 0
   jumpSpeed: 0
   hideMode: 0
   facingLeft: 0
+  footstepSound: {fileID: 0}
 --- !u!114 &113967021287945416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98742967772028944836d79275dcee3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftFacingSprite: 0
 --- !u!95 &1716739975323691782
 Animator:
   serializedVersion: 5
@@ -271,6 +273,7 @@ MonoBehaviour:
   meleeRange: 0.9
   meleePos: {fileID: 5530323509731119618}
   meleeDamage: 30
+  touchingRange: 1
   meleeRaycastLayers:
     serializedVersion: 2
     m_Bits: 256
@@ -594,11 +597,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2183541109363037302, guid: 6870c6659c2b4714d963fa53f1d9720d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.964925
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2183541109363037302, guid: 6870c6659c2b4714d963fa53f1d9720d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9100001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2183541109363037302, guid: 6870c6659c2b4714d963fa53f1d9720d, type: 3}
       propertyPath: m_LocalPosition.z

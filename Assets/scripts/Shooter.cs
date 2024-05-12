@@ -58,14 +58,14 @@ public class Shooter : MonoBehaviour
             // ray hit a target, because only a target would have Health
             if (hit.collider.gameObject.GetComponent<Health>() != null)
             {
-                Debug.DrawRay(shootPoint.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.red);
+                //Debug.DrawRay(shootPoint.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.red);
                 return true;
             }
 
             // ray hit a wall
             else
             {
-                Debug.DrawRay(shootPoint.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.yellow);
+                //Debug.DrawRay(shootPoint.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.yellow);
                 return false;
             }
             
@@ -74,7 +74,7 @@ public class Shooter : MonoBehaviour
         // ray hit nothing
         else
         {
-            Debug.DrawRay(shootPoint.position, Vector2.right * shootRange * new Vector2(orientation, 0f), Color.blue);
+            //Debug.DrawRay(shootPoint.position, Vector2.right * shootRange * new Vector2(orientation, 0f), Color.blue);
             return false;
         }
 

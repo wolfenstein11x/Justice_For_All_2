@@ -9,6 +9,7 @@ public class PowerupBlast : MonoBehaviour
     [SerializeField] float maxLifetime = 1f;
     [SerializeField] float explosionLifetime = 0.2f;
     [SerializeField] float explosionSoundLifetime = 1.2f;
+    [SerializeField] float fadeAwaySpeed = 1000f;
     [SerializeField] GameObject impactVFX;
     [SerializeField] GameObject impactSound;
 
@@ -85,7 +86,7 @@ public class PowerupBlast : MonoBehaviour
         {
             c.a = alpha;
             sr.color = c;
-            yield return new WaitForSeconds(0.025f);
+            yield return new WaitForSeconds(1f/fadeAwaySpeed);
         }
 
         Destroy(gameObject);
