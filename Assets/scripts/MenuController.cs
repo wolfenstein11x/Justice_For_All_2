@@ -51,7 +51,7 @@ public class MenuController : MonoBehaviour
         sceneLoader.LoadNextLevel();
     }
 
-    public void ActivateGemOverMenu()
+    public void ActivateGameOverMenu()
     {
         gameOverMenu.SetActive(true);
     }

@@ -7,6 +7,8 @@ public class PlayerHealth : Health
     [SerializeField] protected HealthBar healthBar;
     [SerializeField] float startingHitpointsEasy, startingHitpointsMedium, startingHitpointsHard;
 
+    MenuController menuController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,7 @@ public class PlayerHealth : Health
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        menuController = FindObjectOfType<MenuController>();
 
         InitHitPoints();
 
@@ -64,7 +67,8 @@ public class PlayerHealth : Health
     protected override void Die()
     {
         base.Die();
-        FindObjectOfType<MenuController>().ActivateGemOverMenu();
+        menuController.ShowControlsPanels(false);
+        menuController.ActivateGameOverMenu();
     }
 
     public bool IsDead()
