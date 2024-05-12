@@ -6,6 +6,7 @@ public class ArrowShooter : Shooter
 {
     [SerializeField] AudioSource boltSound;
     [SerializeField] AudioSource shootSound;
+    [SerializeField] bool facingRight = false;
 
     Animator animator;
 
@@ -14,6 +15,7 @@ public class ArrowShooter : Shooter
     {
         orientationTracker = GetComponent<OrientationTracker>();
         animator = GetComponent<Animator>();
+        if (facingRight) FlipSprite();
     }
 
     private void Update()
@@ -45,5 +47,12 @@ public class ArrowShooter : Shooter
         shootSound.Play();
     }
 
+    private void FlipSprite()
+    {
+        transform.localScale = new Vector2(-1f*transform.localScale.x, 1f);
+    }
+
     
+
+
 }

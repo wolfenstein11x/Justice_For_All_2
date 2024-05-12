@@ -133,6 +133,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    
     public void PlayFootsteps()
     {
         footstepSound.Play();

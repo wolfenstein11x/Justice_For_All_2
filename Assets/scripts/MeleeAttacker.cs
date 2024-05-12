@@ -8,11 +8,13 @@ public class MeleeAttacker : MonoBehaviour
     [SerializeField] float meleeRange = 1f;
     [SerializeField] Transform meleePos;
     [SerializeField] float meleeDamage;
+    [SerializeField] float touchingRange = 1f;
     [SerializeField] LayerMask meleeRaycastLayers;
     [SerializeField] AudioSource meleeSwingSound;
 
     Rigidbody2D rb;
     OrientationTracker orientationTracker;
+    PlayerController pc;
     
 
 
@@ -21,6 +23,7 @@ public class MeleeAttacker : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         orientationTracker = GetComponent<OrientationTracker>();
+        pc = FindObjectOfType<PlayerController>();
     }
 
     public bool InMeleeRange()
@@ -67,6 +70,13 @@ public class MeleeAttacker : MonoBehaviour
         {
             meleeSwingSound.Play();
         }
+    }
+
+    public bool TouchingPlayer()
+    {
+        float distanceToPlayer = Vector2.Distance(transform.position, pc.transform.position);
+        //Debug.Log("distance to player: " + distanceToPlayer);
+        return (distanceToPlayer < touchingRange); 
     }
 
     

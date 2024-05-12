@@ -23,7 +23,8 @@ public class HideStateSoldier : StateMachineBehaviour
     {
         if (player.IsDead()) return;
 
-        if (meleeAttacker.InMeleeRange())
+        // use TouchingPlayer instead of InMeleeRange, because if player is right on top of or right behind enemy (and not in melee range), it looks stupid for enemy to keep hiding
+        if (meleeAttacker.TouchingPlayer())
         {
             animator.SetBool("meleeMode", true);
         }

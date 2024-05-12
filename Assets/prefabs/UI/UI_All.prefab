@@ -5695,6 +5695,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5313792999052681784}
     m_Modifications:
+    - target: {fileID: 643231529988175360, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+      propertyPath: m_Name
+      value: dialogueArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 643231529988175486, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 643231529988175486, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NPCDialogueController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2934388988827327354, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 2103979550961197842}
+    - target: {fileID: 2934388988827327354, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+      propertyPath: dialogueArrow
+      value: 
+      objectReference: {fileID: 8271067780544060338}
+    - target: {fileID: 2934388988827327354, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+      propertyPath: headShotPosition
+      value: 
+      objectReference: {fileID: 6237595373129838881}
+    - target: {fileID: 3221736236989373587, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221736236989373587, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221736236989373587, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7428509160989486330, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5779,14 +5815,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBackground
       objectReference: {fileID: 0}
+    - target: {fileID: 8036851796236981230, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+      propertyPath: m_margin.z
+      value: 14.29657
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5504417522333404542, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+--- !u!114 &2103979550961197842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7428509160536084128, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+  m_PrefabInstance: {fileID: 8801594944734588338}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2103979552715047240 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7428509160989486330, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+  m_PrefabInstance: {fileID: 8801594944734588338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &6237595373129838881 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3221736236989373587, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
+  m_PrefabInstance: {fileID: 8801594944734588338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8271067780544060338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643231529988175360, guid: 1139c2fdf869e7b46bcf820719c8e216, type: 3}
   m_PrefabInstance: {fileID: 8801594944734588338}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8813589837556971933
