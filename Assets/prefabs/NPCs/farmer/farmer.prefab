@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfAnmations: 1
-  idleTimeMin: 3
+  idleTimeMin: 0.5
   idleTimeMax: 7
   moveTimeMin: 1.1
   moveTimeMax: 2.3
@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98742967772028944836d79275dcee3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftFacingSprite: 0
 --- !u!50 &1513667539305101208
 Rigidbody2D:
   serializedVersion: 4
@@ -187,8 +188,11 @@ MonoBehaviour:
   talkBuffer: 0.75
   headShot: {fileID: 6374548551933721574, guid: 55183b29240faf0499acab485eb85546, type: 3}
   lines:
-  - Howdy, partner! Your welcome to go on in my house and help yerself to some worter...
-  - But my daughter is in there, you best not lay a finger on her, boy!
+  - Howdy mate! What brings you to this here town?
+  - Wait, don't tell me... you got wind of some war criminals hiding 'round here,
+    so you've come to track em down?
+  - Way to go kid! We're all rootin for ya. But be careful, these woods are full
+    of danger!
 --- !u!70 &6924302291814746223
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1421440475
   m_SortingLayer: 4
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 56f2929892a02bf4f8cbda9457fb1409, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfAnmations: 2
-  idleTimeMin: 3.2
+  idleTimeMin: 0.5
   idleTimeMax: 7.2
   moveTimeMin: 1.5
   moveTimeMax: 2.2
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98742967772028944836d79275dcee3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftFacingSprite: 0
 --- !u!50 &3984302547571593465
 Rigidbody2D:
   serializedVersion: 4

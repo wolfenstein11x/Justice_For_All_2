@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfAnmations: 2
-  idleTimeMin: 2.4
+  idleTimeMin: 0.5
   idleTimeMax: 5.9
   moveTimeMin: 1.3
   moveTimeMax: 2.2
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98742967772028944836d79275dcee3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftFacingSprite: 0
 --- !u!50 &7256011723879286545
 Rigidbody2D:
   serializedVersion: 4
