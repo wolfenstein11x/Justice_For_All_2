@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private PowerupShooter powerupShooter;
     private MeleeAttacker meleeAttacker;
     private PlayerHealth playerHealth;
+    private Transform startingPos;
 
     private bool readyToShoot;
     private bool allowInvoke;
