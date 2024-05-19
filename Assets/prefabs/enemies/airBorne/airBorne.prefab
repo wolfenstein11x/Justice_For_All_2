@@ -251,8 +251,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.19191742, y: 0.08374548}
-  m_Size: {x: 0.4496193, y: 0.9930372}
+  m_Offset: {x: 0.0038568974, y: 0.08374548}
+  m_Size: {x: 0.46664286, y: 0.9930372}
   m_Direction: 0
 --- !u!61 &2296505539998239187
 BoxCollider2D:
@@ -311,6 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98742967772028944836d79275dcee3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftFacingSprite: 0
 --- !u!114 &7408435191328755926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +333,7 @@ MonoBehaviour:
   jumpSpeed: 0
   hideMode: 0
   facingLeft: 0
+  footstepSound: {fileID: 0}
 --- !u!114 &4944289048464473515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,6 +349,7 @@ MonoBehaviour:
   meleeRange: 1
   meleePos: {fileID: 804103193445956009}
   meleeDamage: 20
+  touchingRange: 1
   meleeRaycastLayers:
     serializedVersion: 2
     m_Bits: 256
