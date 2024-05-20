@@ -138,4 +138,9 @@ public class Enemy : MonoBehaviour
     {
         footstepSound.Play();
     }
+
+    public float MoveSpeed()
+    {
+        return moveSpeed;
+    }
 }
