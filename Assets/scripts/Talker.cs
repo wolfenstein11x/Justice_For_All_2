@@ -49,9 +49,9 @@ public class Talker : MonoBehaviour
             // ray hit Player, because only a Player would have PlayerController
             if (hit.collider.gameObject.GetComponent<PlayerController>() != null)
             {
+                //Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.red);
                 if (PlayerTooClose()) return false;
                 else return true;
-                //Debug.DrawRay(transform.position, Vector2.right * hit.distance * new Vector2(orientation, 0f), Color.red);
             }
 
             // ray hit a wall

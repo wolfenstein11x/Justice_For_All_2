@@ -34,7 +34,7 @@ public class NPCDialogueController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pc.InDialogueMode()) return;
+        //if (pc.InDialogueMode()) return;
 
         ShowDialogueButton(TalkersInPosition());
     }
@@ -42,7 +42,7 @@ public class NPCDialogueController : MonoBehaviour
     private bool TalkersInPosition()
     {
         if (currentTalker == null) return false;
-
+        
         else return (pc.TalkerInSight() && currentTalker.PlayerInSight());
     }
 

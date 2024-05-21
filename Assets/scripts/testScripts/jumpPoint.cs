@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class JumpPoint : MonoBehaviour
 {
-    [SerializeField] Jumper jumper;
+    [SerializeField] Enemy jumper;
     [SerializeField] float proximityThreshold = 0.1f;
     [SerializeField] float resetTime = 1f;
-    [SerializeField] bool jumpUpPoint = true;
 
 
     float proximityToJumper;
@@ -37,8 +36,7 @@ public class JumpPoint : MonoBehaviour
         {
             recentInteraction = true;
 
-            if (jumpUpPoint) jumper.JumpDiagonalUp();
-            else jumper.JumpDiagonalDown();
+            jumper.Jump();
 
             Invoke(nameof(ClearRecentInteraction), resetTime);
 
