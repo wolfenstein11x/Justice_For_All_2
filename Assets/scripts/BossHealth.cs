@@ -2,23 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossHealth : PlayerHealth
+public class BossHealth : HealthBarHealth
 {
-    [SerializeField] float healthThreshold1, healthThreshold2;
+    //[SerializeField] float healthThreshold1, healthThreshold2;
 
-    Boss boss;
-    BossTrapActivator bossTrapActivator;
-    bool reachedThreshold1 = false;
-    bool reachedThreshold2 = false;
+    //Boss boss;
+    //BossTrapActivator bossTrapActivator;
+    //bool reachedThreshold1 = false;
+    //bool reachedThreshold2 = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        Initialize();
+        base.Initialize();
     }
 
     private void Update()
     {
+        /*
         if (hitPoints <= healthThreshold2)
         {
             if (reachedThreshold2) return;
@@ -32,22 +33,16 @@ public class BossHealth : PlayerHealth
             reachedThreshold1 = true;
             if (bossTrapActivator != null) bossTrapActivator.ActivateBossTrap(0);
         }
+        */
     }
 
-    protected override void Initialize()
-    {
-        animator = GetComponent<Animator>();
-        sr = GetComponent<SpriteRenderer>();
-        healthBar.SetMaxHealth(hitPoints);
-        boss = GetComponent<Boss>();
-        bossTrapActivator = FindObjectOfType<BossTrapActivator>();
-    }
+    
 
     protected override void Die()
     {
         animator.SetTrigger("die");
-        if (bossTrapActivator != null) bossTrapActivator.DisableAllBossTraps();
-        boss.StartPostBattleDialogue();
+        Debug.Log("reveal key");
+        FindObjectOfType<MusicController>().PlaySong(0);
         
     }
 }

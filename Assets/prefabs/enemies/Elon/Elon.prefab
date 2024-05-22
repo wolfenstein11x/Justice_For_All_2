@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1928794865482428309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0.05, z: 0}
+  m_LocalPosition: {x: 1.7, y: 0.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -189,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 7686709530958688897}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.597, y: 0.042, z: 0}
+  m_LocalPosition: {x: 1, y: 0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -209,15 +209,14 @@ GameObject:
   - component: {fileID: 2660187922925621054}
   - component: {fileID: 6266108833539152904}
   - component: {fileID: 1731158833319775752}
-  - component: {fileID: 1641140443134228421}
   - component: {fileID: 1862412694963584263}
   - component: {fileID: 2781931308929751040}
   - component: {fileID: 2251225307064377560}
   - component: {fileID: 4229668080074712021}
-  - component: {fileID: 7269284068575120155}
+  - component: {fileID: 1115604722932319743}
   m_Layer: 9
   m_Name: Elon
-  m_TagString: Untagged
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,7 +354,7 @@ MonoBehaviour:
     m_Bits: 264
   jumpSpeed: 800
   hideMode: 0
-  facingLeft: 0
+  facingLeft: 1
   footstepSound: {fileID: 0}
 --- !u!114 &1731158833319775752
 MonoBehaviour:
@@ -369,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18acfeb5e6d586b40ae48c2ed509d0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeRange: 0.6
+  meleeRange: 2
   meleePos: {fileID: 6042204565634561097}
   meleeDamage: 20
   touchingRange: 1
@@ -377,21 +376,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   meleeSwingSound: {fileID: 0}
---- !u!114 &1641140443134228421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9163918460956487918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 989a52818b04b5d4f9e5aa4c805f32b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 100
-  meleeDamageSound: {fileID: 0}
-  healthBar: {fileID: 7985070858588893715}
 --- !u!95 &1862412694963584263
 Animator:
   serializedVersion: 5
@@ -425,14 +409,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a757ac729901d428e9b5374576fbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6680331636397599474, guid: 28c59495d9d10824898d57321dbcad07, type: 3}
+  bullet: {fileID: 1435500071706828608, guid: 5814798fed0766a4c9b0a1dbcdd34c80, type: 3}
   muzzleFlash: {fileID: 7170868187974088185, guid: bf3e6b3c0abf71d4b8d36200283aff3d, type: 3}
-  gunSound: {fileID: 2164896143331134124, guid: 578fca3ac0ea6c64290ed0815caee72a, type: 3}
+  gunSound: {fileID: 3529497247219397572}
   shootPoint: {fileID: 3348035371757450133}
   muzzleFlashPoint: {fileID: 1955149527065139656}
   shootPointCrouching: {fileID: 0}
   muzzleFlashPointCrouching: {fileID: 0}
-  shootRange: 4
+  shootRange: 8
   shootRaycastLayers:
     serializedVersion: 2
     m_Bits: 264
@@ -502,7 +486,7 @@ MonoBehaviour:
   lines:
   - You're no match for me! I've got my X-69-420 Lasergun!
   - And I've got my 420-69 Tesla Cyber Armor Model X!
---- !u!114 &7269284068575120155
+--- !u!114 &1115604722932319743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -511,15 +495,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 9163918460956487918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0679554aa9a19124b90351b0ab3ccdfb, type: 3}
+  m_Script: {fileID: 11500000, guid: b7e74e953be02974a9a04f091324240b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfAnmations: 1
-  idleTimeMin: 0.5
-  idleTimeMax: 1
-  moveTimeMin: 0.3
-  moveTimeMax: 0.4
-  moveSpeed: 1
+  hitPoints: 200
+  meleeDamageSound: {fileID: 1382541660301537428}
+  healthBar: {fileID: 7985070858588893715}
 --- !u!1001 &3382214975201655144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -581,6 +562,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 578fca3ac0ea6c64290ed0815caee72a, type: 3}
+--- !u!82 &3529497247219397572 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2164896143331134124, guid: 578fca3ac0ea6c64290ed0815caee72a, type: 3}
+  m_PrefabInstance: {fileID: 3382214975201655144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3529497247219397579 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2164896143331134115, guid: 578fca3ac0ea6c64290ed0815caee72a, type: 3}
@@ -800,6 +786,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6870c6659c2b4714d963fa53f1d9720d, type: 3}
+--- !u!82 &1382541660301537428 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9050130890055793285, guid: 6870c6659c2b4714d963fa53f1d9720d, type: 3}
+  m_PrefabInstance: {fileID: 7977915946883025425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8140888928412032615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2183541109363037302, guid: 6870c6659c2b4714d963fa53f1d9720d, type: 3}

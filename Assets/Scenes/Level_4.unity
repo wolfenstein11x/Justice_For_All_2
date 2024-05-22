@@ -88716,11 +88716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4185f9b989653478ed7f48da943aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &1131709192 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1382541660301537428, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-  m_PrefabInstance: {fileID: 1232717465}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1209370174
 GameObject:
   m_ObjectHideFlags: 0
@@ -88843,70 +88838,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1641140443134228421, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: hitPoints
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 1641140443134228421, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: meleeDamageSound
-      value: 
-      objectReference: {fileID: 1131709192}
-    - target: {fileID: 1731158833319775752, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: meleeRange
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955149527065139656, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955149527065139656, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2781931308929751040, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 1435500071706828608, guid: 5814798fed0766a4c9b0a1dbcdd34c80, type: 3}
-    - target: {fileID: 2781931308929751040, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: gunSound
-      value: 
-      objectReference: {fileID: 1291028294}
-    - target: {fileID: 2781931308929751040, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: shootRange
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3348035371757450133, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3348035371757450133, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266108833539152904, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: facingLeft
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7269284068575120155, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: moveSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7269284068575120155, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: idleTimeMax
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7269284068575120155, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: idleTimeMin
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7269284068575120155, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: moveTimeMax
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7269284068575120155, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: moveTimeMin
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 7451060175325345694, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.66
@@ -88959,21 +88890,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elon
       objectReference: {fileID: 0}
-    - target: {fileID: 9163918460956487918, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-      propertyPath: m_TagString
-      value: boss
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7269284068575120155, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
---- !u!82 &1291028294 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3529497247219397572, guid: ce471b258dcbae04db8c7a9c87236162, type: 3}
-  m_PrefabInstance: {fileID: 1232717465}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1342589578
 PrefabInstance:
   m_ObjectHideFlags: 0
