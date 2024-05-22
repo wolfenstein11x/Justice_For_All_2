@@ -16,6 +16,7 @@ public class NPCDialogueController : MonoBehaviour
     PlayerController pc;
     Talker currentTalker;
     MenuController menuController;
+    MusicController musicController;
     int currentLine = 0;
 
     private void Awake()
@@ -29,6 +30,7 @@ public class NPCDialogueController : MonoBehaviour
     {
         pc = FindObjectOfType<PlayerController>();
         menuController = FindObjectOfType<MenuController>();
+        musicController = FindObjectOfType<MusicController>();
     }
 
     // Update is called once per frame
@@ -54,6 +56,7 @@ public class NPCDialogueController : MonoBehaviour
             SetCurrentTalkerUI();
             menuController.ShowControlsPanels(false);
             ShowDialogueBackground(true);
+            ProcessTalkerTagStartOfDialogue(currentTalker);
 
             // give short delay before typing line to give Dialogue game object enough time to initialize, preventing null reference error
             Invoke(nameof(TypeNextLine), startDialogueDelay);
@@ -128,19 +131,34 @@ public class NPCDialogueController : MonoBehaviour
         menuController.ShowControlsPanels(true);
         currentTalker.SetTalkMode(false);
 
-        ProcessTalkerTag(currentTalker);
+        ProcessTalkerTagPostDialogue(currentTalker);
     }
 
-    private void ProcessTalkerTag(Talker talker)
+    private void ProcessTalkerTagPostDialogue(Talker talker)
     {
         if (talker.tag == "boss")
         {
             talker.SetDoneTalking(true);
+            talker.SetNPCmode(false);
         }
 
         else if (talker.tag == "elite")
         {
+            talker.SetDoneTalking(true);
             Debug.Log("load next scene");
+        }
+    }
+
+    private void ProcessTalkerTagStartOfDialogue(Talker talker)
+    {
+        if (talker.tag == "boss")
+        {
+            musicController.PlaySong(1);
+        }
+
+        else if (talker.tag == "elite")
+        {
+            musicController.PlaySong(2);
         }
     }
 }

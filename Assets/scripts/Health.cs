@@ -61,7 +61,7 @@ public class Health : MonoBehaviour
         animator.SetTrigger("die");
 
         // turn off collider so that dead enemy doesn't block attacks
-        capsuleCollider.enabled = false;
+        if (capsuleCollider != null) capsuleCollider.enabled = false;
     }
 
     public void ForceDie()

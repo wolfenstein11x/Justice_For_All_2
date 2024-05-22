@@ -23,6 +23,7 @@ public class Talker : MonoBehaviour
         orientationTracker = GetComponent<OrientationTracker>();
         animator = GetComponent<Animator>();
         pc = FindObjectOfType<PlayerController>();
+        SetNPCmode(true);
         doneTalking = false;
     }
 
@@ -93,5 +94,11 @@ public class Talker : MonoBehaviour
     public void SetDoneTalking(bool status)
     {
         doneTalking = status;
+    }
+
+    public void SetNPCmode(bool status)
+    {
+        //Debug.Log(animator.GetBool("npcMode"));
+        animator.SetBool("npcMode", status);
     }
 }
