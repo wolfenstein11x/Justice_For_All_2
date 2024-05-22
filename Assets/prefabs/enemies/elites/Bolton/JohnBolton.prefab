@@ -9,9 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6793317883973538054}
-  m_Layer: 0
+  - component: {fileID: 2232752914302611658}
+  - component: {fileID: 8027537191559942072}
+  - component: {fileID: 4075010043682426928}
+  m_Layer: 17
   m_Name: JohnBolton
-  m_TagString: Untagged
+  m_TagString: elite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23,15 +26,70 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465895633570576591}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.9696026, y: 1.3431246, z: 0.040984374}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8459023642627495844}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2232752914302611658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465895633570576591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43097315186a3c46b0f7465e62f2eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sightRange: 8
+  sightRaycastLayers:
+    serializedVersion: 2
+    m_Bits: 264
+  talkBuffer: 0.75
+  headShot: {fileID: 6374548551933721574, guid: 4e11c22020cc0d048af879d9ddc019cc, type: 3}
+  lines:
+  - im gay
+  - i like guys
+--- !u!114 &8027537191559942072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465895633570576591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98742967772028944836d79275dcee3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftFacingSprite: 0
+--- !u!95 &4075010043682426928
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465895633570576591}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5995306812775973409
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8459023642627495844}
   - component: {fileID: 3085930127491550888}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: john_bolton_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,13 +114,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5995306812775973409}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.117319, y: -0.30312467, z: -0.040984374}
   m_LocalScale: {x: 1.8981456, y: 1.8981456, z: 1.8981456}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6793317883973538054}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3085930127491550888
 SpriteRenderer:

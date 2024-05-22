@@ -14,6 +14,7 @@ public class Talker : MonoBehaviour
     OrientationTracker orientationTracker;
     Animator animator;
     PlayerController pc;
+    bool doneTalking;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +23,13 @@ public class Talker : MonoBehaviour
         orientationTracker = GetComponent<OrientationTracker>();
         animator = GetComponent<Animator>();
         pc = FindObjectOfType<PlayerController>();
+        doneTalking = false;
     }
 
     private void Update()
     {
+        if (doneTalking) return;
+
         if (npcDialogueController.IsCurrentTalker(this)) return;
 
         if (PlayerInSight() && pc.TalkerInSight())
@@ -40,6 +44,8 @@ public class Talker : MonoBehaviour
 
     public bool PlayerInSight()
     {
+        if (doneTalking) return false;
+
         float orientation = orientationTracker.GetOrientation();
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * new Vector2(orientation, 0f), sightRange, sightRaycastLayers);
 
@@ -82,5 +88,10 @@ public class Talker : MonoBehaviour
     public void SetTalkMode(bool status)
     {
         animator.SetBool("talkMode", status);
+    }
+
+    public void SetDoneTalking(bool status)
+    {
+        doneTalking = status;
     }
 }

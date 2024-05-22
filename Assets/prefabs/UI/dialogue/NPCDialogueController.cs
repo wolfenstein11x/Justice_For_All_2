@@ -127,5 +127,20 @@ public class NPCDialogueController : MonoBehaviour
         ShowDialogueBackground(false);
         menuController.ShowControlsPanels(true);
         currentTalker.SetTalkMode(false);
+
+        ProcessTalkerTag(currentTalker);
+    }
+
+    private void ProcessTalkerTag(Talker talker)
+    {
+        if (talker.tag == "boss")
+        {
+            talker.SetDoneTalking(true);
+        }
+
+        else if (talker.tag == "elite")
+        {
+            Debug.Log("load next scene");
+        }
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1435500071706828608}
   - component: {fileID: 4609363787064240949}
   - component: {fileID: 3240782842167836691}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: blueBlast2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   damage: 1
-  maxLifetime: 1
+  maxLifetime: 2
   explosionLifetime: 0.2
   explosionSoundLifetime: 1.2
   impactVFX: {fileID: 6849658597899046209, guid: 337c02c85ff12054d91e94c257d08f4a, type: 3}
