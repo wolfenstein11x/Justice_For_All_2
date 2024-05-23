@@ -6,7 +6,9 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
-    [SerializeField] DialogueController dialogueController;
+    // this script is not used, delete it
+
+    //[SerializeField] DialogueController dialogueController;
     [SerializeField] List<string> lines;
     [SerializeField] int lettersPerSecond = 10;
     //[SerializeField] TextMeshProUGUI loadingText;
@@ -59,7 +61,7 @@ public class Dialogue : MonoBehaviour
 
     private void ConcludeDialogue(bool loadNextScene=false)
     {
-        dialogueController.ConcludeDialogue();
+        //dialogueController.ConcludeDialogue();
         //loadingText.enabled = true;
         //dialogueBackground.SetActive(false);
         //FindObjectOfType<LevelLoader>().LoadNextLevel();

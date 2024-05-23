@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossHealth : HealthBarHealth
 {
+    Boss boss;
     //[SerializeField] float healthThreshold1, healthThreshold2;
 
     //Boss boss;
@@ -15,6 +16,7 @@ public class BossHealth : HealthBarHealth
     void Start()
     {
         base.Initialize();
+        boss = GetComponent<Boss>();
     }
 
     private void Update()
@@ -41,7 +43,7 @@ public class BossHealth : HealthBarHealth
     protected override void Die()
     {
         animator.SetTrigger("die");
-        Debug.Log("reveal key");
+        boss.ProcessDeath();
         FindObjectOfType<MusicController>().PlaySong(0);
         
     }
