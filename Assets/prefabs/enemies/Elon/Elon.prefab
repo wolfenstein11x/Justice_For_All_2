@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 2251225307064377560}
   - component: {fileID: 4229668080074712021}
   - component: {fileID: 1115604722932319743}
+  - component: {fileID: 4084607445503314362}
   m_Layer: 9
   m_Name: Elon
   m_TagString: boss
@@ -498,9 +499,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e74e953be02974a9a04f091324240b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 200
+  hitPoints: 10
   meleeDamageSound: {fileID: 1382541660301537428}
   healthBar: {fileID: 7985070858588893715}
+--- !u!114 &4084607445503314362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9163918460956487918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa729dac434e08242b5807600f834d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: {fileID: 0}
 --- !u!1001 &3382214975201655144
 PrefabInstance:
   m_ObjectHideFlags: 0

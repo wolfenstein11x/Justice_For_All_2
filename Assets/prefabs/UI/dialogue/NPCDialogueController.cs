@@ -17,6 +17,7 @@ public class NPCDialogueController : MonoBehaviour
     Talker currentTalker;
     MenuController menuController;
     MusicController musicController;
+    SceneLoader sceneLoader;
     int currentLine = 0;
 
     private void Awake()
@@ -31,6 +32,7 @@ public class NPCDialogueController : MonoBehaviour
         pc = FindObjectOfType<PlayerController>();
         menuController = FindObjectOfType<MenuController>();
         musicController = FindObjectOfType<MusicController>();
+        sceneLoader = FindObjectOfType<SceneLoader>();
     }
 
     // Update is called once per frame
@@ -145,7 +147,7 @@ public class NPCDialogueController : MonoBehaviour
         else if (talker.tag == "elite")
         {
             talker.SetDoneTalking(true);
-            Debug.Log("load next scene");
+            sceneLoader.LoadNextLevel();
         }
     }
 
