@@ -8,11 +8,13 @@ public class Boss : MonoBehaviour
     [SerializeField] Key key;
 
     SavePoint savePoint;
+    MusicController musicController;
 
     private void Awake()
     {
         key.gameObject.SetActive(false);
         savePoint = GetComponent<SavePoint>();
+        musicController = FindObjectOfType<MusicController>();
     }
 
     // Start is called before the first frame update
@@ -25,6 +27,6 @@ public class Boss : MonoBehaviour
     public void ProcessDeath()
     {
         key.gameObject.SetActive(true);
-        savePoint.UnlockLevel();
+        musicController.PlaySong(0);
     }
 }
