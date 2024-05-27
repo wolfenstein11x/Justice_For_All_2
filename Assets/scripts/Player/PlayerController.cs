@@ -270,5 +270,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool PlayerDead()
+    {
+        return playerHealth.IsDead();
+    }
+
     
 }
