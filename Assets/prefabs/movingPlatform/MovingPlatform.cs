@@ -36,7 +36,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (pc.PlayerDead()) return;
+        //if (pc.PlayerDead()) return;
 
         if (collision.gameObject.tag == "Player")
         {
@@ -47,7 +47,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (pc.PlayerDead()) return;
+        //if (pc.PlayerDead()) return;
 
         if (collision.gameObject.tag == "Player")
         {
