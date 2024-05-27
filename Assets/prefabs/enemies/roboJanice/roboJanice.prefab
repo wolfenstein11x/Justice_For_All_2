@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98742967772028944836d79275dcee3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftFacingSprite: 0
 --- !u!114 &4019736947962761922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +239,7 @@ MonoBehaviour:
   meleeRange: 0.6
   meleePos: {fileID: 3558499296837596130}
   meleeDamage: 20
+  touchingRange: 1
   meleeRaycastLayers:
     serializedVersion: 2
     m_Bits: 256
@@ -254,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989a52818b04b5d4f9e5aa4c805f32b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 100
+  hitPoints: 300
   meleeDamageSound: {fileID: 0}
   healthBar: {fileID: 4820079420707862818}
 --- !u!95 &5758784053532672334
