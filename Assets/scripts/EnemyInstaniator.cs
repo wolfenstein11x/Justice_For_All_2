@@ -8,6 +8,7 @@ public class EnemyInstaniator : MonoBehaviour
    
     private void OnEnable()
     {
-        Instantiate(enemy, transform.position, transform.rotation);
+        Enemy instantiatedEnemy = Instantiate(enemy, transform.position, transform.rotation);
+        instantiatedEnemy.transform.parent = gameObject.transform;
     }
 }
