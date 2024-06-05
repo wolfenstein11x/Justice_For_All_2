@@ -24,7 +24,9 @@ public class ActivatorDeactivator : MonoBehaviour
         {
             foreach(GameObject item in items)
             {
-                item.SetActive(activator);
+                //item.SetActive(activator);
+                if (activator) item.SetActive(true);
+                else Destroy(item);
             }
         }
     }
