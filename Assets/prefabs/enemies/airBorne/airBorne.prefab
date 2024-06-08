@@ -200,7 +200,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7705085937272480592}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -218,7 +218,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &3500515226196195395
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -251,8 +251,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0038568974, y: 0.08374548}
-  m_Size: {x: 0.46664286, y: 0.9930372}
+  m_Offset: {x: 0.0038568974, y: 0.0022497177}
+  m_Size: {x: 0.46664286, y: 1.1560287}
   m_Direction: 0
 --- !u!61 &2296505539998239187
 BoxCollider2D:

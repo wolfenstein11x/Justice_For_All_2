@@ -29,6 +29,9 @@ public class ObjectHealth : Health
         breakSound.Play();
         animator.SetBool("isBroken", true);
         capsuleCollider.enabled = false;
+
+        
+        
     }
 
     public void RemoveFromPlay()

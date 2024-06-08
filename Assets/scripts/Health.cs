@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     public float hitPoints = 20f;
     [SerializeField] protected AudioSource meleeDamageSound;
+    [SerializeField] BoxCollider2D deadCollider;
 
     protected Animator animator;
     protected SpriteRenderer sr;
@@ -24,6 +25,7 @@ public class Health : MonoBehaviour
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        deadCollider.enabled = false;
         startingHitPoints = hitPoints;
     }
 
@@ -60,8 +62,11 @@ public class Health : MonoBehaviour
     {
         animator.SetTrigger("die");
 
-        // turn off collider so that dead enemy doesn't block attacks -- actually no, because now they use gravity and will fall
-        //if (capsuleCollider != null) capsuleCollider.enabled = false;
+        // enable dead collider so enemy doesn't fall off screen once we disable its regular collider
+        deadCollider.enabled = true;
+
+        // turn off collider so that dead enemy doesn't block attacks
+        if (capsuleCollider != null) capsuleCollider.enabled = false;
     }
 
     public void ForceDie()

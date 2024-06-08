@@ -50,7 +50,6 @@ public class EnemyInstaniator : MonoBehaviour
 
     private bool MaxEnemies()
     {
-        int enemyCount = GetComponentsInChildren<Enemy>().Length;
-        return (enemyCount >= maxEnemies);
+        return transform.childCount >= maxEnemies;
     }
 }

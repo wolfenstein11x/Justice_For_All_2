@@ -20,6 +20,9 @@ public class AmmoPickup : MonoBehaviour
         obtained = false;
 
         ammoType = GameObject.FindWithTag(ammoOrGrenades);
+
+        // de-child from parent crate, so that when crate is destroyed, ammo inside won't be destroyed
+        transform.parent = null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
