@@ -10,6 +10,7 @@ public class EnemyInstaniator : MonoBehaviour
     [SerializeField] float delayMax = 6f;
 
     private bool allowInvoke;
+    float zedPos = 0f;
 
     private void Start()
     {
@@ -31,10 +32,15 @@ public class EnemyInstaniator : MonoBehaviour
     {
         int enemyIndex = Random.Range(0, enemies.Length);
 
-        Enemy instantiatedEnemy = Instantiate(enemies[enemyIndex], transform.position, transform.rotation);
+        Vector3 instantiatePos = new Vector3(transform.position.x, transform.position.y, zedPos);
+        Enemy instantiatedEnemy = Instantiate(enemies[enemyIndex], instantiatePos, transform.rotation);
         instantiatedEnemy.transform.parent = gameObject.transform;
 
+        // prevent zed fighting
+        zedPos += 1.0f;
+
         allowInvoke = true;
+
     }
 
     private float GenDelay()
