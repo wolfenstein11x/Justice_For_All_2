@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 106
+  controlID: 60
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 359
     height: 571
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -120,8 +120,8 @@ MonoBehaviour:
     y: 571
     width: 1458
     height: 376
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 24}
   m_Panes:
   - {fileID: 19}
@@ -278,11 +278,11 @@ MonoBehaviour:
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 23}
-  - {fileID: 18}
   - {fileID: 22}
+  - {fileID: 18}
   - {fileID: 12}
-  m_Selected: 2
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -381,7 +381,7 @@ MonoBehaviour:
         m_PaneScroll: {x: 0, y: 0}
         m_ViewType: 1
         updateViewLive: 0
-        m_CurrentFrameIndex: 3342
+        m_CurrentFrameIndex: -1
         m_HierarchyOverruledThreadFromSelection: 0
         m_ProfilerViewFilteringOptions: 1
         m_FrameDataHierarchyView:
@@ -1269,7 +1269,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -207798
+  m_LastSelectedObjectID: -10390
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -2573,7 +2573,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/prefabs/props
+    - Assets/prefabs/gameManagement
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -2581,16 +2581,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/prefabs/props
+  - Assets/prefabs/gameManagement
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\repos\Justice_For_All_2\Justice_For_All_2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1057}
-    m_SelectedIDs: 4ca10000
-    m_LastClickedID: 41292
-    m_ExpandedIDs: 000000004e970000729700007e9700003ca1000044a10000f8d7000012d8000020d8000000ca9a3b
+    scrollPos: {x: 0, y: 449}
+    m_SelectedIDs: ac970000
+    m_LastClickedID: 38828
+    m_ExpandedIDs: 000000009c94000098970000aa970000b497000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2618,7 +2618,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004e970000
+    m_ExpandedIDs: 000000009c940000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2643,9 +2643,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: c4faffff
+    m_LastClickedInstanceID: -1340
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000a6cd0000ca7600008a750000e4670000de6700007ca60000b0ca0000206d0000f68000008e880000fa8f0000ceee0000fa68000086ca0000b2d00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2670,7 +2670,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 178}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -2760,7 +2760,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a6f8feffeef8feff7402ffff9a02ffff2007ffffac2fffffb036fffffc36ffff7c48ffffa248ffff284dffff9073ffff6474ffff3ee8ffffdee9ffffe4e9fffff0eaffff6af2fffff6faffff0c98000080980000969800004ed70000e6fd000016fe000026fe00003efe000088fe0000d4fe0000f4fe0000
+      m_ExpandedIDs: 6659ffffae59ffffdc64ffff0665ffff9469ffff569bffff5e9bffffc49bffff429cfffff6faffff266f0000766f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -3179,9 +3179,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.6801329, y: 25.472193, z: 0.64386344}
+    m_Target: {x: 47.24988, y: 33.480026, z: 0.41222104}
     speed: 2
-    m_Value: {x: 3.0866766, y: 25.544735, z: 0.63981956}
+    m_Value: {x: 47.24988, y: 33.480026, z: 0.41222104}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -3231,9 +3231,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.581927
+    m_Target: 31.746052
     speed: 2
-    m_Value: 8.986311
+    m_Value: 31.746052
   m_Ortho:
     m_Target: 1
     speed: 2
