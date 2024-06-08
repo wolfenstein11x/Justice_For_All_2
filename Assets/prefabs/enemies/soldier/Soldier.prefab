@@ -199,7 +199,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4028386662228038526}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -217,7 +217,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &4028386662228038520
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -250,8 +250,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021640003, y: 0.04088962}
-  m_Size: {x: 0.55051184, y: 1.1730947}
+  m_Offset: {x: -0.0021576583, y: 0.017761052}
+  m_Size: {x: 0.51154715, y: 1.2193519}
   m_Direction: 0
 --- !u!61 &4028386662228038521
 BoxCollider2D:
@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98742967772028944836d79275dcee3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftFacingSprite: 0
 --- !u!114 &4028386662228038279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,6 +348,7 @@ MonoBehaviour:
   meleeRange: 0.3
   meleePos: {fileID: 4028386662041647902}
   meleeDamage: 10
+  touchingRange: 1
   meleeRaycastLayers:
     serializedVersion: 2
     m_Bits: 256

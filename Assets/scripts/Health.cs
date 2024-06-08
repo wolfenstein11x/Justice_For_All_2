@@ -60,8 +60,8 @@ public class Health : MonoBehaviour
     {
         animator.SetTrigger("die");
 
-        // turn off collider so that dead enemy doesn't block attacks
-        if (capsuleCollider != null) capsuleCollider.enabled = false;
+        // turn off collider so that dead enemy doesn't block attacks -- actually no, because now they use gravity and will fall
+        //if (capsuleCollider != null) capsuleCollider.enabled = false;
     }
 
     public void ForceDie()
