@@ -10,16 +10,18 @@ public class EnemyInstaniator : MonoBehaviour
     [SerializeField] float delayMax = 6f;
 
     private bool allowInvoke;
+    private bool terminated;
     float zedPos = 0f;
 
     private void Start()
     {
         allowInvoke = true;
+        terminated = false;
     }
 
     private void Update()
     {
-        if (MaxEnemies()) return;
+        if (MaxEnemies() || terminated) return;
 
         if (allowInvoke)
         {
@@ -51,5 +53,16 @@ public class EnemyInstaniator : MonoBehaviour
     private bool MaxEnemies()
     {
         return transform.childCount >= maxEnemies;
+    }
+
+    public bool HasEnemies()
+    {
+        //Debug.Log(gameObject.name + ": " + transform.childCount);
+        return transform.childCount > 0;
+    }
+
+    public void Terminate()
+    {
+        terminated = true;
     }
 }

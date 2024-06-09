@@ -26,5 +26,12 @@ public class HealthBarHealth : Health
         healthBar.SetHealth(hitPoints);
     }
 
+    protected override void Die()
+    {
+        base.Die();
+
+        waveManager.ProcessMainEnemyDeath();
+    }
+
     
 }

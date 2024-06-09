@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     protected SpriteRenderer sr;
     protected CapsuleCollider2D capsuleCollider;
     protected float startingHitPoints;
+    protected WaveManager waveManager;
  
 
     // Start is called before the first frame update
@@ -25,6 +26,7 @@ public class Health : MonoBehaviour
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        waveManager = FindObjectOfType<WaveManager>();
         startingHitPoints = hitPoints;
 
         if (deadCollider != null) deadCollider.enabled = false;
@@ -68,6 +70,9 @@ public class Health : MonoBehaviour
 
         // turn off collider so that dead enemy doesn't block attacks
         if (capsuleCollider != null) capsuleCollider.enabled = false;
+
+        // check if this is a level completing kill
+        if (waveManager != null) waveManager.CheckLevelComplete();
     }
 
     public void ForceDie()

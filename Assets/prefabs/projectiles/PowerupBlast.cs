@@ -30,7 +30,8 @@ public class PowerupBlast : MonoBehaviour
         // powerup blasts may not be symmetric, so make it face direction it's going
         transform.localScale = new Vector2(orientation * transform.localScale.x, transform.localScale.y);
 
-        Invoke(nameof(FadeAway), maxLifetime);
+        //Invoke(nameof(FadeAway), maxLifetime);
+        Invoke(nameof(BlowUp), maxLifetime);
     }
 
     // Update is called once per frame
@@ -57,13 +58,15 @@ public class PowerupBlast : MonoBehaviour
 
             DisableColliders();
 
-            FadeAway();
+            //FadeAway();
+            BlowUp();
         }
 
         // hit wall or another powerup blast, blow up
         else
         {
-            FadeAway();
+            //FadeAway();
+            BlowUp();
             //DisableColliders();
         }
     }
