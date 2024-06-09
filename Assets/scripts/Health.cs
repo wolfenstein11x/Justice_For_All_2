@@ -25,8 +25,9 @@ public class Health : MonoBehaviour
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
-        deadCollider.enabled = false;
         startingHitPoints = hitPoints;
+
+        if (deadCollider != null) deadCollider.enabled = false;
     }
 
     
@@ -63,7 +64,7 @@ public class Health : MonoBehaviour
         animator.SetTrigger("die");
 
         // enable dead collider so enemy doesn't fall off screen once we disable its regular collider
-        deadCollider.enabled = true;
+        if (deadCollider != null) deadCollider.enabled = true;
 
         // turn off collider so that dead enemy doesn't block attacks
         if (capsuleCollider != null) capsuleCollider.enabled = false;
