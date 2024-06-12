@@ -31,6 +31,7 @@ public class WaveManager : MonoBehaviour
         {
             if (enemyInstaniator.HasEnemies())
             {
+                //Debug.Log(enemyInstaniator.name + " has enemies"); 
                 allDead = false;
             }
         }
@@ -61,7 +62,7 @@ public class WaveManager : MonoBehaviour
     {
         if (MainEnemiesDead() && RegularEnemiesDead())
         {
-            Debug.Log("level complete");
+            //Debug.Log("level complete");
             mc.ActivateLevelCompleteMenu();
         }
     }
