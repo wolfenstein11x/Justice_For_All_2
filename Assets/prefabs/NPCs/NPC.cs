@@ -10,6 +10,8 @@ public class NPC : MonoBehaviour
     [SerializeField] float moveSpeed;
 
     Animator animator;
+    Talker talker;
+    bool isTalker;
     Rigidbody2D rb;
     OrientationTracker orientationTracker;
 
@@ -19,6 +21,16 @@ public class NPC : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         orientationTracker = GetComponent<OrientationTracker>();
+        talker = GetComponent<Talker>();
+        isTalker = (talker != null);
+    }
+
+    public void TalkerUpdate()
+    {
+        if (isTalker)
+        {
+            talker.TalkerUpdate();
+        }
     }
 
     public void Move(float direction)

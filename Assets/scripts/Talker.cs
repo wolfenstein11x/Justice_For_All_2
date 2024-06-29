@@ -27,19 +27,17 @@ public class Talker : MonoBehaviour
         doneTalking = false;
     }
 
-    private void Update()
+   
+    public void TalkerUpdate()
     {
         if (doneTalking) return;
 
         if (npcDialogueController.IsCurrentTalker(this)) return;
 
         if (PlayerInSight() && pc.TalkerInSight())
-            {
-                npcDialogueController.SetCurrentTalker(this);
-            }
-
-        
-
+        {
+            npcDialogueController.SetCurrentTalker(this);
+        }
     }
 
 

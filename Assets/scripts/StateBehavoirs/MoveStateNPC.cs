@@ -20,6 +20,8 @@ public class MoveStateNPC : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         npc.Move(direction);
+
+        npc.TalkerUpdate();
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
