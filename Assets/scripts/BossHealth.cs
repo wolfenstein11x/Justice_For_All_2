@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossHealth : HealthBarHealth
 {
     Boss boss;
+    bool invincibleMode;
     //[SerializeField] float healthThreshold1, healthThreshold2;
 
     //Boss boss;
@@ -19,9 +20,10 @@ public class BossHealth : HealthBarHealth
         boss = GetComponent<Boss>();
     }
 
+    /*
     private void Update()
     {
-        /*
+        
         if (hitPoints <= healthThreshold2)
         {
             if (reachedThreshold2) return;
@@ -35,10 +37,15 @@ public class BossHealth : HealthBarHealth
             reachedThreshold1 = true;
             if (bossTrapActivator != null) bossTrapActivator.ActivateBossTrap(0);
         }
-        */
-    }
+        
+    }*/
 
-    
+    public override void TakeDamage(float damage)
+    {
+        if (invincibleMode) return;
+
+        base.TakeDamage(damage);
+    }
 
     protected override void Die()
     {
@@ -46,5 +53,10 @@ public class BossHealth : HealthBarHealth
         boss.ProcessDeath();
         FindObjectOfType<MusicController>().PlaySong(0);
         
+    }
+
+    public void SetInvincibleMode(bool status)
+    {
+        invincibleMode = status;
     }
 }

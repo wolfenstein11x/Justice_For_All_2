@@ -2,28 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpStateTest : StateMachineBehaviour
+public class IdleStateBoss : StateMachineBehaviour
 {
-    MotionTest motionTest;
+    Talker talker;
+    BossHealth bossHealth;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        motionTest = animator.GetComponent<MotionTest>();
+        talker = animator.GetComponent<Talker>();
+        bossHealth = animator.GetComponent<BossHealth>();
+        bossHealth.SetInvincibleMode(true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //motionTest.JumpDiagonalUp();
-        //motionTest.JumpUp();
-        motionTest.JumpDiagonalDown();
+        talker.TalkerUpdate();
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        bossHealth.SetInvincibleMode(false);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
