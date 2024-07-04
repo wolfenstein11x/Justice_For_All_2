@@ -6,26 +6,20 @@ public class Boss : MonoBehaviour
 {
     
     [SerializeField] Key key;
+    [SerializeField] EnemyInstaniator enemyInstantiator;
 
-    SavePoint savePoint;
     MusicController musicController;
 
     private void Awake()
     {
         key.gameObject.SetActive(false);
-        savePoint = GetComponent<SavePoint>();
         musicController = FindObjectOfType<MusicController>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-
+   
     public void ProcessDeath()
     {
+        enemyInstantiator.Terminate();
         key.gameObject.SetActive(true);
         musicController.PlaySong(0);
     }

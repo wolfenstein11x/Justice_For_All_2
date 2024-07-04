@@ -7,6 +7,7 @@ public class Talker : MonoBehaviour
     [SerializeField] float sightRange = 2f;
     [SerializeField] LayerMask sightRaycastLayers;
     [SerializeField] float talkBuffer = 2f;
+    [SerializeField] GameObject postDialogueItem;
     public GameObject headShot;
     public List<string> lines;
 
@@ -98,5 +99,13 @@ public class Talker : MonoBehaviour
     {
         //Debug.Log(animator.GetBool("npcMode"));
         animator.SetBool("npcMode", status);
+    }
+
+    public void ActivatePostDialogueItem()
+    {
+        if (postDialogueItem != null)
+        {
+            postDialogueItem.SetActive(true);
+        }
     }
 }

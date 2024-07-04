@@ -142,6 +142,7 @@ public class NPCDialogueController : MonoBehaviour
         {
             talker.SetDoneTalking(true);
             talker.SetNPCmode(false);
+            talker.ActivatePostDialogueItem();
         }
 
         else if (talker.tag == "elite")
