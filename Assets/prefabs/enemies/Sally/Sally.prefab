@@ -1,5 +1,82 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3791428749625569672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5773216941855026249}
+  - component: {fileID: 6677853054600198932}
+  m_Layer: 9
+  m_Name: deadCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5773216941855026249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791428749625569672}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1653118290718012560}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &6677853054600198932
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791428749625569672}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0026140213, y: -0.5237751}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.35004807, y: 0.06980133}
+  m_EdgeRadius: 0
 --- !u!1 &3922202044533892011
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,13 +255,15 @@ GameObject:
   - component: {fileID: 6977069134845109297}
   - component: {fileID: 465549816210065273}
   - component: {fileID: 2370911356199283216}
-  - component: {fileID: 3030088083069347026}
   - component: {fileID: 7565671458598682430}
   - component: {fileID: 7284889648272345682}
-  - component: {fileID: 5368483922147910648}
+  - component: {fileID: 7203266838884451133}
+  - component: {fileID: 7286245117023907846}
+  - component: {fileID: 3469943531115334803}
+  - component: {fileID: 4636055386796714371}
   m_Layer: 9
   m_Name: Sally
-  m_TagString: Untagged
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,6 +287,7 @@ Transform:
   - {fileID: 1105457373890540423}
   - {fileID: 2402138648305247858}
   - {fileID: 4087508174792677386}
+  - {fileID: 5773216941855026249}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8330095463850975469
@@ -322,7 +402,7 @@ MonoBehaviour:
     m_Bits: 264
   jumpSpeed: 800
   hideMode: 0
-  facingLeft: 0
+  facingLeft: 1
   footstepSound: {fileID: 0}
 --- !u!114 &2370911356199283216
 MonoBehaviour:
@@ -344,21 +424,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   meleeSwingSound: {fileID: 0}
---- !u!114 &3030088083069347026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6242414029232618493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 989a52818b04b5d4f9e5aa4c805f32b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 100
-  meleeDamageSound: {fileID: 0}
-  healthBar: {fileID: 5307980068177973316}
 --- !u!95 &7565671458598682430
 Animator:
   serializedVersion: 5
@@ -403,8 +468,24 @@ MonoBehaviour:
   shootRaycastLayers:
     serializedVersion: 2
     m_Bits: 264
---- !u!61 &5368483922147910648
-BoxCollider2D:
+--- !u!114 &7203266838884451133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6242414029232618493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e74e953be02974a9a04f091324240b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 400
+  meleeDamageSound: {fileID: 0}
+  deadCollider: {fileID: 6677853054600198932}
+  healthBar: {fileID: 5307980068177973316}
+--- !u!70 &7286245117023907846
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -412,7 +493,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6242414029232618493}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: dcbaf42bbb52a1448ba6988cb3516ea8, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -435,19 +516,44 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004032135, y: -0.00206244}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.45, y: 0.5}
-    oldSize: {x: 0.95, y: 1.135}
-    newSize: {x: 1.1475, y: 1.335}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.47406197, y: 1.1206429}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.011863232, y: 0.003743589}
+  m_Size: {x: 0.4236536, y: 1.1275128}
+  m_Direction: 0
+--- !u!114 &3469943531115334803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6242414029232618493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43097315186a3c46b0f7465e62f2eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sightRange: 8
+  sightRaycastLayers:
+    serializedVersion: 2
+    m_Bits: 264
+  talkBuffer: 0.75
+  headShot: {fileID: 6374548551933721574, guid: 665195c685efea7409ea7dee8a3cf5a9, type: 3}
+  lines:
+  - You think you can beat me 'cause I'm a girl, huh?
+  - I'm not just any girl... I'm a TOUGH girl! I served in the Army 3rd Psyops Battallion,
+    as a Thirst Trap Specialist!
+--- !u!114 &4636055386796714371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6242414029232618493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa729dac434e08242b5807600f834d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: {fileID: 0}
 --- !u!1 &6665976285235295932
 GameObject:
   m_ObjectHideFlags: 0
